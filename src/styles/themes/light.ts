@@ -36,6 +36,6 @@ const light = {
     l: '(max-width: 1300px)',
     xl: '(max-width: 1500px)',
   },
-};
+}
 
-export default light;
+export default light

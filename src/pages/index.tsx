@@ -1,6 +1,7 @@
-import { NextPage } from 'next';
-import Head from 'next/head';
-import Meta from 'components/Meta';
+import { NextPage } from 'next'
+import Head from 'next/head'
+import Meta from 'components/Meta'
+import HomeView from 'containers/Views/Home'
 
 const HomePage: NextPage = () => (
   <>
@@ -8,8 +9,8 @@ const HomePage: NextPage = () => (
       <Meta />
       <title>Maisha Roots</title>
     </Head>
-    <h1>Maisha roots</h1>
+    <HomeView />
   </>
-);
+)
 
-export default HomePage;
+export default HomePage

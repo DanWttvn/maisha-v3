@@ -146,5 +146,6 @@ module.exports = {
     'no-debugger': 'warn',
     'prettier/prettier': 'warn',
     'import/no-relative-parent-imports': 'error',
+    'no-return-assign': 'false',
   },
-};
+}
