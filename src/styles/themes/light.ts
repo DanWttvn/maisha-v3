@@ -28,6 +28,12 @@ const light = {
     elevation3: '-1px 5px 14px 1px rgba(0,0,0,0.2)',
     elevation4: '0px 3px 30px -11px rgba(112,112,112,0.2)',
   },
+  weights: {
+    normal: 400,
+    semibold: 500,
+    bold: 600,
+    black: 700,
+  },
   breakpoints: {
     xs: '(max-width: 400px)',
     s: '(max-width: 650px)',

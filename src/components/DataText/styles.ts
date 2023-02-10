@@ -18,7 +18,7 @@ export default styled(Text)<Props>`
     }
   `}
 
-  ${({type, theme }) => type === 'number' && css`
+  ${({ type, theme }) => type === 'text' && css`
     font-size: 4.5rem;
     line-height: 4rem;
 

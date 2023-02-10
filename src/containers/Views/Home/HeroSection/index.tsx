@@ -5,7 +5,7 @@ import AppLink from 'components/AppLink'
 
 const HeroSection: FC<SectionProps> = () => (
   <Section id="header" styles={{ justifyContent: 'center', marginTop: 20 }}>
-    <Image src="/images/Header.png" />
+    <Image src="/images/Header.png" loading="eager" />
     <AppLink toSection="about" isSamePage>
       <Icon />
     </AppLink>

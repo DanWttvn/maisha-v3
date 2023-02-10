@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle, css } from "styled-components"
 
 export default createGlobalStyle`
   * {
@@ -13,7 +13,7 @@ export default createGlobalStyle`
     -webkit-tap-highlight-color: transparent;
   }
 
-  html {
+  body {
     font-size: 17px;
     background-color: white;
 

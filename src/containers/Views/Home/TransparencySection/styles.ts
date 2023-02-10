@@ -2,7 +2,8 @@ import Paragraph from "components/Paragraph";
 import styled from "styled-components";
 
 export const ParagraphDocs = styled(Paragraph).attrs({
-  isFullWidht: true
+  isFullWidth: true,
 })`
-  gap: 4px; // comprobarlo y poner df si hace falta
-`
+  display: flex;
+  gap: 4px;
+`;

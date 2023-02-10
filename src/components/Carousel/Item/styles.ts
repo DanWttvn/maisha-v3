@@ -9,9 +9,12 @@ export default styled.div<Props>`
   height: 100%;
   padding: 100px 5rem;
   background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-  background-image: ${({ src, hasOverlay }) => hasOverlay ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${src})` : `url(${src})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: ${({ src, hasOverlay }) =>
+    hasOverlay
+      ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${src})`
+      : `url(${src})`};
 
   @media ${({ theme }) => theme.breakpoints.s} {
     padding: 60px 2rem;

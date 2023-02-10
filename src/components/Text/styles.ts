@@ -6,6 +6,12 @@ export const TextStyles = css<TextProps>`
 
   ${({ size }) => {
     switch (size) {
+      case 'inherit':
+      default:
+        return css`
+          font-size: inherit;
+          line-height: inherit;
+        `;
       case 'xs':
         return css`
           font-size: 0.75rem;
@@ -26,7 +32,6 @@ export const TextStyles = css<TextProps>`
           font-size: 2rem;
           line-height: 2rem;
         `;
-      default:
       case 'xl':
         return css`
           font-size: 3.2rem;
@@ -35,33 +40,17 @@ export const TextStyles = css<TextProps>`
     }
   }}
 
-  ${({ weight }) => {
-    switch (weight) {
-      default:
-      case 'normal':
-        return css`
-          font-weight: 400;
-        `;
-      case 'semibold':
-        return css`
-          font-weight: 500;
-        `;
-      case 'bold':
-        return css`
-          font-weight: 600;
-        `;
-      case 'black':
-        return css`
-          font-weight: 700;
-        `;
-    }
-  }}  
+${({ theme, weight }) =>
+    weight &&
+    css`
+      font-weight:  ${weight === 'inherit' ? 'inherit': theme.weights[weight]};
+    `}
 `
 
 export default styled.span<TextProps>`
   ${TextStyles}
   margin: 0;
-  color: ${({ theme, color }) => !!color ? theme.colors[color] : 'inherit'};
+  color: ${({ theme, color }) => !!color && color !== 'inherit' ? theme.colors[color] : 'inherit'};
   cursor: ${({ onClick }) => !!onClick ? 'pointer' : 'inherit'};
 
   ${({ isHighlighted }) => isHighlighted && css`
@@ -70,6 +59,6 @@ export default styled.span<TextProps>`
     font-weight: 900;
     font-style: italic;
   `};
-  ${({ isFullWidth }) => isFullWidth ? 'width: 100%;' : ''};
+  ${({ isFullWidth }) => (isFullWidth ? 'width: 100%;' : '')};
   ${({ styles }) => ({ ...styles })}
 `
