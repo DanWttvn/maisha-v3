@@ -10,7 +10,7 @@ const Button = styled.button<Props>`
   cursor: pointer;
   padding: 10px 15px;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: ${({ theme}) => theme.weights.bold};
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
   pointer-events: ${({ isDisabled }) => (isDisabled ? 'none' : 'auto')};
@@ -44,7 +44,7 @@ export const ButtonB = styled(Button)`
 
 export const ButtonC = styled(ButtonA)`
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: ${({ theme}) => theme.weights.black};
   padding: 20px 35px;
   border-radius: 0;
 
@@ -59,7 +59,7 @@ export const ButtonC = styled(ButtonA)`
 export const ButtonD = styled(Button)`
   font-size: 0.95rem;
   background: transparent;
-  font-weight: 400;
+  font-weight: ${({ theme}) => theme.weights.normal};
   padding: 0 5px;
   color: ${({ theme }) => theme.colors.offOrange};
 
@@ -98,7 +98,7 @@ export const ButtonG = styled(Button)`
   font-size: 14px;
   border-radius: 5px;
   padding: 5px 10px;
-  font-weight: 400;
+  font-weight: ${({ theme}) => theme.weights.normal};
   background: ${({ theme }) => theme.colors.offRed};
   color: ${({ theme }) => theme.colors.white};
 

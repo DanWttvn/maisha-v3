@@ -3,9 +3,10 @@ import NavItem from 'components/NavItem'
 import Image from 'components/Image'
 import Container from 'components/Container'
 import LanguageContext from 'contexts/language'
-import { BaseProps, sectionsData } from 'models'
+import { BaseProps } from 'models'
 import AppLink from 'components/AppLink'
 import Styled, { Hamburger, Cross, ItemsWrapper, Menu, Backdrop, VerticalDivider, Li } from './styles'
+import { SECTIONS_DATA } from './constants'
 
 interface Props extends BaseProps {
   isHomePage?: boolean
@@ -39,7 +40,7 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
     if (isResponsiveOpen) setIsResponsiveOpen(false)
   }
 
-  const items = sectionsData.map(section => {
+  const items = SECTIONS_DATA.map(section => {
     const subItems = section.subsections?.map(subSection => ({ name: subSection.title[lang], section: subSection.id }))
 
     return (

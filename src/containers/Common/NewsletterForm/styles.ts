@@ -13,7 +13,7 @@ export const Form = styled.form`
 `
 
 export const EmailInput = styled.input`
-  font-weight: 600;
+  font-weight: ${({ theme}) => theme.weights.bold};
   font-size: 0.8rem;
   border-radius: 5px;
   border: none;

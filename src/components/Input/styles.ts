@@ -4,7 +4,7 @@ import { Props } from '.'
 export default styled.input<Pick<Props, 'isFullWidth' | 'styles'>>`
   height: 100%;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: ${({ theme}) => theme.weights.black};
   text-align: center;
   border: none;
 

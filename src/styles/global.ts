@@ -31,7 +31,7 @@ export default createGlobalStyle`
   }
 
   strong {
-    font-weight: 600;
+    font-weight: ${({ theme}) => theme.weights.bold};
   }
 
   input,

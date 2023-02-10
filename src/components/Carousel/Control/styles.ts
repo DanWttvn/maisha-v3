@@ -48,7 +48,7 @@ export const Node = styled.div`
   position: relative;
 	padding: 15px 0;
 	color: white;
-	font-weight: 600;
+	font-weight: ${({ theme}) => theme.weights.bold};
 	left: -1px;
 	z-index: 1;
 	cursor: pointer;

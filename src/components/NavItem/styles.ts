@@ -3,8 +3,8 @@ import AppLinkRoot from 'components/AppLink'
 
 export const Li = styled.li<{ isSubItem?: boolean }>`
   position: relative;
-  font-size: ${({ isSubItem }) => isSubItem ? '13px' : '14px'};
-  font-weight: 600;
+  font-size: ${({ isSubItem }) => isSubItem ? '0.8125rem' : '0.875rem'};
+  font-weight: ${({ theme}) => theme.weights.bold};
   text-decoration: none;
   padding: 20px;
   transition: 0.3s;
