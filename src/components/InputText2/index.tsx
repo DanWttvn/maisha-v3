@@ -1,59 +1,54 @@
-import { FC, ChangeEvent, useState } from 'react'
-import { BaseProps, InputProps } from 'models'
-import theme from 'styles/themes/light'
-import {Styled, Input, Label} from './styles'
+import { FC, HTMLProps } from 'react'
+import { BaseProps } from 'models'
+import { Styled, Input, Label } from './styles'
+import Text from 'components/Text'
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form'
 
-export interface Props extends BaseProps, InputProps {
-  label?: string
-  name: string
-  autocomplete?: string
-  type?: 'text' | 'number' | 'email'
-  onChange?: (value: string) => void
+export interface Props extends BaseProps {
+  register: UseFormRegisterReturn;
+  label?: string;
+  type?: 'text' | 'number' | 'email';
+  value?: HTMLProps<HTMLInputElement>['value'];
   helper?: string
-  register?: any
+  autoComplete?: string;
+  error?: FieldError;
 }
 
 const InputText2: FC<Props> = ({
-  isHidden,
-  styles,
-  name,
-  label,
-  autocomplete,
-  type = 'text',
-  onChange,
-  isError,
-  helper,
-  isRequired,
   register,
+  isHidden,
+  label,
+  type = 'text',
+  value,
+  error,
+  helper,
   isFullWidth,
+  autoComplete,
   className,
 }) => {
-  const [value, setValue] = useState('')
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    const nextValue = event.currentTarget.value
-    setValue(nextValue)
-    if (onChange) onChange(nextValue)
-  }
-
   if (isHidden) return null
 
   return (
-    <Styled className={className}>
+    <Styled className={className} isFullWidth={isFullWidth}>
       <Input 
+        type={type}
         value={value}
-        type="text"
-        name={name}
-        onChange={handleChange}
         placeholder=" "
+        autoComplete={autoComplete}
+        {...register}
       />
       <Label>{label} *</Label>
+      {!!helper && (
+        <Text size='xs' color='lightGrey' isFullWidth>{helper}</Text>
+      )}
+      {!!error && (
+        <Text size='xs' color='brightRed' isFullWidth>{error.message}</Text>
+      )}
     </Styled>
-  )
+  );
 }
+
 
 InputText2.displayName = 'InputText2'
 
 export default InputText2
-
-// TODOs: quitar required

@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from "styled-components"
+import { createGlobalStyle, css } from 'styled-components'
 
 export default createGlobalStyle`
   * {
@@ -15,7 +15,6 @@ export default createGlobalStyle`
 
   body {
     font-size: 17px;
-    background-color: white;
 
     ${({ theme }) => css`
       @media ${theme.breakpoints.m} {
@@ -28,10 +27,14 @@ export default createGlobalStyle`
         font-size: 14px;
       }
     `}
+
+    #__next {
+      min-height: 100vh;
+    }
   }
 
   strong {
-    font-weight: ${({ theme}) => theme.weights.bold};
+    font-weight: ${({ theme }) => theme.weights.bold};
   }
 
   input,
@@ -97,4 +100,4 @@ export default createGlobalStyle`
   ol {
     padding-left: 20px;
   }
-`;
+`
