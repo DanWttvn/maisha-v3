@@ -1,7 +1,6 @@
-import { FC, lazy, Suspense } from 'react'
+import { FC } from 'react'
 import { BaseProps } from 'models'
-import './styles.css'
-const VideoPlayer = lazy(() => import('react-video-js-player'))
+import { Container, ReactPlayer, Thumbnail } from './styles'
 
 export interface Props extends BaseProps {
   src: string
@@ -9,16 +8,24 @@ export interface Props extends BaseProps {
 }
 
 const Video: FC<Props>  = ({ src, poster }) => (
-  <Suspense fallback={<></>}>
-    <VideoPlayer
-      src={src}
-      poster={poster}
-      autoplay={false}
-      bigPlayButton={true}
-      bigPlayButtonCentered={true}
-      className="vjs-fill vjs-fluid video-js vjs-matrix"
+  <Container>
+    <ReactPlayer
+      url={src}
+      light={!!poster && <Thumbnail src={poster} alt='Thumbnail' />}
+      width="100%"
+      height="100%"
+      controls
+      mute
+      config={{
+        vimeo: {
+          playerOptions: {
+            autoplay: true,
+            responsive: true
+          }
+        }
+      }}
     />
-  </Suspense>
+  </Container>
 )
 
 Video.displayName = 'Video'
