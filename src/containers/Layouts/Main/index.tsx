@@ -23,7 +23,7 @@ const Layout: FC<PropsWithChildren<Props>> = ({ children, isHomePage }) => {
   }, []);
 
   return (
-    <Container isFullWidth>
+    <Container direction='vertical' styles={{ position: 'relative', minHeight: '100vh', justifyContent: 'space-between' }} isFullWidth>
       <Navbar isHomePage={isHomePage} />
       {children}
       <Footer />
