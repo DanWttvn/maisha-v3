@@ -1,32 +1,9 @@
 import { urls } from 'globals/routes'
-import { FIELD_HELPERS, Yup, yupResolver } from 'helpers/yup'
+import { yupResolver } from 'helpers/yup'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-
-type FormValues = {
-  name: string
-  lastName: string
-  dni: string
-  email: string
-  zipCode: string
-  IBAN: string
-  termsAccepted: boolean
-}
-
-const schema = Yup.object({
-  name: Yup.string().required(FIELD_HELPERS.REQUIRED),
-  lastName: Yup.string().required(FIELD_HELPERS.REQUIRED),
-  dni: Yup.string().required(FIELD_HELPERS.REQUIRED),
-  email: Yup.string()
-    .email(FIELD_HELPERS.EMAIL)
-    .required(FIELD_HELPERS.REQUIRED),
-  zipCode: Yup.string().required(FIELD_HELPERS.REQUIRED),
-  IBAN: Yup.string()
-    .matches(/^[A-Za-z]{2}[0-9 ]+$/, FIELD_HELPERS.IBAN)
-    .required(FIELD_HELPERS.REQUIRED),
-  termsAccepted: Yup.boolean().required(FIELD_HELPERS.REQUIRED),
-})
+import { FormValues, schema } from './types'
 
 export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
   const { push } = useRouter()

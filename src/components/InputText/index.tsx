@@ -10,7 +10,7 @@ export interface Props extends BaseProps {
   type?: 'text' | 'number' | 'email';
   value?: HTMLProps<HTMLInputElement>['value'];
   helper?: string
-  autoComplete?: string;
+  autocomplete?: string;
   error?: FieldError;
 }
 
@@ -23,7 +23,7 @@ const InputText: FC<Props> = ({
   error,
   helper,
   isFullWidth,
-  autoComplete,
+  autocomplete,
   className,
 }) => {
   if (isHidden) return null
@@ -34,7 +34,7 @@ const InputText: FC<Props> = ({
         type={type}
         value={value}
         placeholder=" "
-        autoComplete={autoComplete}
+        autoComplete={autocomplete}
         {...register}
       />
       <Label>{label} *</Label>

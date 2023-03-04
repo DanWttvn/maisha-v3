@@ -119,9 +119,9 @@ export const TransparencySection: FC<SectionProps> = () => {
           {lang === 'SW' && <>Kwa kusudi la kukamilisha kujitolea kwetu kwa uwazi na utawala bora, Maisha Roots hutengeneza wafanyakazi walioajiriwa, wafadhili, wauzaji, washirika, n.k. njia ya malalamiko ambayo inaruhusu tabia isiyo ya kawaida inajumuisha hatua yoyote haramu, isiyo ya kawaida au dhidi ya sharia zote za ndani na nje zinazofanywa na shirika Maisha Roots au mtu yeyote wa washiriki wake. Kwenye kiunga hiki unaeza kupata hati inayohusiana na kituo chetu cha malalamiko: kituo cha malalamiko.</>}
         </Paragraph>
         <Paragraph>
-          {lang === 'ES' && <>Para establecer tu denuncia, puedes rellenar las indicaciones del documento, o rellenar <AppLink toPage={urls.complains}>este formulario</AppLink> o envía <ExternalLink href={docSrcs.complainsForm}>esta ficha rellena</ExternalLink> a la dirección de correo electrónico <ExternalLink href={emailHref}>canaldenuncias@maisharoots.org</ExternalLink></>}
-          {lang === 'EN' && <>To present your complaint, you might fill in the indications in the document, or fill in <AppLink toPage={urls.complains}>this form</AppLink> or send <ExternalLink href={docSrcs.complainsForm}>this completed draft</ExternalLink> to the email address <ExternalLink href={emailHref}>canaldenuncias@maisharoots.org</ExternalLink></>}
-          {lang === 'SW' && <>Ili kuwasilisha malalamiko yako, unaweza kujaza dalili kwenye hati, au ujaze <AppLink toPage={urls.complains}>fomu hii</AppLink>, au utume <ExternalLink href={docSrcs.complainsForm}>rasimu hii iliyosimamiwa</ExternalLink> kwa anwani ya barua pepe <ExternalLink href={emailHref}>canaldenuncias@maisharoots.org</ExternalLink></>}
+          {lang === 'ES' && <>Para establecer tu denuncia envía <ExternalLink href={docSrcs.complainsForm}>esta ficha rellena</ExternalLink> a la dirección de correo electrónico <ExternalLink href={emailHref}>canaldenuncias@maisharoots.org</ExternalLink></>}
+          {lang === 'EN' && <>To present your complaint send <ExternalLink href={docSrcs.complainsForm}>this completed draft</ExternalLink> to the email address <ExternalLink href={emailHref}>canaldenuncias@maisharoots.org</ExternalLink></>}
+          {lang === 'SW' && <>Ili kuwasilisha malalamiko yako wasilisha <ExternalLink href={docSrcs.complainsForm}>rasimu hii iliyosimamiwa</ExternalLink> kwa anwani ya barua pepe <ExternalLink href={emailHref}>canaldenuncias@maisharoots.org</ExternalLink></>}
         </Paragraph>
       </SubSection>
 

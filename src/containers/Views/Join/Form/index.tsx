@@ -37,39 +37,39 @@ const JoinForm: FC<Props> = ({ selectedAmount: forcedAmount, variant, isHidden, 
       <form id="sib-form" onSubmit={onSubmit} style={{ ...styles, width: '100%' }} noValidate>
         <InputText
           label="Nombre"
-          autoComplete="first-name"
+          autocomplete="first-name"
           error={errors.name}
           register={register('name')}
         />
         <InputText
           label="Apellidos"
-          autoComplete="family-name"
+          autocomplete="family-name"
           error={errors.lastName}
           register={register('lastName')}
         />
         <InputText
           label="DNI/Pasaporte"
-          autoComplete="id"
+          autocomplete="id"
           error={errors.dni}
           register={register('dni')}
         />
         <InputText
           label="Email"
           type="email"
-          autoComplete="email"
+          autocomplete="email"
           error={errors.email}
           register={register('email')}
         />
         <InputText
           label="Código Postal"
           type="number"
-          autoComplete="postal-code"
+          autocomplete="postal-code"
           error={errors.zipCode}
           register={register('zipCode')}
         />
         <InputText
           label="Cuenta Bancaria"
-          autoComplete="IBAN"
+          autocomplete="IBAN"
           helper="Recuerda que debes añadir el IBAN (Ej.: ES1212341234110123456789)"
           styles={{ marginBottom: 32 }}
           error={errors.IBAN}
