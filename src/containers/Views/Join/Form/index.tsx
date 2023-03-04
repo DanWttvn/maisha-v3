@@ -14,6 +14,7 @@ export interface Props extends BaseProps {
   variant: '1' | '2' | '3'
 }
 
+//TODO: add recaptcha
 const JoinForm: FC<Props> = ({ selectedAmount: forcedAmount, variant, isHidden, styles }) => {
   const {
     register,
