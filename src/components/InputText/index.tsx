@@ -1,64 +1,53 @@
-import { FC, ChangeEvent, useState } from 'react'
-import { BaseProps, InputProps } from 'models'
-import theme from 'styles/themes/light'
-import Styled from './styles'
+import { FC, HTMLProps } from 'react'
+import { BaseProps } from 'models'
+import { Styled, Input, Label } from './styles'
+import Text from 'components/Text'
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form'
 
-export interface Props extends BaseProps, InputProps {
-  label?: string
-  name: string
-  autocomplete?: string
-  type?: 'text' | 'number' | 'email'
-  onChange?: (value: string) => void
+export interface Props extends BaseProps {
+  register: UseFormRegisterReturn;
+  label?: string;
+  type?: 'text' | 'number' | 'email';
+  value?: HTMLProps<HTMLInputElement>['value'];
   helper?: string
-  register?: any
+  autoComplete?: string;
+  error?: FieldError;
 }
 
 const InputText: FC<Props> = ({
-  isHidden,
-  styles,
-  name,
-  label,
-  autocomplete,
-  type = 'text',
-  onChange,
-  isError,
-  helper,
-  isRequired,
   register,
+  isHidden,
+  label,
+  type = 'text',
+  value,
+  error,
+  helper,
   isFullWidth,
+  autoComplete,
+  className,
 }) => {
-  const [value, setValue] = useState('')
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    const nextValue = event.currentTarget.value
-    setValue(nextValue)
-    if (onChange) onChange(nextValue)
-  }
-
   if (isHidden) return null
 
   return (
-    <Styled
-      variant="standard"
-      margin="normal"
-      id={name}
-      type={type}
-      value={value}
-      label={label}
-      name={name}
-      autoComplete={autocomplete}
-      onChange={handleChange}
-      error={isError}
-      fullWidth={isFullWidth}
-      inputRef={register}
-      helperText={helper}
-      required={isRequired}
-      InputLabelProps={{ style: { fontFamily: theme.fonts.main } }}
-      inputProps={{ style: { fontFamily: theme.fonts.main, fontWeight: 500 } }}
-      style={styles}
-    />
-  )
+    <Styled className={className} isFullWidth={isFullWidth}>
+      <Input 
+        type={type}
+        value={value}
+        placeholder=" "
+        autoComplete={autoComplete}
+        {...register}
+      />
+      <Label>{label} *</Label>
+      {!!helper && (
+        <Text size='xs' color='lightGrey' isFullWidth>{helper}</Text>
+      )}
+      {!!error && (
+        <Text size='xs' color='brightRed' isFullWidth>{error.message}</Text>
+      )}
+    </Styled>
+  );
 }
+
 
 InputText.displayName = 'InputText'
 

@@ -5,7 +5,7 @@ import Text from 'components/Text'
 import Container from 'components/Container'
 import SkipWrap from 'components/SkipWrap'
 import PolicyModal from 'containers/Common/PolicyModal'
-import InputText from 'components/InputText2'
+import InputText from 'components/InputText'
 import { OptionsButton, AmountInput } from './styles'
 import { useConnect } from './connect'
 
