@@ -44,13 +44,6 @@ const AppLink: FC<Props> = ({
     )
   }
 
-  // if (!!toSection)
-  //   return (
-  //     <HashLink to={`${urls.root}#${toSection}`} onClick={onClick} variant={variant} size={size} weight={weight}>
-  //       {children}
-  //     </HashLink>
-  //   )
-  // TODOs: probar si funciona. Para eso tiene que ser desde otra pagina
   if (!!toSection) {
     return (
       <RouteLink href={`${urls.root}#${toSection}`} onClick={onClick} variant={variant} size={size} weight={weight}>

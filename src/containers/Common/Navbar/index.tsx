@@ -3,7 +3,7 @@ import NavItem from 'components/NavItem'
 import Image from 'components/Image'
 import Container from 'components/Container'
 import LanguageContext from 'contexts/language'
-import { BaseProps } from 'models'
+import { BaseProps, Language } from 'models'
 import AppLink from 'components/AppLink'
 import Styled, { Hamburger, Cross, ItemsWrapper, Menu, Backdrop, VerticalDivider, Li } from './styles'
 import { SECTIONS_DATA } from './constants'
@@ -57,6 +57,11 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
     )
   })
 
+  const onLanguageChange = (nextLang: Language) => {
+    setLang(nextLang)
+    setIsResponsiveOpen(false)
+  }
+
   return (
     <Styled isOpen={isDesktopOpen} isHeroSection={isHeroSection}>
       <AppLink toSection="header" isSamePage={isHomePage}>
@@ -71,15 +76,15 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
         <Menu isResponsiveOpen={isResponsiveOpen}>
           {items}
           <Container>
-            <Li onClick={() => setLang('ES')} isSubItem>
+            <Li onClick={() => onLanguageChange('ES')} isSubItem>
               ESP
             </Li>
             <VerticalDivider />
-            <Li onClick={() => setLang('EN')} isSubItem>
+            <Li onClick={() => onLanguageChange('EN')} isSubItem>
               ENG
             </Li>
             <VerticalDivider />
-            <Li onClick={() => setLang('SW')} isSubItem>
+            <Li onClick={() => onLanguageChange('SW')} isSubItem>
               SWA
             </Li>
           </Container>

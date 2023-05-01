@@ -1,5 +1,4 @@
 import React, { FC, useContext } from 'react'
-import AppLink from 'components/AppLink'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import Paragraph from 'components/Paragraph'
@@ -9,7 +8,6 @@ import SubSection from 'components/SubSection'
 import { SectionProps } from 'models'
 import Li from 'components/Li'
 import ExternalLink from 'components/ExternalLink'
-import { urls } from 'globals/routes'
 import { ParagraphDocs } from './styles'
 
 export const TransparencySection: FC<SectionProps> = () => {
