@@ -1,4 +1,12 @@
-import { Children, cloneElement, FC, ReactElement, useState, MouseEvent } from 'react'
+/* eslint-disable import/no-relative-parent-imports */
+import {
+  Children,
+  cloneElement,
+  FC,
+  ReactElement,
+  useState,
+  MouseEvent,
+} from 'react'
 import { BaseProps } from 'models'
 import Styled, { TabBar, TabButton } from './styles'
 import { Props as ItemProps } from '../Item'
@@ -10,13 +18,23 @@ const Tabs: FC<Props> = ({ isHidden, styles, children, isFullWidth }) => {
   let tabs: ReactElement[] = []
   let content: ReactElement[] = []
 
-  const handleClick = (index: number, event: MouseEvent<HTMLButtonElement>): void => {
+  const handleClick = (
+    index: number,
+    event: MouseEvent<HTMLButtonElement>,
+  ): void => {
     setValue(index)
     event.preventDefault()
   }
 
   Children.forEach(children as ReactElement<ItemProps>, (x, i) => {
-    const tabButton = <TabButton key={i} onClick={(e) => handleClick(i, e)} isActive={value === i}>{x.props.title}</TabButton>
+    const tabButton = (
+      <TabButton
+        key={i}
+        onClick={e => handleClick(i, e)}
+        isActive={value === i}>
+        {x.props.title}
+      </TabButton>
+    )
     const tabContent = cloneElement(x, { isHidden: value !== i, key: i })
 
     tabs = [...tabs, tabButton]

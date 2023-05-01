@@ -7,12 +7,22 @@ export interface Props extends BaseProps {
   variant?: 'A' | 'B'
 }
 
-const Modal: FC<Props> = ({ children, variant = 'A', styles, onClose, isHidden, className }) => {
+const Modal: FC<Props> = ({
+  children,
+  variant = 'A',
+  styles,
+  onClose,
+  isHidden,
+  className,
+}) => {
   if (isHidden) return null
 
   return (
     <Styled styles={styles} className={className}>
-      <Cross color={variant === 'A' ? 'lightGrey' : 'white'} onClick={onClose}/>
+      <Cross
+        color={variant === 'A' ? 'lightGrey' : 'white'}
+        onClick={onClose}
+      />
       {children}
     </Styled>
   )

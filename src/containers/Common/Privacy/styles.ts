@@ -4,10 +4,10 @@ import DefaultParagraph from 'components/Paragraph'
 
 export const Text = styled(DefaultText).attrs({
   color: 'darkGrey',
-  size: 's'
+  size: 's',
 })``
 
 export const Paragraph = styled(DefaultParagraph).attrs({
   color: 'darkGrey',
-  size: 's'
+  size: 's',
 })``

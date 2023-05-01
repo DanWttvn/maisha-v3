@@ -1,4 +1,4 @@
-import { Cookies } from '../models'
+import { Cookies } from 'models'
 
 export const checkCookie = (name: Cookies): string | undefined => {
   const decodedCookies = decodeURIComponent(document.cookie).split(';')
@@ -8,9 +8,13 @@ export const checkCookie = (name: Cookies): string | undefined => {
   return value
 }
 
-export const setCookie = (name: string, value: string, exdays: number): void => {
+export const setCookie = (
+  name: string,
+  value: string,
+  exdays: number,
+): void => {
   const date = new Date()
-  date.setTime(date.getTime() + exdays * 24*60*60*1000)
-  const expires = 'expires='+ date.toUTCString()
+  date.setTime(date.getTime() + exdays * 24 * 60 * 60 * 1000)
+  const expires = 'expires=' + date.toUTCString()
   document.cookie = name + '=' + value + ';' + expires + ';path=/'
 }

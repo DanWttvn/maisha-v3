@@ -8,17 +8,17 @@ import CollaborateSection from './CollaborateSection'
 import TransparencySection from './TransparencySection'
 import MainLayout from 'containers/Layouts/Main'
 
-// TODO: como meter google tag manager (.html)
+// TODOs: como meter google tag manager (.html)
 
 const HomeView: FC = () => (
   <MainLayout isHomePage>
     <HeroSection />
     <WhoSection />
-    <TimelineSection/>
-    <HowWorkSection/>
-    <ProjectsSection/>
-    <CollaborateSection/>
-    <TransparencySection/>
+    <TimelineSection />
+    <HowWorkSection />
+    <ProjectsSection />
+    <CollaborateSection />
+    <TransparencySection />
   </MainLayout>
 )
 

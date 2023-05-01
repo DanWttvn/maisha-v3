@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import React, { FC } from 'react'
 import { BaseProps } from 'models'
 import Button from 'components/Button'
@@ -14,8 +15,13 @@ export interface Props extends BaseProps {
   variant: '1' | '2' | '3'
 }
 
-//TODO: add recaptcha
-const JoinForm: FC<Props> = ({ selectedAmount: forcedAmount, variant, isHidden, styles }) => {
+//TODOs: add recaptcha
+const JoinForm: FC<Props> = ({
+  selectedAmount: forcedAmount,
+  variant,
+  isHidden,
+  styles,
+}) => {
   const {
     register,
     errors,
@@ -34,7 +40,11 @@ const JoinForm: FC<Props> = ({ selectedAmount: forcedAmount, variant, isHidden, 
 
   return (
     <>
-      <form id="sib-form" onSubmit={onSubmit} style={{ ...styles, width: '100%' }} noValidate>
+      <form
+        id="sib-form"
+        onSubmit={onSubmit}
+        style={{ ...styles, width: '100%' }}
+        noValidate>
         <InputText
           label="Nombre"
           autocomplete="first-name"
@@ -76,34 +86,52 @@ const JoinForm: FC<Props> = ({ selectedAmount: forcedAmount, variant, isHidden, 
           register={register('IBAN')}
         />
 
-        <Container isHidden={variant !== '3'} styles={{ marginBottom: 16 }} isFullWidth>
+        <Container
+          isHidden={variant !== '3'}
+          styles={{ marginBottom: 16 }}
+          isFullWidth>
           <Container styles={{ margin: '0 auto' }}>
-            <Text weight="bold" styles={{ marginBottom: 8 }} isFullWidth>Donación mensual</Text>
-            {[ 5, 10, 15, 20, 25 ].map(amount => (
+            <Text weight="bold" styles={{ marginBottom: 8 }} isFullWidth>
+              Donación mensual
+            </Text>
+            {[5, 10, 15, 20, 25].map(amount => (
               <OptionsButton
                 key={amount}
                 onClick={() => handleSelectAmount(amount)}
-                isSelected={selectedAmount === amount && customAmount !== amount}
-              >
+                isSelected={
+                  selectedAmount === amount && customAmount !== amount
+                }>
                 {amount}€
               </OptionsButton>
             ))}
             <OptionsButton
               onClick={() => handleSelectAmount(customAmount)}
-              isSelected={selectedAmount === customAmount}
-            >
+              isSelected={selectedAmount === customAmount}>
               <AmountInput type="number" onChange={handleInputChange} />€
             </OptionsButton>
           </Container>
 
-          <Text isHidden={selectedAmount !== 5} color="black" size="s" styles={{ maxWidth: 860 }}>
-            *Para evitar comisiones del banco y sacar el máximo provecho a tu aportación, retiraremos cada dos meses 10€ de tu cuenta
+          <Text
+            isHidden={selectedAmount !== 5}
+            color="black"
+            size="s"
+            styles={{ maxWidth: 860 }}>
+            *Para evitar comisiones del banco y sacar el máximo provecho a tu
+            aportación, retiraremos cada dos meses 10€ de tu cuenta
           </Text>
           <SkipWrap />
-          <Text isHidden={!generalErrors.includes('no-amount')} color="brightRed" weight="black" isFullWidth>
+          <Text
+            isHidden={!generalErrors.includes('no-amount')}
+            color="brightRed"
+            weight="black"
+            isFullWidth>
             *Por favor, selecciona una cantidad mensual
           </Text>
-          <Text isHidden={!generalErrors.includes('smaller-than-min')} color="brightRed" weight="black" isFullWidth>
+          <Text
+            isHidden={!generalErrors.includes('smaller-than-min')}
+            color="brightRed"
+            weight="black"
+            isFullWidth>
             *La cantidad mínima es de 5€
           </Text>
         </Container>
@@ -114,23 +142,42 @@ const JoinForm: FC<Props> = ({ selectedAmount: forcedAmount, variant, isHidden, 
           required
           {...register('termsAccepted')}
         />
-        <Text size="xs" styles={{ marginRight: 6 }}>He leído y acepto la</Text>
-        <Text size="xs" onClick={() => setIsPolicyModalOpen(true)} styles={{ textDecoration: 'underline' }}>
+        <Text size="xs" styles={{ marginRight: 6 }}>
+          He leído y acepto la
+        </Text>
+        <Text
+          size="xs"
+          onClick={() => setIsPolicyModalOpen(true)}
+          styles={{ textDecoration: 'underline' }}>
           Política de Privacidad
         </Text>
         {!!errors.termsAccepted && (
-          <Text size='xs' color='brightRed' isFullWidth>{errors.termsAccepted.message}</Text>
+          <Text size="xs" color="brightRed" isFullWidth>
+            {errors.termsAccepted.message}
+          </Text>
         )}
 
-        <SkipWrap/>
-        <Text color="brightRed" weight="bold" styles={{ marginBottom: 16 }} isHidden={!generalErrors.includes('fail')} isFullWidth>
-          Ha ocurrido un error, por favor, vuelve a intentarlo más tarde o envía un email a info@maisharoots.org
+        <SkipWrap />
+        <Text
+          color="brightRed"
+          weight="bold"
+          styles={{ marginBottom: 16 }}
+          isHidden={!generalErrors.includes('fail')}
+          isFullWidth>
+          Ha ocurrido un error, por favor, vuelve a intentarlo más tarde o envía
+          un email a info@maisharoots.org
         </Text>
-        <Button type="submit" isLoading={isSubmitting} styles={{ margin: '0 auto' }}>
+        <Button
+          type="submit"
+          isLoading={isSubmitting}
+          styles={{ margin: '0 auto' }}>
           Enviar
         </Button>
       </form>
-      <PolicyModal isHidden={!isPolicyModalOpen} onClose={() => setIsPolicyModalOpen(false)} />
+      <PolicyModal
+        isHidden={!isPolicyModalOpen}
+        onClose={() => setIsPolicyModalOpen(false)}
+      />
     </>
   )
 }

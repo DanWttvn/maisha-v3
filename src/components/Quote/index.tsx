@@ -7,7 +7,13 @@ export interface Props extends TextProps {
   quotesColor: Color | 'inherit'
 }
 
-const Quote: FC<Props> = ({ children, quotesColor, isHidden, className, ...props }) => {
+const Quote: FC<Props> = ({
+  children,
+  quotesColor,
+  isHidden,
+  className,
+  ...props
+}) => {
   if (isHidden) return null
 
   return (

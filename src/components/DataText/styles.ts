@@ -8,25 +8,29 @@ export default styled(Text)<Props>`
   cursor: default;
   text-align: center;
 
-  ${({ type, theme }) => type === 'number' && css`
-    font-size: 7rem;
-    line-height: 7rem;
+  ${({ type, theme }) =>
+    type === 'number' &&
+    css`
+      font-size: 7rem;
+      line-height: 7rem;
 
-    @media ${theme.breakpoints.sl} {
-      font-size: 5rem;
-      line-height: 5.3rem;
-    }
-  `}
+      @media ${theme.breakpoints.sl} {
+        font-size: 5rem;
+        line-height: 5.3rem;
+      }
+    `}
 
-  ${({ type, theme }) => type === 'text' && css`
-    font-size: 4.5rem;
-    line-height: 4rem;
+  ${({ type, theme }) =>
+    type === 'text' &&
+    css`
+      font-size: 4.5rem;
+      line-height: 4rem;
 
-    @media ${theme.breakpoints.sl} {
-      font-size: 3rem;
-      line-height: 3rem;
-    }
-  `}
+      @media ${theme.breakpoints.sl} {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    `}
   
 
   ${({ styles }) => ({ ...styles })}

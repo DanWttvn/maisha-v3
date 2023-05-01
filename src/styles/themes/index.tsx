@@ -1,16 +1,16 @@
-import light from './light';
+import light from './light'
 
 const untypedThemes = {
   light,
-};
+}
 
-export type Theme = typeof light;
-export type ThemeKey = keyof typeof untypedThemes;
-export type Color = keyof Theme['colors'];
+export type Theme = typeof light
+export type ThemeKey = keyof typeof untypedThemes
+export type Color = keyof Theme['colors']
 
-const themes: { [k in ThemeKey]: Theme } = untypedThemes;
+const themes: { [k in ThemeKey]: Theme } = untypedThemes
 
-export default themes;
+export default themes
 
 declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */

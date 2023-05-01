@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { Link as ScrollLinkRoot, LinkProps } from 'react-scroll'
-// import { HashLink as HashLinkRoot } from 'react-router-hash-link' //! no funciona porque no es para next -> mirar si next tiene algo asi. creo que funciona tal cual
 import NextLink from 'next/link'
 import { Props } from '.'
 import { TextStyles } from 'components/Text/styles'
@@ -45,11 +44,6 @@ export const ScrollLink = styled(ScrollLinkRoot)<Props & LinkProps>`
   ${TextStyles}
   ${LinkStyles}
 `
-
-// export const HashLink = styled(HashLinkRoot)<Props>`
-//   ${TextStyles}
-//   ${LinkStyles}
-// `
 
 export const RouteLink = styled(NextLink)<Props>`
   ${TextStyles}

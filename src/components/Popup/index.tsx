@@ -7,11 +7,19 @@ export interface Props extends BaseProps {
   isShown?: boolean
 }
 
-const Popup: FC<Props> = ({ children, onClose, isShown = false, isHidden, styles, className }) => {
+const Popup: FC<Props> = ({
+  children,
+  onClose,
+  isShown = false,
+  isHidden,
+  styles,
+  className,
+}) => {
   const [isOpen, setIsOpen] = useState(isShown || false)
 
   useEffect(() => {
     if (isShown !== isOpen) setIsOpen(isShown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isShown])
 
   if (isHidden || !isOpen) return null
@@ -23,7 +31,7 @@ const Popup: FC<Props> = ({ children, onClose, isShown = false, isHidden, styles
 
   return (
     <Styled styles={styles} className={className}>
-      <Cross onClick={handleClose}/>
+      <Cross onClick={handleClose} />
       {children}
     </Styled>
   )

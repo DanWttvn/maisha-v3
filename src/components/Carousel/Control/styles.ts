@@ -6,8 +6,8 @@ export default styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1;
-	bottom: 60px;
-	width: 100%;
+  bottom: 60px;
+  width: 100%;
   padding: 0 50px;
 
   @media ${({ theme }) => theme.breakpoints.s} {
@@ -30,11 +30,11 @@ export const NodesWrapper = styled.div`
 `
 
 export const Line = styled.div`
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	border-radius: 50%;
-	background-color: ${({ theme }) => theme.colors.darkOrange};
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.darkOrange};
   top: 22px;
 `
 
@@ -46,22 +46,22 @@ export const NodeWrapper = styled.div`
 
 export const Node = styled.div`
   position: relative;
-	padding: 15px 0;
-	color: white;
-	font-weight: ${({ theme}) => theme.weights.bold};
-	left: -1px;
-	z-index: 1;
-	cursor: pointer;
-	border-radius: 3px;
+  padding: 15px 0;
+  color: white;
+  font-weight: ${({ theme }) => theme.weights.bold};
+  left: -1px;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 3px;
 
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 
-	transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   &::before {
     position: relative;
-    content: "";
+    content: '';
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -73,7 +73,7 @@ export const Node = styled.div`
 
   &::after {
     position: relative;
-    content: "";
+    content: '';
     width: 3px;
     height: 3px;
     border-radius: 50%;
@@ -87,5 +87,5 @@ export const Node = styled.div`
 export const Icon = styled(KeyboardArrowRight)<{ isLeft?: boolean }>`
   width: 1.2rem;
   color: ${({ theme }) => theme.colors.white};
-  ${({ isLeft }) => isLeft ? 'transform: rotate(180deg);' : ''};
+  ${({ isLeft }) => (isLeft ? 'transform: rotate(180deg);' : '')};
 `

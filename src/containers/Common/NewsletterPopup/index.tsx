@@ -11,8 +11,8 @@ export interface Props extends BaseProps {
 
 const NewsletterPopup: FC<Props> = () => {
   const { lang } = useContext(LanguageContext)
-  const [ isShown, setIsShown ] = useState(false)
-  const [ isPolicyAccepted, setIsPolicyAccepted ] = useState(false)
+  const [isShown, setIsShown] = useState(false)
+  const [isPolicyAccepted, setIsPolicyAccepted] = useState(false)
 
   useEffect(() => {
     const nextIsPolicyAccepted = checkCookie('is_policy_accepted')
@@ -21,6 +21,7 @@ const NewsletterPopup: FC<Props> = () => {
 
     const isNewsletterClosed = checkCookie('is_newsletter_closed')
     if (isNewsletterClosed !== 'true') setIsShown(true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleClose = () => {
@@ -28,7 +29,11 @@ const NewsletterPopup: FC<Props> = () => {
   }
 
   return (
-    <Styled isHidden={lang !== 'ES'} isShown={isShown} onClose={handleClose} styles={{ bottom: isPolicyAccepted ? 30 : 100 }}>
+    <Styled
+      isHidden={lang !== 'ES'}
+      isShown={isShown}
+      onClose={handleClose}
+      styles={{ bottom: isPolicyAccepted ? 30 : 100 }}>
       <NewsletterForm />
     </Styled>
   )

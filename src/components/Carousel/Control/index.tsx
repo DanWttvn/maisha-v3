@@ -3,7 +3,14 @@ import { BaseProps } from 'models'
 import theme from 'styles/themes/light'
 import Button from 'components/Button'
 import Text from 'components/Text'
-import Styled, { ButtonsWrapper, NodesWrapper, NodeWrapper, Node, Line, Icon } from './styles'
+import Styled, {
+  ButtonsWrapper,
+  NodesWrapper,
+  NodeWrapper,
+  Node,
+  Line,
+  Icon,
+} from './styles'
 
 export interface Props extends BaseProps {
   control: { currentIndex: number; totalItems: number }
@@ -25,8 +32,9 @@ const Control: FC<Props> = ({ isHidden, control, sectionTitles, onChange }) => {
           onClick={onChange.bind(undefined, i)}
           weight={isActive ? 'black' : 'bold'}
           size={isActive ? 'l' : 'm'}
-          styles={{ color: isActive ? theme.colors.darkOrange : theme.colors.white }}
-        >
+          styles={{
+            color: isActive ? theme.colors.darkOrange : theme.colors.white,
+          }}>
           {x}
         </Text>
       </NodeWrapper>

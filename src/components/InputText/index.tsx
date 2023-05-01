@@ -2,16 +2,16 @@ import { FC, HTMLProps } from 'react'
 import { BaseProps } from 'models'
 import { Styled, Input, Label } from './styles'
 import Text from 'components/Text'
-import { FieldError, UseFormRegisterReturn } from 'react-hook-form'
+import type { FieldError, UseFormRegisterReturn } from 'react-hook-form'
 
 export interface Props extends BaseProps {
-  register: UseFormRegisterReturn;
-  label?: string;
-  type?: 'text' | 'number' | 'email';
-  value?: HTMLProps<HTMLInputElement>['value'];
+  register: UseFormRegisterReturn
+  label?: string
+  type?: 'text' | 'number' | 'email'
+  value?: HTMLProps<HTMLInputElement>['value']
   helper?: string
-  autocomplete?: string;
-  error?: FieldError;
+  autocomplete?: string
+  error?: FieldError
 }
 
 const InputText: FC<Props> = ({
@@ -30,7 +30,7 @@ const InputText: FC<Props> = ({
 
   return (
     <Styled className={className} isFullWidth={isFullWidth}>
-      <Input 
+      <Input
         type={type}
         value={value}
         placeholder=" "
@@ -39,15 +39,18 @@ const InputText: FC<Props> = ({
       />
       <Label>{label} *</Label>
       {!!helper && (
-        <Text size='xs' color='lightGrey' isFullWidth>{helper}</Text>
+        <Text size="xs" color="lightGrey" isFullWidth>
+          {helper}
+        </Text>
       )}
       {!!error && (
-        <Text size='xs' color='brightRed' isFullWidth>{error.message}</Text>
+        <Text size="xs" color="brightRed" isFullWidth>
+          {error.message}
+        </Text>
       )}
     </Styled>
-  );
+  )
 }
-
 
 InputText.displayName = 'InputText'
 

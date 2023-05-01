@@ -5,7 +5,7 @@ export default styled.section<Props>`
   display: flex;
   flex-direction: column;
 
-  ${({ isFullWidth }) => isFullWidth ? 'width: 100%;' : ''};
+  ${({ isFullWidth }) => (isFullWidth ? 'width: 100%;' : '')};
   ${({ styles }) => ({ ...styles })}
 `
 
@@ -18,20 +18,22 @@ export const TabBar = styled.nav`
 export const TabButton = styled.button<{ isActive?: boolean }>`
   outline: none;
   border: none;
-	padding: 2px 10px;
-	font-size: 0.9em;
-	font-weight: ${({ theme}) => theme.weights.bold};
-	background: none;
-	color: #888;
-	transition: all 0.1s ease-out;
+  padding: 2px 10px;
+  font-size: 0.9em;
+  font-weight: ${({ theme }) => theme.weights.bold};
+  background: none;
+  color: #888;
+  transition: all 0.1s ease-out;
 
-  ${({ isActive, theme }) => isActive && css`
-    color: ${theme.colors.black};
-    border-bottom: 2px solid ${theme.colors.black};
-  `}
+  ${({ isActive, theme }) =>
+    isActive &&
+    css`
+      color: ${theme.colors.black};
+      border-bottom: 2px solid ${theme.colors.black};
+    `}
 
   &:hover,
-  &:active  {
+  &:active {
     color: ${({ theme }) => theme.colors.black};
   }
 `

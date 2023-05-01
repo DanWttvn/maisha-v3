@@ -10,7 +10,7 @@ const JoinView: FC = () => (
     <Section>
       <SubSection>
         <Subtitle styles={{ marginTop: 16 }}>Hazte socia/o</Subtitle>
-        <Form variant="3" selectedAmount={0}/>
+        <Form variant="3" selectedAmount={0} />
       </SubSection>
     </Section>
   </MainLayout>

@@ -10,38 +10,41 @@ export default styled.div<Props>`
   display: flex;
   flex-flow: row wrap;
 
-  ${({ isFullWidth, theme }) => !isFullWidth && css`
-    padding-inline: 120px;
-
-    @media ${theme.breakpoints.m} {
-      padding-inline: 80px;
-    }
-    @media ${theme.breakpoints.s} {
-      padding-inline: 40px;
-    }
-    @media ${theme.breakpoints.xs} {
-      padding-inline: 20px;
-    }
-  `}
-
-  ${({ isNarrow, theme }) => isNarrow && css`
-    padding-inline: 170px;
-    justify-content: center;
-
-    @media ${theme.breakpoints.l} {
+  ${({ isFullWidth, theme }) =>
+    !isFullWidth &&
+    css`
       padding-inline: 120px;
-    }
-    @media ${theme.breakpoints.m} {
-      padding-inline: 80px;
-    }
-    @media ${theme.breakpoints.s} {
-      padding-inline: 40px;
-    }
-    @media ${theme.breakpoints.xs} {
-      padding-inline: 20px;
-    }
-  `}
+
+      @media ${theme.breakpoints.m} {
+        padding-inline: 80px;
+      }
+      @media ${theme.breakpoints.s} {
+        padding-inline: 40px;
+      }
+      @media ${theme.breakpoints.xs} {
+        padding-inline: 20px;
+      }
+    `}
+
+  ${({ isNarrow, theme }) =>
+    isNarrow &&
+    css`
+      padding-inline: 170px;
+      justify-content: center;
+
+      @media ${theme.breakpoints.l} {
+        padding-inline: 120px;
+      }
+      @media ${theme.breakpoints.m} {
+        padding-inline: 80px;
+      }
+      @media ${theme.breakpoints.s} {
+        padding-inline: 40px;
+      }
+      @media ${theme.breakpoints.xs} {
+        padding-inline: 20px;
+      }
+    `}
 
   ${({ styles }) => ({ ...styles })}
 `
-

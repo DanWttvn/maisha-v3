@@ -4,9 +4,9 @@ import ImageRoot from 'components/Image'
 import { Props } from '.'
 
 export default styled(ExternalLink)<Partial<Props>>`
-	position: relative;
+  position: relative;
   height: 120px;
-	margin: 0 8px 20px;
+  margin: 0 8px 20px;
   box-shadow: ${({ theme }) => theme.shadows.elevation2};
 `
 
