@@ -6,9 +6,10 @@ export default styled(Text)<Props>`
   position: relative;
 
   &::before {
-    content: "“";
+    content: '“';
     font-size: 9rem;
-    color: ${({ theme, quotesColor }) => quotesColor === 'inherit' ? 'inherit' : theme.colors[quotesColor]};
+    color: ${({ theme, quotesColor }) =>
+      quotesColor === 'inherit' ? 'inherit' : theme.colors[quotesColor]};
     position: relative;
     top: 45px;
     left: 40px;
@@ -16,9 +17,10 @@ export default styled(Text)<Props>`
   }
 
   &::after {
-    content: "”";
+    content: '”';
     font-size: 9rem;
-    color: ${({ theme, quotesColor }) => quotesColor === 'inherit' ? 'inherit' :  theme.colors[quotesColor]};
+    color: ${({ theme, quotesColor }) =>
+      quotesColor === 'inherit' ? 'inherit' : theme.colors[quotesColor]};
     position: absolute;
     right: 40px;
     z-index: -1;
@@ -27,5 +29,5 @@ export default styled(Text)<Props>`
   @media ${({ theme }) => theme.breakpoints.s} {
     font-size: 2rem;
     line-height: 2.6rem;
-	}
+  }
 `

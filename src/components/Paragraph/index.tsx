@@ -22,8 +22,7 @@ const Paragraph: FC<TextProps> = ({
       color={color}
       isCentered={isCentered}
       isFullWidth={isFullWidth}
-      className={className}
-    >
+      className={className}>
       {children}
     </Styled>
   )

@@ -3,13 +3,13 @@ import { BaseProps } from 'models'
 import Styled, { Image } from './styles'
 
 export interface Props extends BaseProps {
- src: string
- href: string
+  src: string
+  href: string
 }
 
 const ColabLink: FC<Props> = ({ src, href }) => (
   <Styled href={href}>
-    <Image src={src}/>
+    <Image src={src} />
   </Styled>
 )
 

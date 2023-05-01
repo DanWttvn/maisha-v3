@@ -8,17 +8,24 @@ export interface Props extends BaseProps {
   min?: number
 }
 
-const Input: FC<Props> = ({ type = 'text', styles, className, min, onChange, isFullWidth }) => {
+const Input: FC<Props> = ({
+  type = 'text',
+  styles,
+  className,
+  min,
+  onChange,
+  isFullWidth,
+}) => {
   const preventSymbols = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === '.' || e.key === ',') e.preventDefault()
   }
 
-  return(
+  return (
     <Styled
       step="1"
       min={min}
       onKeyDown={preventSymbols}
-      onChange={(e) => onChange(e.currentTarget.value)}
+      onChange={e => onChange(e.currentTarget.value)}
       type={type}
       styles={styles}
       className={className}

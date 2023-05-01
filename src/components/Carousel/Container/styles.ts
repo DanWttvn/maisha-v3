@@ -1,24 +1,24 @@
-import styled, { StyledProps } from 'styled-components'
+import styled from 'styled-components'
 import { BaseProps } from 'models'
 import SubtitleRoot from 'components/Subtitle'
 
-export default styled.section<StyledProps<BaseProps>>`
+export default styled.section<BaseProps>`
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow-x: hidden;
   position: relative;
 
-  ${({ isFullWidth }) => isFullWidth ? 'width: 100%;' : ''};
+  ${({ isFullWidth }) => (isFullWidth ? 'width: 100%;' : '')};
   ${({ styles }) => ({ ...styles })}
 `
 
-export const Content = styled.div<StyledProps<BaseProps>>`
+export const Content = styled.div<BaseProps>`
   position: relative;
   height: 100%;
   overflow: hidden;
 
-  ${({ isFullWidth }) => isFullWidth ? 'width: 100%;' : ''};
+  ${({ isFullWidth }) => (isFullWidth ? 'width: 100%;' : '')};
   ${({ styles }) => ({ ...styles })};
 `
 

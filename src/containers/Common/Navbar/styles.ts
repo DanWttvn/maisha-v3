@@ -93,6 +93,6 @@ export const VerticalDivider = styled.div`
 `
 
 export const Li = styled(DefaultLi)`
-  font-weight: ${({ theme}) => theme.weights.semibold};
+  font-weight: ${({ theme }) => theme.weights.semibold};
   padding: 20px 10px;
 `

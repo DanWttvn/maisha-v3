@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from 'styled-components'
 
 export const headerAnimation = keyframes`
     from {
@@ -10,12 +10,12 @@ export const headerAnimation = keyframes`
       opacity: 1;
     }
   }
-`;
+`
 
 export const sizeAnimation = keyframes`
   from { transform: scale(1); }
   to { transform: scale(1.05); }
-`;
+`
 
 export const circularDash = keyframes`
   0% {
@@ -30,20 +30,20 @@ export const circularDash = keyframes`
     stroke-dasharray: 100px, 200px;
     stroke-dashoffset: -125px;
   }
-`;
+`
 
 export const circularRotate = keyframes`
   100% {
     transform: rotate(360deg);
   }
-`;
+`
 
 export const scrollIconAnimation = keyframes`
   from { bottom: 38px; }
   to { bottom: 34px; }
-`;
+`
 
 export const colorFadeInAnimation = keyframes`
   from { bottom: rgba(0,0,0,0) }
   to { background: rgba(0,0,0,.7); }
-`;
+`

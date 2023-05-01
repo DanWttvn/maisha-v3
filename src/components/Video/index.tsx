@@ -7,11 +7,11 @@ export interface Props extends BaseProps {
   poster?: string
 }
 
-const Video: FC<Props>  = ({ src, poster }) => (
+const Video: FC<Props> = ({ src, poster }) => (
   <Container>
     <ReactPlayer
       url={src}
-      light={!!poster && <Thumbnail src={poster} alt='Thumbnail' />}
+      light={!!poster && <Thumbnail src={poster} alt="Thumbnail" />}
       width="100%"
       height="100%"
       controls
@@ -20,9 +20,9 @@ const Video: FC<Props>  = ({ src, poster }) => (
         vimeo: {
           playerOptions: {
             autoplay: true,
-            responsive: true
-          }
-        }
+            responsive: true,
+          },
+        },
       }}
     />
   </Container>

@@ -4,7 +4,7 @@ import Styled, { OpenQuote, CloseQuote, Text, Image } from './styles'
 
 const Header: FC = () => (
   <Styled>
-    <Image 
+    <Image
       src="/images/playing_kids.webp"
       srcSet="
         /images/playing_kids-1400w.webp 1400w,
@@ -16,9 +16,18 @@ const Header: FC = () => (
     />
     <Paragraph>
       <OpenQuote />
-      <Text weight="black" color="white" size="xl" styles={{ fontStyle: 'italic' }} >Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo</Text>
+      <Text
+        weight="black"
+        color="white"
+        size="xl"
+        styles={{ fontStyle: 'italic' }}>
+        Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede
+        cambiar el mundo
+      </Text>
       <CloseQuote />
-      <Text weight="black" color="white" size="xl" styles={{ marginLeft: 16 }}>E. Galeano</Text>
+      <Text weight="black" color="white" size="xl" styles={{ marginLeft: 16 }}>
+        E. Galeano
+      </Text>
     </Paragraph>
   </Styled>
 )

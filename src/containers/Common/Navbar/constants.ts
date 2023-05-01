@@ -1,4 +1,4 @@
-import { SectionData } from "models";
+import { SectionData } from 'models'
 
 export const SECTIONS_DATA: SectionData[] = [
   {

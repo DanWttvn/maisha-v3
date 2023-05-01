@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { TextProps, SectionTitle, SubSectionTitle } from 'models'
 import { urls } from 'globals/routes'
-import { ScrollLink,  RouteLink } from './styles'
+import { ScrollLink, RouteLink } from './styles'
 
 export interface LinkProps extends TextProps {
   variant?: 'menu' | 'footer' | 'app'
@@ -37,8 +37,7 @@ const AppLink: FC<Props> = ({
         activeClass="active"
         spy={true}
         smooth={true}
-        className={className}
-      >
+        className={className}>
         {children}
       </ScrollLink>
     )
@@ -46,14 +45,24 @@ const AppLink: FC<Props> = ({
 
   if (!!toSection) {
     return (
-      <RouteLink href={`${urls.root}#${toSection}`} onClick={onClick} variant={variant} size={size} weight={weight}>
+      <RouteLink
+        href={`${urls.root}#${toSection}`}
+        onClick={onClick}
+        variant={variant}
+        size={size}
+        weight={weight}>
         {children}
       </RouteLink>
     )
   }
 
   return (
-    <RouteLink href={toPage ?? '#'} onClick={onClick} variant={variant} size={size} weight={weight}>
+    <RouteLink
+      href={toPage ?? '#'}
+      onClick={onClick}
+      variant={variant}
+      size={size}
+      weight={weight}>
       {children}
     </RouteLink>
   )

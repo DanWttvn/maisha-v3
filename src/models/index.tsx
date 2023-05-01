@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CSSProperties, PropsWithChildren } from 'react'
 import { Color } from 'styles/themes'
 
@@ -14,7 +15,14 @@ export interface InputProps {
   isRequired?: boolean
 }
 
-export type SectionTitle = 'header' | 'about' | 'timeline' | 'how-work' | 'projects' | 'collaborate' | 'transparency'
+export type SectionTitle =
+  | 'header'
+  | 'about'
+  | 'timeline'
+  | 'how-work'
+  | 'projects'
+  | 'collaborate'
+  | 'transparency'
 export type SubSectionTitle =
   | 'know-us'
   | 'where'
@@ -43,7 +51,7 @@ export interface TextProps extends BaseProps {
   isCentered?: boolean
   weight?: 'normal' | 'semibold' | 'bold' | 'black' | 'inherit'
   size?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'inherit'
-  color?: Color |'inherit'
+  color?: Color | 'inherit'
 }
 
 export type FormDraft<T> = { [P in keyof Partial<T>]: T[P] }

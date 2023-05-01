@@ -6,7 +6,12 @@ export interface Props extends BaseProps {
   type?: 'text' | 'number'
 }
 
-const DataText: FC<PropsWithChildren<Props>> = ({ children, type = 'number', styles, isHidden }) => {
+const DataText: FC<PropsWithChildren<Props>> = ({
+  children,
+  type = 'number',
+  styles,
+  isHidden,
+}) => {
   if (isHidden) return null
   return (
     <Styled type={type} styles={styles}>

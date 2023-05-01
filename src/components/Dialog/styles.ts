@@ -8,15 +8,14 @@ export default styled.div<BaseProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(50,50,50,.5);
+  background: rgba(50, 50, 50, 0.5);
   z-index: ${({ theme }) => theme.zIndex.high};
 
   ${({ styles }) => ({ ...styles })}
 `
 
 export const Modal = styled(ModalRoot)<BaseProps>`
-	width: 90%;
+  width: 90%;
   max-height: 90vh;
   overflow-y: auto;
 `
-

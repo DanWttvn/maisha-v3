@@ -27,9 +27,9 @@ export const HelperText = styled(Text)`
 `
 
 export const ErrorText = styled(HelperText).attrs({
-  color:"brightRed",
-  weight:"black",
-  isFullWidth: true
+  color: 'brightRed',
+  weight: 'black',
+  isFullWidth: true,
 })``
 
 export const JoinButton = styled(Button)`

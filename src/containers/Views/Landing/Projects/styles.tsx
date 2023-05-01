@@ -12,7 +12,7 @@ export const ProjectContainer = styled(Container)`
 `
 
 export const Project = styled(Container).attrs({
-  direction: 'vertical'
+  direction: 'vertical',
 })`
   width: 33%;
   padding: 25px 20px;
@@ -30,7 +30,7 @@ export const Project = styled(Container).attrs({
 
 export const Title = styled(DefaultText).attrs({
   weight: 'black',
-  size: 'm'
+  size: 'm',
 })`
   margin-block: 16px 8px;
   text-align: center;

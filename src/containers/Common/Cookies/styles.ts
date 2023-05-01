@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const TextDarkGrey = styled(DefaultText).attrs({
   color: 'darkGrey',
-  size: 's'
+  size: 's',
 })``
 
 export const TextBold = styled(DefaultText).attrs({

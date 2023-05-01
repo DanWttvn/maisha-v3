@@ -6,7 +6,13 @@ export interface Props extends BaseProps {
   onClose?: () => void
 }
 
-const Dialog: FC<Props> = ({ children, styles, onClose, className, isHidden }) => {
+const Dialog: FC<Props> = ({
+  children,
+  styles,
+  onClose,
+  className,
+  isHidden,
+}) => {
   if (isHidden) return null
 
   return (

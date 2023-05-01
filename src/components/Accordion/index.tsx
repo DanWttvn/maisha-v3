@@ -9,7 +9,14 @@ export interface Props extends BaseProps {
   isDefaultOpen?: boolean
 }
 
-const Accordion: FC<Props> = ({ isHidden, title, styles, children, isFullWidth, isDefaultOpen }) => {
+const Accordion: FC<Props> = ({
+  isHidden,
+  title,
+  styles,
+  children,
+  isFullWidth,
+  isDefaultOpen,
+}) => {
   const [isOpen, setIsOpen] = useState(!!isDefaultOpen)
   const [height, setHeight] = useState(0)
   const contentRef = useRef<HTMLDivElement>()

@@ -6,15 +6,36 @@ export interface Props extends TextProps {
   isSmall?: boolean
 }
 
-const Subtitle: FC<Props> = ({ children, styles, color, isSmall, isCentered, isFullWidth, className }) => {
-  return (
-    <>
-      {isSmall
-        ? <H4 color={color} isCentered={isCentered} styles={styles} isFullWidth={isFullWidth} className={className}>{children}</H4>
-        : <H3 color={color} isCentered={isCentered} styles={styles} isFullWidth={isFullWidth} className={className}>{children}</H3>
-      }
-    </>
-  )
-}
+const Subtitle: FC<Props> = ({
+  children,
+  styles,
+  color,
+  isSmall,
+  isCentered,
+  isFullWidth,
+  className,
+}) => (
+  <>
+    {isSmall ? (
+      <H4
+        color={color}
+        isCentered={isCentered}
+        styles={styles}
+        isFullWidth={isFullWidth}
+        className={className}>
+        {children}
+      </H4>
+    ) : (
+      <H3
+        color={color}
+        isCentered={isCentered}
+        styles={styles}
+        isFullWidth={isFullWidth}
+        className={className}>
+        {children}
+      </H3>
+    )}
+  </>
+)
 
 export default Subtitle

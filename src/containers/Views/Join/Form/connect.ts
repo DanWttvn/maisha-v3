@@ -60,7 +60,7 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
     )
 
     try {
-      await fetch(`${process.env['REACT_APP_JOIN_SENDINBLUE']}`, {
+      await fetch(process.env['REACT_APP_JOIN_SENDINBLUE'] || '', {
         method: 'POST',
         body: formData,
       })

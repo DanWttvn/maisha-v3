@@ -5,7 +5,15 @@ import Container from 'components/Container'
 import LanguageContext from 'contexts/language'
 import { BaseProps, Language } from 'models'
 import AppLink from 'components/AppLink'
-import Styled, { Hamburger, Cross, ItemsWrapper, Menu, Backdrop, VerticalDivider, Li } from './styles'
+import Styled, {
+  Hamburger,
+  Cross,
+  ItemsWrapper,
+  Menu,
+  Backdrop,
+  VerticalDivider,
+  Li,
+} from './styles'
 import { SECTIONS_DATA } from './constants'
 
 interface Props extends BaseProps {
@@ -30,6 +38,7 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
     return () => {
       document.removeEventListener('scroll', handleScroll)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleOpen = (isOpen: boolean) => {
@@ -41,7 +50,10 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
   }
 
   const items = SECTIONS_DATA.map(section => {
-    const subItems = section.subsections?.map(subSection => ({ name: subSection.title[lang], section: subSection.id }))
+    const subItems = section.subsections?.map(subSection => ({
+      name: subSection.title[lang],
+      section: subSection.id,
+    }))
 
     return (
       <NavItem
@@ -50,8 +62,7 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
         subItemsData={subItems}
         onOpen={handleOpen}
         onClick={handleClick}
-        isHomePage={isHomePage}
-      >
+        isHomePage={isHomePage}>
         {section.title[lang]}
       </NavItem>
     )
@@ -71,8 +82,14 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
       <Hamburger onClick={() => setIsResponsiveOpen(true)} />
 
       <ItemsWrapper>
-        <Backdrop onClick={() => setIsResponsiveOpen(false)} isResponsiveOpen={isResponsiveOpen} />
-        <Cross onClick={() => setIsResponsiveOpen(false)} isResponsiveOpen={isResponsiveOpen} />
+        <Backdrop
+          onClick={() => setIsResponsiveOpen(false)}
+          isResponsiveOpen={isResponsiveOpen}
+        />
+        <Cross
+          onClick={() => setIsResponsiveOpen(false)}
+          isResponsiveOpen={isResponsiveOpen}
+        />
         <Menu isResponsiveOpen={isResponsiveOpen}>
           {items}
           <Container>
