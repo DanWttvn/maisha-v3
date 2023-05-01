@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FormValues, schema } from './types'
 
+const ENDPOINT = process.env['SENDINBLUE_JOIN'] || ''
+
 export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
   const { push } = useRouter()
   const [selectedAmount, setSelectedAmount] = useState<number | null>(
@@ -60,7 +62,7 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
     )
 
     try {
-      await fetch(process.env['REACT_APP_JOIN_SENDINBLUE'] || '', {
+      await fetch(ENDPOINT, {
         method: 'POST',
         body: formData,
       })
