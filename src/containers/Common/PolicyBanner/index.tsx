@@ -1,13 +1,13 @@
 import React, { FC, useContext, useEffect, useState } from 'react'
-import Banner from 'components/Banner'
 import Button from 'components/Button'
 import Text from 'components/Text'
 import LanguageContext from 'contexts/language'
 import { checkCookie, setCookie } from 'helpers/cookies'
 import { BaseProps } from 'models'
 import PolicyModal from 'containers/Common/PolicyModal'
+import Styled from './styles'
 
-const PolicyBanner: FC<BaseProps> = () => {
+const PolicyBanner: FC<BaseProps> = ({ isHidden, className }) => {
   const { lang } = useContext(LanguageContext)
   const [isShown, setIsShown] = useState(false)
   const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false)
@@ -24,12 +24,11 @@ const PolicyBanner: FC<BaseProps> = () => {
     setIsShown(false)
   }
 
+  if (isHidden) return null
+
   return (
     <>
-      <Banner
-        variant="A"
-        isShown={isShown}
-        styles={{ padding: '20px 30px', alignItems: 'center' }}>
+      <Styled isShown={isShown} className={className}>
         <Text size="s" styles={{ flex: 1 }}>
           {lang === 'ES' &&
             'Esta web utiliza cookies para proporcionar un uso personalizado al usuario del Web. Si continuas la navegación consideramos que aceptas su uso.'}
@@ -54,7 +53,7 @@ const PolicyBanner: FC<BaseProps> = () => {
           {lang === 'EN' && 'Accept'}
           {lang === 'SW' && 'Kubali'}
         </Button>
-      </Banner>
+      </Styled>
       <PolicyModal
         isHidden={!isPolicyModalOpen}
         onClose={() => setIsPolicyModalOpen(false)}

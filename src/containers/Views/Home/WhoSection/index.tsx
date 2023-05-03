@@ -40,7 +40,10 @@ const WhoSection: FC<SectionProps> = () => {
         }
       />
 
-      <SubSection id="know-us" styles={{ maxHeight: 600 }} isFullWidth>
+      <SubSection
+        id="know-us"
+        styles={{ maxHeight: 600, overflow: 'hidden' }}
+        isFullWidth>
         <InnerContainer>
           <Subtitle color="white">
             {lang === 'ES' && 'Conócenos'}

@@ -214,7 +214,7 @@ const CollaborateSection: FC<SectionProps> = () => {
           {lang === 'SW' && 'Changia'}
         </Subtitle>
         <Accordion
-          title="Hazte socia/o"
+          title="Hazte socio"
           isHidden={lang !== 'ES'}
           isFullWidth
           isDefaultOpen>

@@ -11,7 +11,7 @@ export default styled(Container)`
 `
 
 export const Input = styled(InputRoot)`
-  width: 64px;
+  width: 84px; // TODOs: it should take the width of its content
   margin-right: 12px;
   font-size: 2.5rem;
 

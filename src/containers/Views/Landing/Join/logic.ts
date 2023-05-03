@@ -8,7 +8,7 @@ export function useLogic() {
   const [isError, setIsError] = useState(false)
   const [isSmallerThanMin, setIsSmallerThanMin] = useState(false)
   const [isCTAVisible, setIsCTAVisible] = useState(true)
-  const { isNear, elementRef } = useIntersection(false, '350px', true)
+  const { isNear, elementRef } = useIntersection(false, '100px', true)
 
   useEffect(() => {
     setIsCTAVisible(isNear)

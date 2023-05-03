@@ -32,7 +32,7 @@ export const ButtonA = styled(Button)`
       isSelected ? theme.colors.offOrange : theme.colors.brightRed};
   }
 
-  ${({ styles }) => ({ ...styles })}
+  ${({ styles }) => ({ ...styles })};
 `
 
 export const ButtonB = styled(Button)`
@@ -47,7 +47,7 @@ export const ButtonB = styled(Button)`
     color: ${({ theme }) => theme.colors.offOrange};
   }
 
-  ${({ styles }) => ({ ...styles })}
+  ${({ styles }) => ({ ...styles })};
 `
 
 export const ButtonC = styled(ButtonA)`
@@ -61,7 +61,7 @@ export const ButtonC = styled(ButtonA)`
     padding: 15px 22px;
   }
 
-  ${({ styles }) => ({ ...styles })}
+  ${({ styles }) => ({ ...styles })};
 `
 
 export const ButtonD = styled(Button)`
