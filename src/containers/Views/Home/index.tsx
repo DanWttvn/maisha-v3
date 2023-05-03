@@ -7,6 +7,7 @@ import ProjectsSection from './ProjectsSection'
 import CollaborateSection from './CollaborateSection'
 import TransparencySection from './TransparencySection'
 import MainLayout from 'containers/Layouts/Main'
+import JoinBanner from './JoinBanner'
 
 // TODOs: como meter google tag manager (.html)
 
@@ -19,6 +20,7 @@ const HomeView: FC = () => (
     <ProjectsSection />
     <CollaborateSection />
     <TransparencySection />
+    <JoinBanner />
   </MainLayout>
 )
 

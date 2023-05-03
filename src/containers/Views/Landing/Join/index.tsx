@@ -35,7 +35,7 @@ const Join: FC<Props> = ({ variant }) => {
     <>
       <Styled direction="vertical">
         <Container styles={{ justifyContent: 'center' }}>
-          {[5, 10, 15, 20, 25].map(amount => (
+          {[9, 15].map(amount => (
             <Button
               key={amount}
               onClick={() => handleSelectAmount(amount)}
@@ -77,14 +77,14 @@ const Join: FC<Props> = ({ variant }) => {
 
       <SkipWrap />
       <JoinButton variant="B" onClick={handleOpenForm} ref={elementRef}>
-        HAZTE SOCIA/O
+        HAZTE SOCIO
       </JoinButton>
       <SkipWrap />
 
       <Dialog
         isHidden={!isFormModalOpen}
         onClose={() => setIsFormModalOpen(false)}>
-        <Subtitle>Hazte socia/o</Subtitle>
+        <Subtitle>Hazte socio</Subtitle>
         <Text color="black" weight="semibold" styles={{ marginRight: 8 }}>
           Tu aportación mensual seleccionada es de{' '}
           <strong>{selectedAmount}</strong>€.
