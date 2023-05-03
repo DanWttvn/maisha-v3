@@ -46,7 +46,7 @@ const Projects: FC = () => (
       </Project>
       <Project>
         <Image
-          src="/images/icons/gender.svg"
+          src="/images/icons/Gender.svg"
           styles={{ height: 120, margin: '25px 0' }}
         />
         <Title>Talleres de género</Title>

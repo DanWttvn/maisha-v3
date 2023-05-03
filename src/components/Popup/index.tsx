@@ -3,6 +3,7 @@ import { BaseProps } from 'models'
 import Styled, { Cross } from './styles'
 
 export interface Props extends BaseProps {
+  variant?: 'A' | 'B'
   onClose?: () => void
   isShown?: boolean
 }
@@ -13,6 +14,7 @@ const Popup: FC<Props> = ({
   isShown = false,
   isHidden,
   styles,
+  variant = 'A',
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(isShown || false)
@@ -30,7 +32,7 @@ const Popup: FC<Props> = ({
   }
 
   return (
-    <Styled styles={styles} className={className}>
+    <Styled $variant={variant} styles={styles} className={className}>
       <Cross onClick={handleClose} />
       {children}
     </Styled>

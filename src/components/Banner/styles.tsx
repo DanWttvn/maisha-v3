@@ -11,6 +11,7 @@ export default styled.div<Props & { height: number }>`
   left: 0;
   bottom: ${({ isShown, height }) => (!isShown ? `-${height}px` : 0)};
   transition: bottom 0.5s ease;
+  box-shadow: ${({ theme }) => theme.shadows.elevation3};
 
   ${({ variant }) =>
     variant === 'A' &&

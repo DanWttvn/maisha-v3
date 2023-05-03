@@ -57,12 +57,12 @@ const JoinForm: FC<Props> = ({
           error={errors.lastName}
           register={register('lastName')}
         />
-        <InputText
+        {/* <InputText
           label="DNI/Pasaporte"
           autocomplete="id"
           error={errors.dni}
           register={register('dni')}
-        />
+        /> */}
         <InputText
           label="Email"
           type="email"
@@ -70,13 +70,13 @@ const JoinForm: FC<Props> = ({
           error={errors.email}
           register={register('email')}
         />
-        <InputText
+        {/* <InputText
           label="Código Postal"
           type="number"
           autocomplete="postal-code"
           error={errors.zipCode}
           register={register('zipCode')}
-        />
+        /> */}
         <InputText
           label="Cuenta Bancaria"
           autocomplete="IBAN"
@@ -94,7 +94,7 @@ const JoinForm: FC<Props> = ({
             <Text weight="bold" styles={{ marginBottom: 8 }} isFullWidth>
               Donación mensual
             </Text>
-            {[5, 10, 15, 20, 25].map(amount => (
+            {[9, 15].map(amount => (
               <OptionsButton
                 key={amount}
                 onClick={() => handleSelectAmount(amount)}
