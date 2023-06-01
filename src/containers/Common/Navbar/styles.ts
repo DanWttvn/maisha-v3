@@ -43,7 +43,7 @@ export const ItemsWrapper = styled.div`
   z-index: ${({ theme }) => theme.zIndex.high};
 `
 
-export const Backdrop = styled.div<{ isResponsiveOpen: boolean }>`
+export const Backdrop = styled.div<{ $isResponsiveOpen: boolean }>`
   display: ${({ isResponsiveOpen }) => (isResponsiveOpen ? 'block' : 'none')};
   animation: 0.4s ease-in-out ${colorFadeInAnimation} forwards;
   position: fixed;
@@ -51,7 +51,7 @@ export const Backdrop = styled.div<{ isResponsiveOpen: boolean }>`
   cursor: pointer;
 `
 
-export const Menu = styled.ul<{ isResponsiveOpen: boolean }>`
+export const Menu = styled.ul<{ $isResponsiveOpen: boolean }>`
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -73,7 +73,7 @@ export const Menu = styled.ul<{ isResponsiveOpen: boolean }>`
   }
 `
 
-export const Cross = styled(CrossRoot)<{ isResponsiveOpen: boolean }>`
+export const Cross = styled(CrossRoot)<{ $isResponsiveOpen: boolean }>`
   position: absolute;
   top: 36px;
   right: 24px;

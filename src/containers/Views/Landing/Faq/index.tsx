@@ -9,6 +9,7 @@ const Faq: FC = () => (
     <Subtitle styles={{ marginBottom: 8 }} isFullWidth>
       FAQ
     </Subtitle>
+    {/* //! NO coje bien la altura */}
     <Accordion title="¿Qué significa ser socio/a de Maisha Roots?" isFullWidth>
       <Paragraph>
         La <strong>estabilidad económica</strong> es la clave del éxito de
