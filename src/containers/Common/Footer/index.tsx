@@ -82,7 +82,7 @@ const Footer: FC<Props> = ({ isHomePage, isSimplified, className, styles }) => {
             weight="bold"
             styles={{ color: theme.colors.offOrange, marginBottom: 15 }}
             isFullWidth>
-            {lang === 'ES' && 'Sígenos'}
+            {lang === 'ES' && 'Síguenos'}
             {lang === 'EN' && 'Follow us'}
             {lang === 'SW' && 'Follow us'}
           </Text>

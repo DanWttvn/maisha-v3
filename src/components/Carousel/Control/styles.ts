@@ -84,8 +84,8 @@ export const Node = styled.div`
   }
 `
 
-export const Icon = styled(KeyboardArrowRight)<{ isLeft?: boolean }>`
+export const Icon = styled(KeyboardArrowRight)<{ $isLeft?: boolean }>`
   width: 1.2rem;
   color: ${({ theme }) => theme.colors.white};
-  ${({ isLeft }) => (isLeft ? 'transform: rotate(180deg);' : '')};
+  ${({ $isLeft }) => ($isLeft ? 'transform: rotate(180deg);' : '')};
 `

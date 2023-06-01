@@ -15,7 +15,7 @@ export default styled(Text)<Props>`
       line-height: 7rem;
 
       @media ${theme.breakpoints.sl} {
-        font-size: 5rem;
+        font-size: 75px;
         line-height: 5.3rem;
       }
     `}
