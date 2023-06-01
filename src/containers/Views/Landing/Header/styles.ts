@@ -35,8 +35,8 @@ const Quote = styled.span<BaseProps>`
   font-style: italic;
   font-weight: 800;
 
-  @media ${({ theme }) => theme.breakpoints.sl} {
-    font-size: 60px;
+  @media ${({ theme }) => theme.breakpoints.m} {
+    font-size: 3.75rem;
   }
 `
 
@@ -59,17 +59,17 @@ export const CloseQuote = styled(Quote)`
     content: '”';
   }
 
-  @media ${({ theme }) => theme.breakpoints.sl} {
+  @media ${({ theme }) => theme.breakpoints.m} {
     top: 10px;
     line-height: 12px;
   }
 `
 
 export const Text = styled(TextRoot)`
-  font-size: 3.4rem;
-  line-height: 4.7rem;
+  font-size: 3.125rem;
+  line-height: 130%;
 
-  @media ${({ theme }) => theme.breakpoints.sl} {
+  @media ${({ theme }) => theme.breakpoints.m} {
     font-size: 2rem;
     line-height: 3rem;
   }

@@ -11,10 +11,11 @@ const DataText: FC<PropsWithChildren<Props>> = ({
   type = 'number',
   styles,
   isHidden,
+  className,
 }) => {
   if (isHidden) return null
   return (
-    <Styled type={type} styles={styles}>
+    <Styled type={type} styles={styles} className={className}>
       {children}
     </Styled>
   )

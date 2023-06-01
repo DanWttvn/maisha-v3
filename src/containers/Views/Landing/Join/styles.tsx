@@ -5,7 +5,8 @@ import InputRoot from 'components/Input'
 import Text from 'components/Text'
 
 export default styled(Container)`
-  margin: -80px auto 24px;
+  margin: 0 auto 24px;
+  transform: translateY(-50%);
   padding: 0 16px;
   z-index: ${({ theme }) => theme.zIndex.medium};
 `
