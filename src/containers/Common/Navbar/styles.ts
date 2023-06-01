@@ -4,13 +4,13 @@ import { Cross as CrossRoot } from 'styled-icons/entypo'
 import { colorFadeInAnimation } from 'styles/animations'
 import { Li as DefaultLi } from 'components/NavItem/styles'
 
-export default styled.nav<{ isOpen: boolean; isHeroSection: boolean }>`
+export default styled.nav<{ $isOpen: boolean; $isHeroSection: boolean }>`
   width: 100%;
   position: fixed;
   top: 0;
   padding: 20px 50px;
   background: #fff;
-  opacity: ${({ isHeroSection }) => (isHeroSection ? 0 : 1)};
+  opacity: ${({ $isHeroSection }) => ($isHeroSection ? 0 : 1)};
   box-shadow: ${({ theme }) => theme.shadows.elevation2};
   z-index: ${({ theme }) => theme.zIndex.medium};
 
@@ -20,7 +20,7 @@ export default styled.nav<{ isOpen: boolean; isHeroSection: boolean }>`
   align-items: flex-start;
   align-content: center;
 
-  height: ${({ isOpen }) => (isOpen ? '115px' : '90px')};
+  height: ${({ $isOpen }) => ($isOpen ? '115px' : '90px')};
   transition: all 0.4s ease-in-out;
 `
 

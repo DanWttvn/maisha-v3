@@ -58,7 +58,7 @@ const NavItem: FC<Props> = ({
           {children}
         </AppLink>
       )}
-      <SubItemsWrapper isOpen={showSub}>{subItems}</SubItemsWrapper>
+      <SubItemsWrapper $isOpen={showSub}>{subItems}</SubItemsWrapper>
     </Li>
   )
 }

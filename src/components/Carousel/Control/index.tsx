@@ -52,7 +52,7 @@ const Control: FC<Props> = ({ isHidden, control, sectionTitles, onChange }) => {
     <Styled>
       <ButtonsWrapper>
         <Button variant="E" onClick={() => handleChange(currentIndex - 1)}>
-          <Icon isLeft />
+          <Icon $isLeft />
         </Button>
         <Button variant="E" onClick={() => handleChange(currentIndex + 1)}>
           <Icon />

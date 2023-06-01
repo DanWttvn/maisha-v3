@@ -10,12 +10,12 @@ export default styled.div<BaseProps>`
   ${({ styles }) => ({ ...styles })};
 `
 
-export const Icon = styled(KeyboardArrowRight)<{ isOpen?: boolean }>`
+export const Icon = styled(KeyboardArrowRight)<{ $isOpen?: boolean }>`
   width: 25px;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.lightestGrey};
 
-  ${({ isOpen }) => (isOpen ? 'transform: rotate(90deg);' : '')};
+  ${({ $isOpen }) => ($isOpen ? 'transform: rotate(90deg);' : '')};
   transition: transform 0.4s ease-out;
 `
 
@@ -25,13 +25,13 @@ export const Header = styled.div`
   cursor: pointer;
 `
 
-export const Content = styled.article<{ isOpen: boolean; height: number }>`
+export const Content = styled.article<{ $isOpen: boolean; $height: number }>`
   display: flex;
   flex-flow: row wrap;
   padding: 0 30px;
   overflow: hidden;
 
-  height: ${({ isOpen, height }) => (isOpen ? `${height}px` : 0)};
+  height: ${({ $isOpen, $height }) => ($isOpen ? `${$height}px` : 0)};
   transition: height 0.4s ease-out;
 `
 
