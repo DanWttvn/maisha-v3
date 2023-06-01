@@ -9,6 +9,7 @@ export interface Props extends BaseProps {
   isDefaultOpen?: boolean
 }
 
+//! poner cuando eventhandler cuando cambia el ancho de la pantalla
 const Accordion: FC<Props> = ({
   isHidden,
   title,
@@ -36,12 +37,12 @@ const Accordion: FC<Props> = ({
     <Styled styles={styles} isFullWidth={isFullWidth}>
       <Header onClick={handleToggle}>
         <Text weight="bold" styles={{ marginTop: 4 }}>
-          <Icon isOpen={isOpen} onClick={handleToggle} />
+          <Icon $isOpen={isOpen} onClick={handleToggle} />
           {title}
         </Text>
         <Separator styles={{ margin: '5px 0' }} />
       </Header>
-      <Content isOpen={isOpen} height={height}>
+      <Content $isOpen={isOpen} $height={height}>
         <Wrapper ref={contentRef}>{children}</Wrapper>
       </Content>
     </Styled>

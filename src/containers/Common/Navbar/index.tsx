@@ -62,7 +62,8 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
         subItemsData={subItems}
         onOpen={handleOpen}
         onClick={handleClick}
-        isHomePage={isHomePage}>
+        isHomePage={isHomePage}
+        externalHref={section.externalHref}>
         {section.title[lang]}
       </NavItem>
     )
@@ -74,7 +75,7 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
   }
 
   return (
-    <Styled isOpen={isDesktopOpen} isHeroSection={isHeroSection}>
+    <Styled $isOpen={isDesktopOpen} $isHeroSection={isHeroSection}>
       <AppLink toSection="header" isSamePage={isHomePage}>
         <Image styles={{ width: 200, marginTop: 16 }} src="./images/logo.png" />
       </AppLink>
@@ -84,13 +85,13 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
       <ItemsWrapper>
         <Backdrop
           onClick={() => setIsResponsiveOpen(false)}
-          isResponsiveOpen={isResponsiveOpen}
+          $isResponsiveOpen={isResponsiveOpen}
         />
         <Cross
           onClick={() => setIsResponsiveOpen(false)}
-          isResponsiveOpen={isResponsiveOpen}
+          $isResponsiveOpen={isResponsiveOpen}
         />
-        <Menu isResponsiveOpen={isResponsiveOpen}>
+        <Menu $isResponsiveOpen={isResponsiveOpen}>
           {items}
           <Container>
             <Li onClick={() => onLanguageChange('ES')} isSubItem>

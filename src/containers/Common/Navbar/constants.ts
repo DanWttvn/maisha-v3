@@ -35,14 +35,14 @@ export const SECTIONS_DATA: SectionData[] = [
       },
     ],
   },
-  {
-    id: 'timeline',
-    title: {
-      ES: 'De dónde venimos',
-      EN: 'Where we come from',
-      SW: 'Tumetoka wapi',
-    },
-  },
+  // {
+  //   id: 'timeline',
+  //   title: {
+  //     ES: 'De dónde venimos',
+  //     EN: 'Where we come from',
+  //     SW: 'Tumetoka wapi',
+  //   },
+  // },
   {
     id: 'how-work',
     title: {
@@ -136,5 +136,14 @@ export const SECTIONS_DATA: SectionData[] = [
         },
       },
     ],
+  },
+  {
+    id: 'blog',
+    title: {
+      ES: 'Blog',
+      EN: 'Blog',
+      SW: 'Blog',
+    },
+    externalHref: 'https://maisharoots.blogspot.com/',
   },
 ]

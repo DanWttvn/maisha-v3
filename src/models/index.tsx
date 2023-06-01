@@ -23,6 +23,8 @@ export type SectionTitle =
   | 'projects'
   | 'collaborate'
   | 'transparency'
+  | 'blog'
+
 export type SubSectionTitle =
   | 'know-us'
   | 'where'
@@ -69,4 +71,5 @@ export interface SectionData {
     id: SubSectionTitle
     title: LanguageOptions
   }[]
+  externalHref?: string
 }

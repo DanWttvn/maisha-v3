@@ -1,7 +1,13 @@
 import React, { FC } from 'react'
 import Container from 'components/Container'
 import DataText from 'components/DataText'
-import { SubSection, DataContainer, Text } from './styles'
+import {
+  SubSection,
+  DataContainer,
+  Text,
+  SlashContainer,
+  Group,
+} from './styles'
 
 const Infography: FC = () => (
   <SubSection isNarrow>
@@ -9,19 +15,19 @@ const Infography: FC = () => (
       direction="horizontal"
       styles={{ justifyContent: 'space-around' }}
       isFullWidth>
-      <Container>
+      <Group>
         <DataContainer>
           <DataText>320</DataText>
           <Text>menores</Text>
           <Text>beneficiarios</Text>
         </DataContainer>
-        <DataText styles={{ margin: '34px 16px 0 16px' }}>/</DataText>
+        <SlashContainer>/</SlashContainer>
         <DataContainer>
           <DataText>44</DataText>
           <Text>personas adultas</Text>
           <Text>beneficiarias</Text>
         </DataContainer>
-      </Container>
+      </Group>
       <DataContainer>
         <DataText>+250</DataText>
         <Text>personas sensibilizadas</Text>
@@ -32,18 +38,18 @@ const Infography: FC = () => (
         <DataText>120</DataText>
         <Text>Voluntarios/as</Text>
       </DataContainer>
-      <Container>
+      <Group>
         <DataContainer>
           <DataText>5</DataText>
           <Text>convenios con</Text>
           <Text>universidades</Text>
         </DataContainer>
-        <DataText styles={{ margin: '34px 16px 0 16px' }}>/</DataText>
+        <SlashContainer>/</SlashContainer>
         <DataContainer>
           <DataText>3</DataText>
           <Text>Colegios amigos</Text>
         </DataContainer>
-      </Container>
+      </Group>
       <DataContainer>
         <DataText>40</DataText>
         <Text>Socios/as</Text>

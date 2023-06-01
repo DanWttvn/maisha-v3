@@ -4,13 +4,13 @@ import { Cross as CrossRoot } from 'styled-icons/entypo'
 import { colorFadeInAnimation } from 'styles/animations'
 import { Li as DefaultLi } from 'components/NavItem/styles'
 
-export default styled.nav<{ isOpen: boolean; isHeroSection: boolean }>`
+export default styled.nav<{ $isOpen: boolean; $isHeroSection: boolean }>`
   width: 100%;
   position: fixed;
   top: 0;
   padding: 20px 50px;
   background: #fff;
-  opacity: ${({ isHeroSection }) => (isHeroSection ? 0 : 1)};
+  opacity: ${({ $isHeroSection }) => ($isHeroSection ? 0 : 1)};
   box-shadow: ${({ theme }) => theme.shadows.elevation2};
   z-index: ${({ theme }) => theme.zIndex.medium};
 
@@ -20,7 +20,7 @@ export default styled.nav<{ isOpen: boolean; isHeroSection: boolean }>`
   align-items: flex-start;
   align-content: center;
 
-  height: ${({ isOpen }) => (isOpen ? '115px' : '90px')};
+  height: ${({ $isOpen }) => ($isOpen ? '115px' : '90px')};
   transition: all 0.4s ease-in-out;
 `
 
@@ -43,15 +43,15 @@ export const ItemsWrapper = styled.div`
   z-index: ${({ theme }) => theme.zIndex.high};
 `
 
-export const Backdrop = styled.div<{ isResponsiveOpen: boolean }>`
-  display: ${({ isResponsiveOpen }) => (isResponsiveOpen ? 'block' : 'none')};
+export const Backdrop = styled.div<{ $isResponsiveOpen: boolean }>`
+  display: ${({ $isResponsiveOpen }) => ($isResponsiveOpen ? 'block' : 'none')};
   animation: 0.4s ease-in-out ${colorFadeInAnimation} forwards;
   position: fixed;
   inset: 0;
   cursor: pointer;
 `
 
-export const Menu = styled.ul<{ isResponsiveOpen: boolean }>`
+export const Menu = styled.ul<{ $isResponsiveOpen: boolean }>`
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -65,7 +65,7 @@ export const Menu = styled.ul<{ isResponsiveOpen: boolean }>`
     top: 0;
     height: 100vh;
     width: 80%;
-    right: ${({ isResponsiveOpen }) => (isResponsiveOpen ? '0px' : '-80%')};
+    right: ${({ $isResponsiveOpen }) => ($isResponsiveOpen ? '0px' : '-80%')};
     background: #fff;
     box-shadow: ${({ theme }) => theme.shadows.elevation2};
     flex-flow: column nowrap;
@@ -73,14 +73,14 @@ export const Menu = styled.ul<{ isResponsiveOpen: boolean }>`
   }
 `
 
-export const Cross = styled(CrossRoot)<{ isResponsiveOpen: boolean }>`
+export const Cross = styled(CrossRoot)<{ $isResponsiveOpen: boolean }>`
   position: absolute;
   top: 36px;
   right: 24px;
   color: ${({ theme }) => theme.colors.lightGrey};
   width: 25px;
   cursor: pointer;
-  display: ${({ isResponsiveOpen }) => (isResponsiveOpen ? 'block' : 'none')};
+  display: ${({ $isResponsiveOpen }) => ($isResponsiveOpen ? 'block' : 'none')};
   z-index: ${({ theme }) => theme.zIndex.high};
 `
 

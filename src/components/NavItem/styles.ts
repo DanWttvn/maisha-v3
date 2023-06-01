@@ -22,7 +22,7 @@ export const Li = styled.li<{ isSubItem?: boolean }>`
   }
 `
 
-export const SubItemsWrapper = styled.ul<{ isOpen: boolean }>`
+export const SubItemsWrapper = styled.ul<{ $isOpen: boolean }>`
   top: 0;
   opacity: 0;
   list-style: none;
@@ -38,8 +38,8 @@ export const SubItemsWrapper = styled.ul<{ isOpen: boolean }>`
   align-items: center;
   transition: all 0.4s ease-in-out;
 
-  ${({ isOpen }) =>
-    isOpen &&
+  ${({ $isOpen }) =>
+    $isOpen &&
     css`
       top: 35px;
       opacity: 1;
