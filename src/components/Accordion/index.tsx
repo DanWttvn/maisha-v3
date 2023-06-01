@@ -9,6 +9,7 @@ export interface Props extends BaseProps {
   isDefaultOpen?: boolean
 }
 
+//! poner cuando eventhandler cuando cambia el ancho de la pantalla
 const Accordion: FC<Props> = ({
   isHidden,
   title,
