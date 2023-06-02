@@ -1,16 +1,17 @@
+/* eslint-disable import/no-relative-parent-imports */
 import React, { FC } from 'react'
 
 import MainLayout from 'containers/Layouts/Main'
-import {
-  PostPreview,
-  ContentText,
-  Content,
-  Image,
-  TextContainer,
-} from './styles'
-import Text from 'components/Text'
+import { MainContent, Title } from '../styles'
+import { Content, Arrowicon, UpdatedText } from './styles'
 import useBlogPost from 'hooks/useBlogPost'
 import { useRouter } from 'next/router'
+import parse from 'html-react-parser'
+import DOMPurify from 'isomorphic-dompurify'
+import AppLink from 'components/AppLink'
+import { urls } from 'globals/routes'
+import { format } from 'date-fns'
+import localeEs from 'date-fns/locale/es'
 
 const BlogPostView: FC = () => {
   const {
@@ -21,25 +22,27 @@ const BlogPostView: FC = () => {
 
   return (
     <MainLayout>
-      {!!post && (
-        <Content>
-          <Text tag="h1" weight="black" size="l">
-            {post.title}
-          </Text>
+      <MainContent>
+        <AppLink toPage={urls.blog}>
+          <Arrowicon />
+          Blog
+        </AppLink>
+        {!!post ? (
+          <>
+            <Title>{post.title}</Title>
+            <UpdatedText>
+              {format(new Date(post.updated), 'PPP', {
+                locale: localeEs,
+              })}
+            </UpdatedText>
+            {/* <ShareButtons url={post.id} /> */}
 
-          <ContentText size="s" color="lightGrey">
-            {post.content}
-          </ContentText>
-
-          {/* // TO-DO: functionality */}
-          {/* <ShareButton>
-                  <ShareIcon />
-                  <Text tag="span" size="s">
-                    Compartir
-                  </Text>
-                </ShareButton> */}
-        </Content>
-      )}
+            <Content>{parse(DOMPurify.sanitize(post.content))}</Content>
+          </>
+        ) : (
+          <p>loading...</p>
+        )}
+      </MainContent>
     </MainLayout>
   )
 }

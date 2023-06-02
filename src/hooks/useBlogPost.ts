@@ -3,12 +3,12 @@ import { BlogPost } from 'models/blog'
 import { useEffect, useState } from 'react'
 import { getBlogPost } from 'services/blog'
 
-const useBlogPost = ({ id }: { id: string }) => {
+const useBlogPost = ({ id }: { id: string | undefined }) => {
   const [post, setPost] = useState<BlogPost>()
 
-  const get = async () => {
+  const get = async (postId: string) => {
     try {
-      const data = await getBlogPost({ id })
+      const data = await getBlogPost({ id: postId })
       console.log(data)
       setPost(data)
     } catch (error) {
@@ -17,9 +17,10 @@ const useBlogPost = ({ id }: { id: string }) => {
   }
 
   useEffect(() => {
-    void get()
+    if (!id) return
+    void get(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [id])
 
   return {
     post,

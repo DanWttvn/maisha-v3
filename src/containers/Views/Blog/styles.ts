@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import Paragraph from 'components/Paragraph'
 import Container from 'components/Container'
 import { Share } from '@styled-icons/material/Share'
+import DefaultText from 'components/Text'
 
-export const Content = styled(Container).attrs({
+export const MainContent = styled(Container).attrs({
   direction: 'vertical',
 })`
   padding-block-start: 2.5rem;
@@ -11,6 +12,14 @@ export const Content = styled(Container).attrs({
   max-width: 670px;
   margin: 0 auto;
   gap: 32px;
+`
+
+export const Title = styled(DefaultText).attrs({
+  tag: 'h1',
+  weight: 'black',
+  size: 'l',
+})`
+  line-height: 120%;
 `
 
 export const PostPreview = styled.article`
@@ -26,6 +35,8 @@ export const Image = styled.img<{ $isFallback: boolean }>`
   width: 320px;
   object-fit: ${({ $isFallback }) => ($isFallback ? 'scale-down' : 'cover')};
   height: 100%;
+  /* border-inline-end: 1px solid rgb(0, 0, 0, 0.1); */
+  border-inline-end: 1px solid ${({ theme }) => theme.colors.black};
 `
 
 export const TextContainer = styled.div`

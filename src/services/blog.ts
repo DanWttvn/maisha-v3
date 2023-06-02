@@ -1,6 +1,6 @@
 import { request } from 'helpers/http'
 import { assertParam } from 'helpers/url'
-import { BlogInfo, BlogPosts } from 'models/blog'
+import { BlogInfo, BlogPosts, BlogPost } from 'models/blog'
 
 const baseUrl = `https://www.googleapis.com/blogger/v3/blogs/${
   process.env['BLOGGER_BLOG_ID'] || ''
@@ -19,4 +19,10 @@ export const getBlogPosts = async ({
   request<BlogPosts>(
     `${baseUrl}/posts${authParams}&fetchImages=true&status=live
     ${assertParam('pageToken', pageToken)}`,
+  )
+
+// https://developers.google.com/blogger/docs/3.0/reference/posts/get?hl=es-419
+export const getBlogPost = async ({ id }: { id: string }): Promise<BlogPost> =>
+  request<BlogPost>(
+    `${baseUrl}/posts/${id}${authParams}&fetchImages=true&status=live`,
   )

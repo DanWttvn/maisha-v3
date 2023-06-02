@@ -52,7 +52,7 @@ export interface TextProps extends BaseProps {
   isHighlighted?: boolean
   isCentered?: boolean
   weight?: 'normal' | 'semibold' | 'bold' | 'black' | 'inherit'
-  size?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'inherit'
+  size?: 'xs' | 's' | 'm' | 'l' | 'xl' | 'inherit'
   color?: Color | 'inherit'
   tag?: keyof JSX.IntrinsicElements
 }

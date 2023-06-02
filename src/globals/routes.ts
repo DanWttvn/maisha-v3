@@ -5,6 +5,6 @@ export const urls = {
   thanks: '/thanks',
   landing1: '/hazte-socio',
   landing2: '/unete',
-  blog: 'blog',
-  blogPost: (id: string) => `blog/${id}`,
+  blog: '/blog',
+  blogPost: (id: string) => `/blog/${id}`,
 }

@@ -61,7 +61,7 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
   return (
     <Styled $isOpen={isDesktopOpen} $isHeroSection={isHeroSection}>
       <AppLink toSection="header" isSamePage={isHomePage}>
-        <Image styles={{ width: 200, marginTop: 16 }} src="./images/logo.png" />
+        <Image styles={{ width: 200, marginTop: 16 }} src="/images/logo.png" />
       </AppLink>
 
       <Hamburger onClick={() => setIsResponsiveOpen(true)} />
