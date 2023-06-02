@@ -29,11 +29,11 @@ const BlogView: FC = () => {
       <MainContent>
         {!!posts ? (
           <>
-            {/* TO-DO: first preview with vertical layout */}
             <Title>{blogInfo?.name}</Title>
-            {posts.map(x => (
+            {posts.map((x, i) => (
               <PostPreview
                 key={x.id}
+                $layout={i === 0 ? 'vertical' : 'horizontal'}
                 onClick={() => void push(urls.blogPost(x.id))}>
                 <Image
                   src={x?.images?.[0]?.url || './images/logo.png'}
