@@ -9,6 +9,7 @@ const Text: FC<TextProps> = ({
   color,
   weight = 'normal',
   size = 'm',
+  tag = 'p',
   isHidden,
   isHighlighted,
   isCentered,
@@ -19,6 +20,7 @@ const Text: FC<TextProps> = ({
 
   return (
     <Styled
+      as={tag}
       size={size}
       weight={weight}
       styles={styles}

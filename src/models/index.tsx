@@ -54,6 +54,7 @@ export interface TextProps extends BaseProps {
   weight?: 'normal' | 'semibold' | 'bold' | 'black' | 'inherit'
   size?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'inherit'
   color?: Color | 'inherit'
+  tag?: keyof JSX.IntrinsicElements
 }
 
 export type FormDraft<T> = { [P in keyof Partial<T>]: T[P] }
