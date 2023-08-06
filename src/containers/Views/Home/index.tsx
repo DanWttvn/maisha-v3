@@ -9,8 +9,6 @@ import TransparencySection from './TransparencySection'
 import MainLayout from 'containers/Layouts/Main'
 import JoinBanner from './JoinBanner'
 
-// TODOs: como meter google tag manager (.html)
-
 const HomeView: FC = () => (
   <MainLayout isHomePage>
     <HeroSection />
