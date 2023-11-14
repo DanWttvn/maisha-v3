@@ -1,4 +1,4 @@
-import React, { FC, useContext, useState } from 'react'
+import React, { FC, useContext } from 'react'
 import Button from 'components/Button'
 import Container from 'components/Container'
 import Text from 'components/Text'
@@ -7,7 +7,6 @@ import LanguageContext from 'contexts/language'
 import { BaseProps } from 'models'
 import theme from 'styles/themes/light'
 import NewsletterForm from 'containers/Common/NewsletterForm'
-import PolicyModal from 'containers/Common/PolicyModal'
 import Styled, {
   InnerContainer,
   HorizontalDivider,
@@ -21,6 +20,7 @@ import Styled, {
 import ExternalLink from 'components/ExternalLink'
 import Image from 'components/Image'
 import Paragraph from 'components/Paragraph'
+import { urls } from 'globals/routes'
 
 export interface Props extends BaseProps {
   isHomePage?: boolean
@@ -29,7 +29,6 @@ export interface Props extends BaseProps {
 
 const Footer: FC<Props> = ({ isHomePage, isSimplified, className, styles }) => {
   const { lang, setLang } = useContext(LanguageContext)
-  const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false)
 
   return (
     <Styled className={className} styles={styles}>
@@ -39,7 +38,8 @@ const Footer: FC<Props> = ({ isHomePage, isSimplified, className, styles }) => {
             variant="footer"
             isSamePage={isHomePage}
             size="s"
-            toSection="about">
+            toSection="about"
+          >
             {lang === 'ES' && 'Quiénes somos'}
             {lang === 'EN' && 'Who we are'}
             {lang === 'SW' && 'Sisi ni nani'}
@@ -49,7 +49,8 @@ const Footer: FC<Props> = ({ isHomePage, isSimplified, className, styles }) => {
             variant="footer"
             isSamePage={isHomePage}
             size="s"
-            toSection="donate">
+            toSection="donate"
+          >
             {lang === 'ES' && 'Dona'}
             {lang === 'EN' && 'Donate'}
             {lang === 'SW' && 'Changia'}
@@ -59,7 +60,8 @@ const Footer: FC<Props> = ({ isHomePage, isSimplified, className, styles }) => {
             variant="footer"
             isSamePage={isHomePage}
             size="s"
-            toSection="collaborate">
+            toSection="collaborate"
+          >
             {lang === 'ES' && 'Colabora'}
             {lang === 'EN' && 'Collaborate'}
             {lang === 'SW' && 'Shiriki'}
@@ -81,37 +83,43 @@ const Footer: FC<Props> = ({ isHomePage, isSimplified, className, styles }) => {
             size="s"
             weight="bold"
             styles={{ color: theme.colors.offOrange, marginBottom: 15 }}
-            isFullWidth>
+            isFullWidth
+          >
             {lang === 'ES' && 'Síguenos'}
             {lang === 'EN' && 'Follow us'}
             {lang === 'SW' && 'Follow us'}
           </Text>
           <Container
             styles={{ marginBottom: 15, justifyContent: 'space-around' }}
-            isFullWidth>
+            isFullWidth
+          >
             <ExternalLink
               variant="footer"
               size="xs"
-              href="https://www.facebook.com/maisharoots/">
+              href="https://www.facebook.com/maisharoots/"
+            >
               <FacebookIcon />
             </ExternalLink>
             <ExternalLink
               variant="footer"
               size="xs"
-              href="https://www.instagram.com/maisharoots/">
+              href="https://www.instagram.com/maisharoots/"
+            >
               <InstagramIcon />
             </ExternalLink>
             <ExternalLink
               variant="footer"
               size="xs"
-              href="https://www.youtube.com/channel/UCuKDNl0yLjyZppYISnFrtZg">
+              href="https://www.youtube.com/channel/UCuKDNl0yLjyZppYISnFrtZg"
+            >
               <YoutubeIcon />
             </ExternalLink>
           </Container>
           <ExternalLink
             variant="footer"
             size="xs"
-            href="mailto:info@maisharoots.org">
+            href="mailto:info@maisharoots.org"
+          >
             info@maisharoots.org
           </ExternalLink>
         </Section>
@@ -122,12 +130,14 @@ const Footer: FC<Props> = ({ isHomePage, isSimplified, className, styles }) => {
             color="offOrange"
             styles={{ marginBottom: 15 }}
             isCentered
-            isFullWidth>
+            isFullWidth
+          >
             Languages
           </Text>
           <Container
             styles={{ marginBottom: 15, justifyContent: 'center' }}
-            isFullWidth>
+            isFullWidth
+          >
             <Button variant="D" onClick={() => setLang('ES')}>
               ESP
             </Button>
@@ -140,29 +150,26 @@ const Footer: FC<Props> = ({ isHomePage, isSimplified, className, styles }) => {
               SWA
             </Button>
           </Container>
-          <Text
+          <AppLink
             size="s"
-            color="offOrange"
-            onClick={() => setIsPolicyModalOpen(true)}
-            styles={{ textDecoration: 'underline' }}
-            isCentered
-            isFullWidth>
+            variant="footer"
+            weight="normal"
+            toPage={urls.policy}
+            styles={{ textDecoration: 'underline', margin: '0 auto' }}
+          >
             {lang === 'ES' && 'Política de Privacidad'}
             {lang === 'EN' && 'Privacy Policy'}
             {lang === 'SW' && 'Sera ya faragha'}
-          </Text>
+          </AppLink>
         </Section>
       </InnerContainer>
       <Paragraph
         styles={{ fontSize: 11, color: '#ccc', margin: '16px 0 0' }}
         isCentered
-        isFullWidth>
+        isFullWidth
+      >
         CIF G87557476 - Registro de Fundaciones de competencia estatal
       </Paragraph>
-      <PolicyModal
-        isHidden={!isPolicyModalOpen}
-        onClose={() => setIsPolicyModalOpen(false)}
-      />
     </Styled>
   )
 }

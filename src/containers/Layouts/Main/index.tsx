@@ -46,7 +46,8 @@ const Layout: FC<PropsWithChildren<Props>> = ({ children, isHomePage }) => {
         minHeight: '100vh',
         justifyContent: 'space-between',
       }}
-      isFullWidth>
+      isFullWidth
+    >
       <Navbar isHomePage={isHomePage} />
       {children}
       <Footer />

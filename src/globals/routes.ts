@@ -5,4 +5,5 @@ export const urls = {
   thanks: '/thanks',
   landing1: '/hazte-socio',
   landing2: '/unete',
+  policy: '/policy',
 }
