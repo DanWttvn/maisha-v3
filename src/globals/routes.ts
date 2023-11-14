@@ -7,4 +7,5 @@ export const urls = {
   landing2: '/unete',
   blog: '/blog',
   blogPost: (id: string) => `/blog/${id}`,
+  policy: '/policy',
 }

@@ -4,13 +4,13 @@ import Text from 'components/Text'
 import LanguageContext from 'contexts/language'
 import { checkCookie, setCookie } from 'helpers/cookies'
 import { BaseProps } from 'models'
-import PolicyModal from 'containers/Common/PolicyModal'
 import Styled from './styles'
+import { urls } from 'globals/routes'
+import AppLink from 'components/AppLink'
 
 const PolicyBanner: FC<BaseProps> = ({ isHidden, className }) => {
   const { lang } = useContext(LanguageContext)
   const [isShown, setIsShown] = useState(false)
-  const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false)
 
   useEffect(() => {
     if (isShown) return
@@ -36,28 +36,31 @@ const PolicyBanner: FC<BaseProps> = ({ isHidden, className }) => {
             'This website uses cookies to provide personalized use to the Web user. If you continue browsing we consider that you accept its use.'}
           {lang === 'SW' &&
             'Tovuti hii hutumia kuki kutoa matumizi ya kibinafsi kwa mtumiaji wa Wavuti. Ukiendelea kuvinjari tunathibitisha kuwa unakubali matumizi yake.'}
-          <Text
-            size="s"
-            onClick={() => setIsPolicyModalOpen(true)}
-            styles={{ textDecoration: 'underline', marginLeft: 8 }}>
-            {lang === 'ES' && 'Política de Privacidad'}
-            {lang === 'EN' && 'Privacy Policy'}
-            {lang === 'SW' && 'Sera ya faragha'}
-          </Text>
         </Text>
+        <AppLink
+          size="s"
+          variant="menu"
+          weight="normal"
+          toPage={urls.policy}
+          styles={{
+            textDecoration: 'underline',
+            color: 'white',
+          }}
+        >
+          {lang === 'ES' && 'Política de Privacidad'}
+          {lang === 'EN' && 'Privacy Policy'}
+          {lang === 'SW' && 'Sera ya faragha'}
+        </AppLink>
         <Button
           variant="G"
           onClick={handleAccept}
-          styles={{ marginLeft: 'auto' }}>
+          styles={{ marginLeft: 'auto' }}
+        >
           {lang === 'ES' && 'Aceptar'}
           {lang === 'EN' && 'Accept'}
           {lang === 'SW' && 'Kubali'}
         </Button>
       </Styled>
-      <PolicyModal
-        isHidden={!isPolicyModalOpen}
-        onClose={() => setIsPolicyModalOpen(false)}
-      />
     </>
   )
 }

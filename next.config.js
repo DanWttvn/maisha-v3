@@ -11,5 +11,6 @@ module.exports = {
     SENDINBLUE_JOIN: process.env['SENDINBLUE_JOIN'],
     BLOGGER_API_KEY: process.env['BLOGGER_API_KEY'],
     BLOGGER_BLOG_ID: process.env['BLOGGER_BLOG_ID'],
+    GA_MEASUREMENT_ID: process.env['GA_MEASUREMENT_ID'],
   },
 }

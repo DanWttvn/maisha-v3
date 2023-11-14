@@ -24,6 +24,7 @@ const AppLink: FC<Props> = ({
   variant = 'app',
   isSamePage,
   isHidden,
+  styles,
 }) => {
   if (isHidden) return null
 
@@ -37,7 +38,9 @@ const AppLink: FC<Props> = ({
         activeClass="active"
         spy={true}
         smooth={true}
-        className={className}>
+        className={className}
+        styles={styles}
+      >
         {children}
       </ScrollLink>
     )
@@ -50,7 +53,9 @@ const AppLink: FC<Props> = ({
         onClick={onClick}
         variant={variant}
         size={size}
-        weight={weight}>
+        weight={weight}
+        styles={styles}
+      >
         {children}
       </RouteLink>
     )
@@ -62,7 +67,9 @@ const AppLink: FC<Props> = ({
       onClick={onClick}
       variant={variant}
       size={size}
-      weight={weight}>
+      weight={weight}
+      styles={styles}
+    >
       {children}
     </RouteLink>
   )
