@@ -44,7 +44,8 @@ const JoinForm: FC<Props> = ({
         id="sib-form"
         onSubmit={onSubmit}
         style={{ ...styles, width: '100%' }}
-        noValidate>
+        noValidate
+      >
         <InputText
           label="Nombre"
           autocomplete="first-name"
@@ -89,7 +90,8 @@ const JoinForm: FC<Props> = ({
         <Container
           isHidden={variant !== '3'}
           styles={{ marginBottom: 16 }}
-          isFullWidth>
+          isFullWidth
+        >
           <Container styles={{ margin: '0 auto' }}>
             <Text weight="bold" styles={{ marginBottom: 8 }} isFullWidth>
               Donación mensual
@@ -100,13 +102,15 @@ const JoinForm: FC<Props> = ({
                 onClick={() => handleSelectAmount(amount)}
                 isSelected={
                   selectedAmount === amount && customAmount !== amount
-                }>
+                }
+              >
                 {amount}€
               </OptionsButton>
             ))}
             <OptionsButton
               onClick={() => handleSelectAmount(customAmount)}
-              isSelected={selectedAmount === customAmount}>
+              isSelected={selectedAmount === customAmount}
+            >
               <AmountInput type="number" onChange={handleInputChange} />€
             </OptionsButton>
           </Container>
@@ -115,7 +119,8 @@ const JoinForm: FC<Props> = ({
             isHidden={selectedAmount !== 5}
             color="black"
             size="s"
-            styles={{ maxWidth: 860 }}>
+            styles={{ maxWidth: 860 }}
+          >
             *Para evitar comisiones del banco y sacar el máximo provecho a tu
             aportación, retiraremos cada dos meses 10€ de tu cuenta
           </Text>
@@ -124,14 +129,16 @@ const JoinForm: FC<Props> = ({
             isHidden={!generalErrors.includes('no-amount')}
             color="brightRed"
             weight="black"
-            isFullWidth>
+            isFullWidth
+          >
             *Por favor, selecciona una cantidad mensual
           </Text>
           <Text
             isHidden={!generalErrors.includes('smaller-than-min')}
             color="brightRed"
             weight="black"
-            isFullWidth>
+            isFullWidth
+          >
             *La cantidad mínima es de 5€
           </Text>
         </Container>
@@ -148,7 +155,8 @@ const JoinForm: FC<Props> = ({
         <Text
           size="xs"
           onClick={() => setIsPolicyModalOpen(true)}
-          styles={{ textDecoration: 'underline' }}>
+          styles={{ textDecoration: 'underline' }}
+        >
           Política de Privacidad
         </Text>
         {!!errors.termsAccepted && (
@@ -163,14 +171,16 @@ const JoinForm: FC<Props> = ({
           weight="bold"
           styles={{ marginBottom: 16 }}
           isHidden={!generalErrors.includes('fail')}
-          isFullWidth>
+          isFullWidth
+        >
           Ha ocurrido un error, por favor, vuelve a intentarlo más tarde o envía
           un email a info@maisharoots.org
         </Text>
         <Button
           type="submit"
           isLoading={isSubmitting}
-          styles={{ margin: '0 auto' }}>
+          styles={{ margin: '0 auto' }}
+        >
           Enviar
         </Button>
       </form>
