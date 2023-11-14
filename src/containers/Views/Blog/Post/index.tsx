@@ -12,6 +12,8 @@ import AppLink from 'components/AppLink'
 import { urls } from 'globals/routes'
 import { format } from 'date-fns'
 import localeEs from 'date-fns/locale/es'
+// import Share from 'components/Share'
+import Loader from 'components/Loader'
 
 const BlogPostView: FC = () => {
   const {
@@ -35,12 +37,12 @@ const BlogPostView: FC = () => {
                 locale: localeEs,
               })}
             </UpdatedText>
-            {/* <ShareButtons url={post.id} /> */}
+            {/* <Share url={urls.blogPost(post.id)} /> */}
 
             <Content>{parse(DOMPurify.sanitize(post.content))}</Content>
           </>
         ) : (
-          <p>loading...</p>
+          <Loader />
         )}
       </MainContent>
     </MainLayout>

@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import Paragraph from 'components/Paragraph'
 import Container from 'components/Container'
-import { Share } from '@styled-icons/material/Share'
 import DefaultText from 'components/Text'
 
 export const MainContent = styled(Container).attrs({
@@ -75,17 +74,4 @@ export const ContentText = styled(Paragraph)`
   -webkit-line-clamp: 4;
   width: 100%;
   margin-block-end: 0;
-`
-
-export const ShareButton = styled.button`
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.375rem 0.75rem;
-  margin-inline-start: auto;
-  align-items: center;
-`
-
-export const ShareIcon = styled(Share)`
-  width: 1rem;
-  color: 1px solid ${({ theme }) => theme.colors.black};
 `

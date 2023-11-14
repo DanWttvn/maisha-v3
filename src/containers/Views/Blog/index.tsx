@@ -13,6 +13,8 @@ import Text from 'components/Text'
 import useBlog from 'hooks/useBlog'
 import { useRouter } from 'next/router'
 import { urls } from 'globals/routes'
+// import Share from 'components/Share'
+import Loader from 'components/Loader'
 
 const BlogView: FC = () => {
   const { push } = useRouter()
@@ -34,7 +36,8 @@ const BlogView: FC = () => {
               <PostPreview
                 key={x.id}
                 $layout={i === 0 ? 'vertical' : 'horizontal'}
-                onClick={() => void push(urls.blogPost(x.id))}>
+                onClick={() => void push(urls.blogPost(x.id))}
+              >
                 <Image
                   src={x?.images?.[0]?.url || './images/logo.png'}
                   alt="Post main image"
@@ -45,7 +48,8 @@ const BlogView: FC = () => {
                   <Text
                     weight="black"
                     size="m"
-                    styles={{ fontSize: '1.25rem' }}>
+                    styles={{ fontSize: '1.25rem' }}
+                  >
                     {x.title}
                   </Text>
                   <ContentText size="s" color="lightGrey">
@@ -53,18 +57,13 @@ const BlogView: FC = () => {
                   </ContentText>
 
                   {/* // TO-DO: functionality */}
-                  {/* <ShareButton>
-                  <ShareIcon />
-                  <Text tag="span" size="s">
-                    Compartir
-                  </Text>
-                </ShareButton> */}
+                  {/* <Share url={urls.blogPost(x.id)} /> */}
                 </TextContainer>
               </PostPreview>
             ))}
           </>
         ) : (
-          <p>loading...</p>
+          <Loader />
         )}
       </MainContent>
     </MainLayout>
