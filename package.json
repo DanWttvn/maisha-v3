@@ -4,12 +4,13 @@
   "description": "maisha roots website",
   "author": "Daniela Witteveen",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --max-warnings=0 --fix",
-    "lint:fix": "npm run lint --fix",
-    "postinstall": "npm run install-git-hooks",
+    "lint:fix": "pnpm run lint --fix",
+    "postinstall": "pnpm run install-git-hooks",
     "install-git-hooks": "./scripts/git-hooks/install.sh",
     "plop": "plop --plopfile scripts/plop/plopfile.js",
     "tsc": "tsc --noEmit"
