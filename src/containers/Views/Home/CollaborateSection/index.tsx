@@ -198,7 +198,8 @@ const CollaborateSection: FC<SectionProps> = () => {
           weight="black"
           size="xl"
           isFullWidth
-          isCentered>
+          isCentered
+        >
           {lang === 'ES' &&
             'mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo'}
           {lang === 'EN' &&
@@ -217,7 +218,8 @@ const CollaborateSection: FC<SectionProps> = () => {
           title="Hazte socio"
           isHidden={lang !== 'ES'}
           isFullWidth
-          isDefaultOpen>
+          isDefaultOpen
+        >
           <Text styles={{ marginBottom: 8 }}>
             Puedes donarnos una cantidad fija al mes. Uno de los pilares de
             nuestra asociación es la estabilidad económica. Si conseguimos una
@@ -236,7 +238,8 @@ const CollaborateSection: FC<SectionProps> = () => {
             (lang === 'SW' && 'Fanya uhamishaji') ||
             ''
           }
-          isFullWidth>
+          isFullWidth
+        >
           <Text styles={{ marginBottom: 8 }}>
             {lang === 'ES' && (
               <>
@@ -272,7 +275,8 @@ const CollaborateSection: FC<SectionProps> = () => {
               borderRadius: 30,
               margin: '0 auto',
               marginBottom: 16,
-            }}>
+            }}
+          >
             <ul>
               <li style={{ color: theme.colors.offOrange }}>
                 <Text weight="semibold">
@@ -326,7 +330,7 @@ const CollaborateSection: FC<SectionProps> = () => {
           <Text styles={{ marginBottom: 16 }}>
             Desde tu móvil usando la aplicación Bizum la app de tu banco,
             introduce manualmente el número{' '}
-            <Text color="darkRed" weight="black">
+            <Text tag="span" color="darkRed" weight="black">
               02780
             </Text>
             .
