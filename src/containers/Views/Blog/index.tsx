@@ -13,8 +13,8 @@ import Text from 'components/Text'
 import useBlog from 'hooks/useBlog'
 import { useRouter } from 'next/router'
 import { urls } from 'globals/routes'
-// import Share from 'components/Share'
 import Loader from 'components/Loader'
+import Share from 'components/Share'
 
 const BlogView: FC = () => {
   const { push } = useRouter()
@@ -56,8 +56,10 @@ const BlogView: FC = () => {
                     {extractContent(x.content)}
                   </ContentText>
 
-                  {/* // TO-DO: functionality */}
-                  {/* <Share url={urls.blogPost(x.id)} /> */}
+                  <Share
+                    url={urls.blogPost(x.id)}
+                    styles={{ marginTop: 'auto' }}
+                  />
                 </TextContainer>
               </PostPreview>
             ))}

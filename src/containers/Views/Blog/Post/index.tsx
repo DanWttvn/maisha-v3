@@ -12,8 +12,9 @@ import AppLink from 'components/AppLink'
 import { urls } from 'globals/routes'
 import { format } from 'date-fns'
 import localeEs from 'date-fns/locale/es'
-// import Share from 'components/Share'
+import Share from 'components/Share'
 import Loader from 'components/Loader'
+import Container from 'components/Container'
 
 const BlogPostView: FC = () => {
   const {
@@ -32,12 +33,16 @@ const BlogPostView: FC = () => {
         {!!post ? (
           <>
             <Title>{post.title}</Title>
-            <UpdatedText>
-              {format(new Date(post.updated), 'PPP', {
-                locale: localeEs,
-              })}
-            </UpdatedText>
-            {/* <Share url={urls.blogPost(post.id)} /> */}
+            <Container
+              styles={{ alignItems: 'center', justifyContent: 'space-between' }}
+            >
+              <UpdatedText>
+                {format(new Date(post.updated), 'PPP', {
+                  locale: localeEs,
+                })}
+              </UpdatedText>
+              <Share url={urls.blogPost(post.id)} />
+            </Container>
 
             <Content>{parse(DOMPurify.sanitize(post.content))}</Content>
           </>

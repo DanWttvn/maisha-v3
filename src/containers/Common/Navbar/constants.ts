@@ -144,6 +144,5 @@ export const SECTIONS_DATA: SectionData[] = [
       EN: 'Blog',
       SW: 'Blog',
     },
-    externalHref: 'https://maisharoots.blogspot.com/',
   },
 ]

@@ -41,9 +41,9 @@ const VerticalLayout = css`
     border-block-end: 1px solid ${({ theme }) => theme.colors.black};
   }
 `
-export const PostPreview = styled.article<{
-  $layout?: 'vertical' | 'horizontal'
-}>`
+
+type Layout = 'vertical' | 'horizontal'
+export const PostPreview = styled.article<{ $layout?: Layout }>`
   border: 1px solid ${({ theme }) => theme.colors.black};
   display: flex;
   flex-direction: row;
@@ -51,10 +51,10 @@ export const PostPreview = styled.article<{
   height: 250px;
   cursor: pointer;
 
-  ${({ $layout }) => $layout === 'vertical' && VerticalLayout}
+  ${({ $layout }) => $layout === 'vertical' && VerticalLayout};
 
   @media ${({ theme }) => theme.breakpoints.sl} {
-    ${VerticalLayout}
+    ${VerticalLayout};
   }
 `
 
