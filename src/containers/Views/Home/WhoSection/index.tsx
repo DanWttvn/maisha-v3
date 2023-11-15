@@ -17,6 +17,7 @@ import {
   DataParagraph,
   InnerContainer,
   Image,
+  Highlighted,
 } from './styles'
 import light from 'styles/themes/light'
 
@@ -43,7 +44,8 @@ const WhoSection: FC<SectionProps> = () => {
       <SubSection
         id="know-us"
         styles={{ maxHeight: 600, overflow: 'hidden' }}
-        isFullWidth>
+        isFullWidth
+      >
         <InnerContainer>
           <Subtitle color="white">
             {lang === 'ES' && 'Conócenos'}
@@ -159,7 +161,8 @@ const WhoSection: FC<SectionProps> = () => {
           styles={{
             borderLeft: `0.625rem solid ${light.colors.offRed}`,
             paddingLeft: 40,
-          }}>
+          }}
+        >
           {lang === 'ES' && (
             <>
               Los medios de vida y la educación son herramientas que contribuyen
@@ -220,22 +223,22 @@ const WhoSection: FC<SectionProps> = () => {
           {lang === 'ES' && (
             <>
               Desde 2016, Maisha Roots desarrolla y colabora con proyectos de
-              raíces locales en <Text isHighlighted> Tanzania</Text>, y más
-              concretamente, en la ciudad de <Text isHighlighted> Arusha</Text>.
+              raíces locales en <Highlighted>Tanzania</Highlighted>, y más
+              concretamente, en la ciudad de <Highlighted> Arusha</Highlighted>.
             </>
           )}
           {lang === 'EN' && (
             <>
               From 2016, Maisha Roots is developing and collaborating with
-              projects with <Text isHighlighted> Tanzanian Roots</Text>,
-              specifically, in the city of <Text isHighlighted> Arusha</Text>.
+              projects with <Highlighted> Tanzanian Roots</Highlighted>,
+              specifically, in the city of <Highlighted> Arusha</Highlighted>.
             </>
           )}
           {lang === 'SW' && (
             <>
               Kutokea 2016, Maisha Roots imekuwa na kushirikiana na miradi ya
-              mizizi ya <Text isHighlighted> Tanzania</Text>haswa katika mji wa
-              <Text isHighlighted> Arusha</Text>.
+              mizizi ya <Highlighted> Tanzania</Highlighted>haswa katika mji wa
+              <Highlighted> Arusha</Highlighted>.
             </>
           )}
         </DataParagraph>
@@ -243,7 +246,7 @@ const WhoSection: FC<SectionProps> = () => {
           {lang === 'ES' && (
             <>
               A pesar de que, desde su independencia, Tanzania ha disfrutado de{' '}
-              <Text isHighlighted> estabilidad política y paz, </Text>esto no se
+              <Highlighted> estabilidad política y paz, </Highlighted>esto no se
               ha traducido en un mejor nivel de vida para la mayoría de la
               población.
             </>
@@ -251,14 +254,14 @@ const WhoSection: FC<SectionProps> = () => {
           {lang === 'EN' && (
             <>
               Although, since its independence, Tanzania has enjoyed{' '}
-              <Text isHighlighted> political stability and peace, </Text> this
+              <Highlighted> political stability and peace, </Highlighted> this
               has not meant a better level of life for most of its population.
             </>
           )}
           {lang === 'SW' && (
             <>
               Ijapokuwa, tangu uhuru wa Tanzania imefurahia kwa kuwa na{' '}
-              <Text isHighlighted> utulivu wa kisiasa na amani, </Text> hii
+              <Highlighted> utulivu wa kisiasa na amani, </Highlighted> hii
               haimanishi kiwango bora cha maisha kwa wakazi wake wengi.
             </>
           )}
@@ -285,7 +288,8 @@ const WhoSection: FC<SectionProps> = () => {
                 fontSize: '5rem',
                 lineHeight: '5rem',
                 marginTop: '-12px',
-              }}>
+              }}
+            >
               {lang === 'ES' && 'años'}
               {lang === 'EN' && 'years'}
               {lang === 'SW' && 'miaka'}
@@ -324,12 +328,13 @@ const WhoSection: FC<SectionProps> = () => {
         </DataContainer>
 
         <DataParagraph
-          styles={{ width: '65%', marginBottom: 30, marginRight: 'auto' }}>
+          styles={{ width: '65%', marginBottom: 30, marginRight: 'auto' }}
+        >
           {lang === 'ES' && (
             <>
               Arusha es una gran ciudad y un importante centro diplomático
               internacional. Es una ciudad caracterizada por su{' '}
-              <Text isHighlighted> multiculturalidad</Text>, poblada por
+              <Highlighted> multiculturalidad</Highlighted>, poblada por
               tanzanos de distintos orígenes, bantús, árabes e indios, aunque
               también hay minorías europeas y americanas.
             </>
@@ -338,7 +343,7 @@ const WhoSection: FC<SectionProps> = () => {
             <>
               Arusha is a big city and an important international diplomatic
               center. It is a city characterized by its{' '}
-              <Text isHighlighted> multiculturalism</Text>, populated by
+              <Highlighted> multiculturalism</Highlighted>, populated by
               Tanzanian from different origins, Bantus, Arabs, and Indians,
               though also by Caucasic minorities from Europe and North America.
             </>
@@ -346,7 +351,7 @@ const WhoSection: FC<SectionProps> = () => {
           {lang === 'SW' && (
             <>
               Arusha ni jiji kubwa na kituo muhimu cha kidiplomasia. Ni mji
-              unaoonyeshwa na <Text isHighlighted> tamaduni zake nyingi</Text>,
+              unaoonyeshwa na <Highlighted> tamaduni zake nyingi</Highlighted>,
               zilizokusanywa na Watanzania kutoka asili tofauti, za kibantu,
               kiarabu na kihindi, ingawa pia na wachache kidogo wa Caucasic
               kutoka Ulaya na Amerika ya Kaskazini.
@@ -360,30 +365,31 @@ const WhoSection: FC<SectionProps> = () => {
             marginLeft: 'auto',
             textAlign: 'end',
             marginBottom: 30,
-          }}>
+          }}
+        >
           {lang === 'ES' && (
             <>
-              Arusha es una ciudad <Text isHighlighted>en expansión</Text>, por
+              Arusha es una ciudad <Highlighted>en expansión</Highlighted>, por
               lo que cuenta con muchos barrios que están en continuo y rápido
               crecimiento y, por tanto, carecen de recursos básicos. Es aquí
               donde intentaremos centrar{' '}
-              <Text isHighlighted>nuestra acción</Text>.
+              <Highlighted>nuestra acción</Highlighted>.
             </>
           )}
           {lang === 'EN' && (
             <>
-              Arusha is a <Text isHighlighted>sprawling city</Text>, this is why
+              Arusha is a <Highlighted>sprawling city</Highlighted>, this is why
               many of its neighborhoods are in continuous and fast growth,
               therefore they lack minimum services. Here is where we try to
-              focus on <Text isHighlighted>our actions</Text>.
+              focus on <Highlighted>our actions</Highlighted>.
             </>
           )}
           {lang === 'SW' && (
             <>
-              Arusha ni <Text isHighlighted>mji unaofurika</Text>, ndio maana
+              Arusha ni <Highlighted>mji unaofurika</Highlighted>, ndio maana
               vitongoji vyake vingi vinaendelea kuongezeka watu kwa kasi, hivyo
               basi wanakosa huduma za msingi. Hapa ndipo tunapotilia mkazo{' '}
-              <Text isHighlighted>utendaji wetu</Text>.
+              <Highlighted>utendaji wetu</Highlighted>.
             </>
           )}
         </DataParagraph>
@@ -409,7 +415,8 @@ const WhoSection: FC<SectionProps> = () => {
             minWidth: 200,
             margin: '0 30px',
             marginBottom: 30,
-          }}>
+          }}
+        >
           {lang === 'ES' &&
             'Son los idiomas oficiales, aunque sólo las personas que han recibido educación hablan este último. La educación primaria se ofrece en swahili, y la secundaria en inglés, uno de los motivos por los cuales muchos estudiantes dejan la escuela en los niveles de secundaria.'}
           {lang === 'EN' &&
@@ -435,7 +442,8 @@ const WhoSection: FC<SectionProps> = () => {
             marginLeft: 'auto',
             textAlign: 'end',
             marginBottom: 30,
-          }}>
+          }}
+        >
           {lang === 'ES' && (
             <>
               Por otro lado, las tasas de desempleo en medios oficiales no
@@ -443,8 +451,8 @@ const WhoSection: FC<SectionProps> = () => {
               las grandes ciudades como Arusha, es que las y los jóvenes que
               abandonan sus estudios, especialmente durante o al finalizar la
               secundaria, se encuentran en situación de{' '}
-              <Text isHighlighted>desempleo</Text> y{' '}
-              <Text isHighlighted>sin tecnificaciones necesarias</Text> para
+              <Highlighted>desempleo</Highlighted> y{' '}
+              <Highlighted>sin tecnificaciones necesarias</Highlighted> para
               encontrar un buen empleo o empezar un negocio.
             </>
           )}
@@ -454,8 +462,8 @@ const WhoSection: FC<SectionProps> = () => {
               vya habari rasmi na taasisi za umma sio za idadi kubwa, lakini kwa
               hali halisi, hasa katika miji mikubwa kama Arusha, vijana ambao
               wameacha shule, haswa katika elimu ya sekondari au waliomaliza kwa
-              wakati, <Text isHighlighted>unemployed </Text>and{' '}
-              <Text isHighlighted>without the necessary qualifications</Text> to
+              wakati, <Highlighted>unemployed </Highlighted>and{' '}
+              <Highlighted>without the necessary qualifications</Highlighted> to
               find a proper job or start a business.
             </>
           )}
@@ -465,8 +473,8 @@ const WhoSection: FC<SectionProps> = () => {
               vya habari rasmi na taasisi za umma sio za idadi kubwa, lakini kwa
               hali halisi, hasa katika miji mikubwa kama Arusha, vijana ambao
               wameacha shule, haswa katika elimu ya sekondari au waliomaliza kwa
-              wakati, <Text isHighlighted>hawana kazi</Text> na{' '}
-              <Text isHighlighted>bila sifa zinazostahiki</Text> kupata kazi
+              wakati, <Highlighted>hawana kazi</Highlighted> na{' '}
+              <Highlighted>bila sifa zinazostahiki</Highlighted> kupata kazi
               sahihi au kuanza biashara.
             </>
           )}

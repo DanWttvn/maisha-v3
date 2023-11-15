@@ -6,6 +6,8 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
     'plugin:storybook/recommended',
+    // prettier should be listed last to resolve any possible conflicts in its favor
+    'prettier',
   ],
   parserOptions: {
     ecmaVersion: 2021,
@@ -97,34 +99,13 @@ module.exports = {
         // have multiple exported members, although not always.
         {
           files: [
-            'src/components/**/logic.ts',
-            'src/components/**/styles.ts',
-            'src/components/**/styles.tsx',
-            'src/containers/**/logic.ts',
-            'src/containers/**/styles.ts',
-            'src/graphql/variables/**/*.ts',
+            '**/stories.*',
+            'src/storybook/**/*.*',
+            'additional.d.ts',
+            'src/graphql/instrospection.ts',
           ],
           rules: {
             'import/prefer-default-export': 'off',
-          },
-        }, // Always enforce exported functions to be typed, except in specific
-        // cases where we want the return type to be inferred.
-        {
-          files: [
-            'src/components/**/logic.ts',
-            'src/containers/**/connect.ts',
-            'src/containers/**/logic.ts',
-            'src/graphql/hooks/**/*.ts',
-            'src/model/**/*.ts',
-          ],
-          rules: {
-            '@typescript-eslint/explicit-module-boundary-types': 'off',
-          },
-        },
-        {
-          files: ['src/graphql/generated/*'],
-          rules: {
-            '@typescript-eslint/naming-convention': 'off',
           },
         },
       ],
@@ -147,5 +128,12 @@ module.exports = {
     'prettier/prettier': 'warn',
     'import/no-relative-parent-imports': 'error',
     'no-return-assign': 0,
+    'react/self-closing-comp': [
+      'error',
+      {
+        component: true,
+        html: true,
+      },
+    ],
   },
 }

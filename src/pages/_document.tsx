@@ -40,7 +40,7 @@ export default class AppDocument extends Document {
   }
 
   override render = (): JSX.Element => (
-    <Html lang="en">
+    <Html lang="en" suppressHydrationWarning>
       <Head>
         <meta name="author" content="Daniela Witteveen" />
         <meta

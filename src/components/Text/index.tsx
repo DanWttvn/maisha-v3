@@ -29,7 +29,8 @@ const Text: FC<TextProps> = ({
       onClick={onClick}
       className={className}
       isFullWidth={isFullWidth}
-      isCentered={isCentered}>
+      isCentered={isCentered}
+    >
       {children}
     </Styled>
   )
