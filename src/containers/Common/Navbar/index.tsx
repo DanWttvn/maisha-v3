@@ -1,4 +1,4 @@
-import { useState, FC, useContext, useEffect } from 'react'
+import { FC, useContext } from 'react'
 import NavItem from 'components/NavItem'
 import Image from 'components/Image'
 import Container from 'components/Container'
@@ -15,39 +15,23 @@ import Styled, {
   Li,
 } from './styles'
 import { SECTIONS_DATA } from './constants'
+import { useLogic } from './logic'
 
-interface Props extends BaseProps {
+export interface Props extends BaseProps {
   isHomePage?: boolean
 }
 
 export const Navbar: FC<Props> = ({ isHomePage }) => {
   const { lang, setLang } = useContext(LanguageContext)
-  const [isDesktopOpen, setIsDesktopOpen] = useState(false)
-  const [isResponsiveOpen, setIsResponsiveOpen] = useState(false)
-  const [isHeroSection, setIsHeroSection] = useState(true)
 
-  useEffect(() => {
-    if (!isHomePage) return setIsHeroSection(false)
-
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight - 120) setIsHeroSection(false)
-      else setIsHeroSection(true)
-    }
-
-    document.addEventListener('scroll', handleScroll)
-    return () => {
-      document.removeEventListener('scroll', handleScroll)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  const handleOpen = (isOpen: boolean) => {
-    setIsDesktopOpen(isOpen)
-  }
-
-  const handleClick = () => {
-    if (isResponsiveOpen) setIsResponsiveOpen(false)
-  }
+  const {
+    handleOpen,
+    handleClick,
+    isDesktopOpen,
+    isHeroSection,
+    isResponsiveOpen,
+    setIsResponsiveOpen,
+  } = useLogic({ isHomePage })
 
   const items = SECTIONS_DATA.map(section => {
     const subItems = section.subsections?.map(subSection => ({
@@ -58,12 +42,14 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
     return (
       <NavItem
         sectionId={section.id}
+        page={section.page}
         key={section.id}
         subItemsData={subItems}
         onOpen={handleOpen}
         onClick={handleClick}
         isHomePage={isHomePage}
-        externalHref={section.externalHref}>
+        externalHref={section.externalHref}
+      >
         {section.title[lang]}
       </NavItem>
     )
@@ -77,7 +63,7 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
   return (
     <Styled $isOpen={isDesktopOpen} $isHeroSection={isHeroSection}>
       <AppLink toSection="header" isSamePage={isHomePage}>
-        <Image styles={{ width: 200, marginTop: 16 }} src="./images/logo.png" />
+        <Image styles={{ width: 200, marginTop: 16 }} src="/images/logo.png" />
       </AppLink>
 
       <Hamburger onClick={() => setIsResponsiveOpen(true)} />

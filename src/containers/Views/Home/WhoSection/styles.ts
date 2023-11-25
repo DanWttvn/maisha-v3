@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Container from 'components/Container'
 import Paragraph from 'components/Paragraph'
 import ImageRoot from 'components/Image'
+import Text from 'components/Text'
 
 export const InnerContainer = styled(Container)`
   width: 100%;
@@ -52,3 +53,8 @@ export const Image = styled(ImageRoot)`
     margin-bottom: 30px;
   }
 `
+
+export const Highlighted = styled(Text).attrs({
+  isHighlighted: true,
+  tag: 'span',
+})``

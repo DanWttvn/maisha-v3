@@ -30,7 +30,6 @@ export const SubItemsWrapper = styled.ul<{ $isOpen: boolean }>`
   position: absolute;
   width: 100%;
   height: 50px;
-  padding: 10px 0;
   z-index: ${({ theme }) => theme.zIndex.high};
   display: flex;
   flex-flow: row nowrap;
@@ -41,7 +40,7 @@ export const SubItemsWrapper = styled.ul<{ $isOpen: boolean }>`
   ${({ $isOpen }) =>
     $isOpen &&
     css`
-      top: 35px;
+      top: 40px;
       opacity: 1;
       pointer-events: all;
     `}
