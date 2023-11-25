@@ -42,12 +42,14 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
     return (
       <NavItem
         sectionId={section.id}
+        page={section.page}
         key={section.id}
         subItemsData={subItems}
         onOpen={handleOpen}
         onClick={handleClick}
         isHomePage={isHomePage}
-        externalHref={section.externalHref}>
+        externalHref={section.externalHref}
+      >
         {section.title[lang]}
       </NavItem>
     )

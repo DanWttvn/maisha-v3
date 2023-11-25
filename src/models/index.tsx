@@ -66,7 +66,8 @@ export type LanguageOptions = { ES: string; EN: string; SW: string }
 export type Cookies = 'is_newsletter_closed' | 'is_policy_accepted'
 
 export interface SectionData {
-  id: SectionTitle
+  id?: SectionTitle
+  page?: string
   title: LanguageOptions
   subsections?: {
     id: SubSectionTitle

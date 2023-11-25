@@ -54,5 +54,7 @@ export const Content = styled.div`
   }
   img {
     width: 100%;
+    object-fit: cover;
+    height: fit-content;
   }
 `

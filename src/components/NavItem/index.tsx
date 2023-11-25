@@ -5,7 +5,8 @@ import ExternalLink from 'components/ExternalLink'
 
 export interface Props extends BaseProps {
   subItemsData?: { name: string; section: SubSectionTitle }[]
-  sectionId: SectionTitle
+  sectionId?: SectionTitle
+  page?: string
   onClick?: () => void
   onOpen: (isShown: boolean) => void
   isHomePage?: boolean
@@ -16,6 +17,7 @@ const NavItem: FC<Props> = ({
   children,
   subItemsData,
   sectionId,
+  page,
   onClick,
   onOpen,
   isHomePage,
@@ -29,7 +31,8 @@ const NavItem: FC<Props> = ({
         toSection={x.section}
         variant="menu"
         onClick={onClick}
-        isSamePage={isHomePage}>
+        isSamePage={isHomePage}
+      >
         {x.name}
       </AppLink>
     </Li>
@@ -44,7 +47,8 @@ const NavItem: FC<Props> = ({
   return (
     <Li
       onMouseEnter={() => handleToggle(true)}
-      onMouseLeave={() => handleToggle(false)}>
+      onMouseLeave={() => handleToggle(false)}
+    >
       {externalHref ? (
         <ExternalLink href={externalHref} variant="menu" onClick={onClick}>
           {children}
@@ -52,9 +56,11 @@ const NavItem: FC<Props> = ({
       ) : (
         <AppLink
           toSection={sectionId}
+          toPage={page}
           variant="menu"
           onClick={onClick}
-          isSamePage={isHomePage}>
+          isSamePage={isHomePage}
+        >
           {children}
         </AppLink>
       )}
