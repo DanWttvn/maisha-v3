@@ -1,20 +1,24 @@
 import styled from 'styled-components'
-import { circularDash, circularRotate } from 'styles/animations'
+import { circularRotate, prixClipFix } from 'styles/animations'
 import { Props } from '.'
 
-export default styled.svg<Props>`
-  height: 24px;
-  width: 24px;
-  animation: ${circularRotate} 1.4s linear infinite;
+export default styled.span<Props>`
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  position: relative;
+  animation: ${circularRotate} 1s linear infinite;
+  margin: 1.5rem auto;
+
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid ${({ theme }) => theme.colors.darkRed};
+    animation: ${prixClipFix} 2s linear infinite;
+  }
 
   ${({ styles }) => ({ ...styles })}
-`
-
-export const Circle = styled.circle`
-  stroke: ${({ theme }) => theme.colors.offOrange};
-  animation: ${circularDash} 1.4s ease-in-out infinite;
-  stroke-dasharray: 80px, 200px;
-  stroke-dashoffset: 0px;
-  stroke-width: 1.5px;
-  fill: transparent;
 `

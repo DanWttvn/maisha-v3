@@ -1,6 +1,6 @@
 import { FC, forwardRef } from 'react'
 import { BaseProps } from 'models'
-import Loader from 'components/Loader'
+import Loader from './Loader'
 import {
   ButtonA,
   ButtonB,
@@ -72,7 +72,8 @@ const Button: FC<Props> = forwardRef(
         isLoading={isLoading}
         isDisabled={isDisabled}
         isSelected={isSelected}
-        styles={styles}>
+        styles={styles}
+      >
         <Loader isHidden={!isLoading} styles={{ position: 'absolute' }} />
         {children}
       </Styled>

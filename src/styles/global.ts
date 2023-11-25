@@ -50,6 +50,12 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+  button {
+    color: inherit;
+    background-color: transparent;
+    border-width: 0;
+  }
+
   input:focus,
   textarea:focus,
   button:focus,

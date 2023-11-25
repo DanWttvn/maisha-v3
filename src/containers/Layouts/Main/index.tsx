@@ -2,10 +2,10 @@ import { FC, PropsWithChildren, useContext, useEffect, useState } from 'react'
 import LanguageContext from 'contexts/language'
 import { getUrlParam } from 'helpers/url'
 import { Language } from 'models'
-import Container from 'components/Container'
 import PolicyBanner from 'containers/Common/PolicyBanner'
 import Footer from 'containers/Common/Footer'
 import Navbar from 'containers/Common/Navbar'
+import { Container } from './styles'
 
 interface Props {
   isHomePage?: boolean
@@ -39,15 +39,7 @@ const Layout: FC<PropsWithChildren<Props>> = ({ children, isHomePage }) => {
   }, [])
 
   return (
-    <Container
-      direction="vertical"
-      styles={{
-        position: 'relative',
-        minHeight: '100vh',
-        justifyContent: 'space-between',
-      }}
-      isFullWidth
-    >
+    <Container $isHomePage={isHomePage}>
       <Navbar isHomePage={isHomePage} />
       {children}
       <Footer />

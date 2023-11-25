@@ -1,4 +1,5 @@
 import { SectionData } from 'models'
+import { PATHS } from 'paths'
 
 export const SECTIONS_DATA: SectionData[] = [
   {
@@ -138,12 +139,11 @@ export const SECTIONS_DATA: SectionData[] = [
     ],
   },
   {
-    id: 'blog',
+    page: PATHS.blog,
     title: {
       ES: 'Blog',
       EN: 'Blog',
       SW: 'Blog',
     },
-    externalHref: 'https://maisharoots.blogspot.com/',
   },
 ]

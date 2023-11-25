@@ -52,7 +52,7 @@ export interface TextProps extends BaseProps {
   isHighlighted?: boolean
   isCentered?: boolean
   weight?: 'normal' | 'semibold' | 'bold' | 'black' | 'inherit'
-  size?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'inherit'
+  size?: 'xs' | 's' | 'm' | 'l' | 'xl' | 'inherit'
   color?: Color | 'inherit'
   tag?: keyof JSX.IntrinsicElements
 }
@@ -66,7 +66,8 @@ export type LanguageOptions = { ES: string; EN: string; SW: string }
 export type Cookies = 'is_newsletter_closed' | 'is_policy_accepted'
 
 export interface SectionData {
-  id: SectionTitle
+  id?: SectionTitle
+  page?: string
   title: LanguageOptions
   subsections?: {
     id: SubSectionTitle

@@ -11,3 +11,9 @@ export const deleteUrlParam = (param: string): string => {
 
   return urlParams.toString()
 }
+
+export const assertParam = (key: string, value?: string): string => {
+  if (!value) return ''
+
+  return `${key}=${encodeURIComponent(value)}`
+}
