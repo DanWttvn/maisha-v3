@@ -9,12 +9,12 @@ export default function Share({ url, ...props }: Props): JSX.Element {
   const { domain, socialMediaList } = useLogic()
 
   return (
-    <Container onBlur={() => setIsOpen(false)} {...props}>
+    <Container {...props}>
       <Button
         $isOpen={isOpen}
         onClick={e => {
           e.stopPropagation()
-          setIsOpen(true)
+          setIsOpen(prev => !prev)
         }}
       >
         <ShareIcon />
@@ -23,11 +23,11 @@ export default function Share({ url, ...props }: Props): JSX.Element {
         </Text>
       </Button>
 
+      {/*  TO-DO: close on click outside */}
       {isOpen && (
-        <Dropdown>
+        <Dropdown onBlur={() => setIsOpen(false)}>
           {socialMediaList.map(x => (
             <a
-              onClick={e => e.stopPropagation()}
               target="_blank"
               rel="noopener noreferrer"
               key={x.name}
