@@ -2,9 +2,17 @@ import { SocialNetwork } from './types'
 import { Facebook } from '@styled-icons/entypo-social/Facebook'
 import { Twitter } from '@styled-icons/entypo-social/Twitter'
 import { Linkedin } from '@styled-icons/entypo-social/Linkedin'
+import { useEffect, useState } from 'react'
 
 export function useLogic() {
-  const domain = window !== undefined ? window.location.origin : ''
+  const [domain, setDomain] = useState<string>()
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const currentDomain = window.location.hostname
+      setDomain(currentDomain)
+    }
+  }, [])
 
   const socialMediaList: SocialNetwork[] = [
     {

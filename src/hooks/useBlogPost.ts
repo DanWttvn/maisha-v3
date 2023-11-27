@@ -9,7 +9,6 @@ const useBlogPost = ({ id }: { id: string | undefined }) => {
   const get = async (postId: string) => {
     try {
       const data = await getBlogPost({ id: postId })
-      console.log(data)
       setPost(data)
     } catch (error) {
       console.error(error)

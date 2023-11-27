@@ -4,5 +4,5 @@ import Popup from 'components/Popup'
 export default styled(Popup).attrs({ variant: 'B' })`
   width: 450px;
   max-width: calc(100% - 60px);
-  bottom: 100px;
+  bottom: 30px;
 `
