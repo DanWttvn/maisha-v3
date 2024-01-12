@@ -134,12 +134,20 @@ const JoinForm: FC<Props> = ({
             *Por favor, selecciona una cantidad mensual
           </Text>
           <Text
-            isHidden={!generalErrors.includes('smaller-than-min')}
+            isHidden={!generalErrors.includes('iban-error')}
             color="brightRed"
             weight="black"
             isFullWidth
           >
-            *La cantidad mínima es de 5€
+            *El IBAN no es correcto
+          </Text>
+          <Text
+            isHidden={!generalErrors.includes('document-error')}
+            color="brightRed"
+            weight="black"
+            isFullWidth
+          >
+            *El DNI o el pasaporte no es correcto
           </Text>
         </Container>
 
