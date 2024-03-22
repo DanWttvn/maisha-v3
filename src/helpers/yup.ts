@@ -7,11 +7,10 @@ type ObjectShapeValues = Yup.ObjectShape extends Record<string, infer V>
 
 type Schema<T> = Record<keyof T, ObjectShapeValues>
 
-// export const getRequiredObjectSchema = <T>(
-//   callback: (yup: typeof Yup) => Record<keyof T, Yup.AnySchema>,
-// ): Yup.AnyObjectSchema => {
-//   return Yup.object(callback(Yup)).required() as Yup.AnyObjectSchema
-// }
+export const getRequiredObjectSchema = <T>(
+  callback: (yup: typeof Yup) => Record<keyof T, Yup.AnySchema>,
+): Yup.AnyObjectSchema =>
+  Yup.object(callback(Yup)).required() as Yup.AnyObjectSchema
 
 export const FIELD_HELPERS = {
   REQUIRED: 'Este campo es obligatorio',
