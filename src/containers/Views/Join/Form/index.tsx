@@ -159,12 +159,11 @@ const JoinForm: FC<Props> = ({
         >
           Política de Privacidad
         </Text>
-        {!!errors.termsAccepted && (
+        {!!generalErrors.includes('terms-not-accepted') && (
           <Text size="xs" color="brightRed" isFullWidth>
-            {errors.termsAccepted.message}
+            Debes aceptar la Política de Privacidad
           </Text>
         )}
-
         <SkipWrap />
         <Text
           color="brightRed"
