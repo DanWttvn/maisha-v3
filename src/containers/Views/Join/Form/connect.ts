@@ -15,7 +15,7 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
   const [customAmount, setCustomAmount] = useState(0)
   const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false)
   const [generalErrors, setGeneralErrors] = useState<
-    ('no-amount' | 'fail' | 'smaller-than-min')[]
+    ('no-amount' | 'fail' | 'smaller-than-min' | 'terms-not-accepted')[]
   >([])
 
   const {
@@ -44,14 +44,16 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
       return setGeneralErrors([...generalErrors, 'no-amount'])
     if (selectedAmount < 5)
       return setGeneralErrors([...generalErrors, 'smaller-than-min'])
+    if (!data.termsAccepted)
+      return setGeneralErrors([...generalErrors, 'terms-not-accepted']) // Temporarily solution: Should be handled by yup
 
     // Parse Data
     const parsedData = {
       NOMBRE: data.name,
       APELLIDOS: data.lastName,
-      ID: data.dni,
+      // ID: data.dni,
       EMAIL: data.email,
-      CODIGO_POSTAL: data.zipCode,
+      // CODIGO_POSTAL: data.zipCode,
       CUENTA_BANCARIA: data.IBAN,
       APORTACION_MENSUAL: String(selectedAmount || 0),
     }
