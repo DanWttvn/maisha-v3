@@ -20,12 +20,20 @@ const Header: FC = () => (
         weight="black"
         color="white"
         size="xl"
-        styles={{ fontStyle: 'italic' }}>
+        tag="span"
+        styles={{ fontStyle: 'italic' }}
+      >
         Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede
         cambiar el mundo
       </Text>
       <CloseQuote />
-      <Text weight="black" color="white" size="xl" styles={{ marginLeft: 16 }}>
+      <Text
+        weight="black"
+        tag="span"
+        color="white"
+        size="xl"
+        styles={{ marginLeft: 16 }}
+      >
         E. Galeano
       </Text>
     </Paragraph>
