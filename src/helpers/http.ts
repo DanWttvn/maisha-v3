@@ -1,5 +1,8 @@
-export const request = async <T>(url: string): Promise<T> => {
-  const response = await fetch(url)
+export const request = async <T>(
+  url: string,
+  options?: RequestInit,
+): Promise<T> => {
+  const response = await fetch(url, options)
 
   if (!response.ok) {
     throw new Error(`Error! status: ${response.status}`)

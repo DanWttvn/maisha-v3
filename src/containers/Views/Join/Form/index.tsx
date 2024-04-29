@@ -83,8 +83,8 @@ const JoinForm: FC<Props> = ({
           autocomplete="IBAN"
           helper="Recuerda que debes añadir el IBAN (Ej.: ES1212341234110123456789)"
           styles={{ marginBottom: 32 }}
-          error={errors.IBAN}
-          register={register('IBAN')}
+          error={errors.iban}
+          register={register('iban')}
         />
 
         <Container
