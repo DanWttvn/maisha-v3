@@ -39,3 +39,22 @@ export const postMember = async ({ email, ...attributes }: Member) => {
 
   return res
 }
+
+export const postNewsletterMember = async ({ email }: { email: string }) => {
+  const MEMBERS_LIST_ID = 6
+
+  const res = await request<unknown>(CONTACTS_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      'api-key': BREVO_API_KEY,
+    },
+    body: JSON.stringify({
+      email: email,
+      listIds: [MEMBERS_LIST_ID],
+    }),
+  })
+
+  return res
+}

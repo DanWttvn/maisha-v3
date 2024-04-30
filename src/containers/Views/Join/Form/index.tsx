@@ -40,12 +40,7 @@ const JoinForm: FC<Props> = ({
 
   return (
     <>
-      <form
-        id="sib-form"
-        onSubmit={onSubmit}
-        style={{ ...styles, width: '100%' }}
-        noValidate
-      >
+      <form onSubmit={onSubmit} style={{ ...styles, width: '100%' }} noValidate>
         <InputText
           label="Nombre"
           autocomplete="first-name"
