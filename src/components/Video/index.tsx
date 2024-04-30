@@ -15,7 +15,7 @@ const Video: FC<Props> = ({ src, poster }) => (
       width="100%"
       height="100%"
       controls
-      mute
+      mute="true"
       config={{
         vimeo: {
           playerOptions: {

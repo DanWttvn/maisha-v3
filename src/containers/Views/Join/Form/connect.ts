@@ -4,8 +4,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FormValues, schema } from './types'
-
-const ENDPOINT = process.env['SENDINBLUE_JOIN'] || ''
+import { postMember } from 'services/members'
 
 export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
   const { push } = useRouter()
@@ -47,29 +46,10 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
     if (!data.termsAccepted)
       return setGeneralErrors([...generalErrors, 'terms-not-accepted']) // Temporarily solution: Should be handled by yup
 
-    // Parse Data
-    const parsedData = {
-      NOMBRE: data.name,
-      APELLIDOS: data.lastName,
-      // ID: data.dni,
-      EMAIL: data.email,
-      // CODIGO_POSTAL: data.zipCode,
-      CUENTA_BANCARIA: data.IBAN,
-      APORTACION_MENSUAL: String(selectedAmount || 0),
-    }
-
-    const formData = new FormData()
-    Object.entries(parsedData).map(([name, value]) =>
-      formData.append(name, value),
-    )
-
     try {
-      await fetch(ENDPOINT, {
-        method: 'POST',
-        body: formData,
-      })
+      const res = await postMember({ ...data, monthlyPayment: selectedAmount })
 
-      void push(urls.thanks)
+      if (!!res) void push(urls.thanks)
     } catch (error) {
       setGeneralErrors([...generalErrors, 'fail'])
     }
