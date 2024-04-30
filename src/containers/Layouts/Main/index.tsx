@@ -42,7 +42,7 @@ const Layout: FC<PropsWithChildren<Props>> = ({ children, isHomePage }) => {
     <Container $isHomePage={isHomePage}>
       <Navbar isHomePage={isHomePage} />
       {children}
-      <Footer />
+      <Footer styles={{ marginBottom: 81.5 }} />
       {/* <NewsletterPopup /> */}
       <PolicyBanner isHidden={isHeroSection} />
     </Container>

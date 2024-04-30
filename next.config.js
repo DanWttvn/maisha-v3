@@ -6,9 +6,7 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   env: {
-    MAILCHIMP_SUBSCRIBE: process.env['MAILCHIMP_SUBSCRIBE'],
-    SENDINBLUE_SUBSCRIBE: process.env['SENDINBLUE_SUBSCRIBE'],
-    SENDINBLUE_JOIN: process.env['SENDINBLUE_JOIN'],
+    BREVO_API_KEY: process.env['BREVO_API_KEY'],
     BLOGGER_API_KEY: process.env['BLOGGER_API_KEY'],
     BLOGGER_BLOG_ID: process.env['BLOGGER_BLOG_ID'],
     GA_MEASUREMENT_ID: process.env['GA_MEASUREMENT_ID'],
