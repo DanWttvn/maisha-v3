@@ -35,11 +35,11 @@ const ProjectsSection: FC<SectionProps> = () => {
         </Subtitle>
         <Paragraph>
           {lang === 'ES' &&
-            'Creemos que el deporte puede ser un motor para el desarrollo, aportando tanto bienestar físico como empoderamiento social. En una zona donde tanto el acceso a servicios básicos como el tiempo de esparcimiento están limitados, la adquisición de hábitos saludables es de vital importancia. Por ello, realizamos actividades deportivas semanales en dos centros educativos del distrito de Ward, con más de 200 alumnos y alumnas de educación primaria y secundaria. A través de diferentes actividades deportivas, torneos, ejercicios de educación emocional y diversos talleres (primeros auxilios, educación sexual y reproductiva, etc.) contribuimos a mantener un nivel de vida saludable entre las personas jóvenes del barrio.'}
+            'Maisha Roots utiliza el deporte como herramienta de transformación social en el barrio de Olasiti y Terati. Implementamos un programa de actividades deportivas semanales en dos centros educativos de primaria, beneficiando a más de 600 alumnos y alumnas. Nuestras actividades van más allá del deporte, se centran también en una mejora de la salud integral, fomentan la actividad física y la vida saludable, desarrollan habilidades socioemocionales, empoderan a las niñas y fortalecen a la comunidad aportándoles las herramientas necesarias para un futuro más saludable.'}
           {lang === 'EN' &&
-            'We believe that sport can be an engine for development, providing both physical well-being and social empowerment. In an area where both access to basic services and leisure time are limited, the acquisition of healthy habits is of vital importance. For this reason, we carry out weekly sports activities in two educational centers in the Terrat Ward, with more than 200 primary and secondary school students. Through different sports activities, tournaments, emotional education exercises, and various workshops (first aid, reproductive health education, etc.) we contribute to maintaining a healthy life standard among young people in the neighborhood.'}
+            'Maisha Roots uses sports as a way of social transformation in the Olasiti and Terati neighborhood. We implemented a program of weekly sports activities in two primary schools, benefiting more than 600 students. We also focus on improving comprehensive health, promoting physical activity and healthy living, developing socio-emotional skills, empowering girls and strengthening the community by providing them with the necessary tools for a healthier future.'}
           {lang === 'SW' &&
-            'Tunaamini kua michezo inaweza kuwa injini ya maendeleo, na kutoa afya njema ya kimwili na uwezeshwaji wa kijamii. Katika nafasi ambayo wote wanapata huduma za msingi na burudani zinadhibitiwa kuwa na tabia za kiafya ni muhimu sana. Kwa sababu hizi, tunafanya shughuli za kimichezo kila wiki kwenye vituo viwili vya kielimu kata ya Terrat na Zaidi ya wanafunzi 200 wa shule za msingi na sekondari. Kwa kupitia shughuli mbalimbali za kimichezo, mashindano, mazoezi ya elimu ya hisia na mafunzo mbalimbali (huduma ya kwanza, elimu ya afya ya uzazi, nk.) tunachangia katika kuboresha maisha ya kiafya kwa vijana katika jamii.'}
+            'Maisha Roots hutumia michezo kama njia ya kuleta mabadiliko ya kijamii katika vitongoji vya Olasiti na Terati. Tunatekeleza mpango wa shughuli za michezo za kila wiki katika shule mbili za msingi, na kunufaisha zaidi ya wanafunzi 600. Pia tunazingatia kuboresha afya kamili, kukuza shughuli za kimwili na maisha yenye afya, kukuza ujuzi wa kijamii na kihisia, kuwawezesha wasichana na kuimarisha jamii kwa kuwapa zana muhimu kwa maisha bora ya baadaye.'}
         </Paragraph>
 
         <Subtitle>
@@ -49,11 +49,11 @@ const ProjectsSection: FC<SectionProps> = () => {
         </Subtitle>
         <Paragraph>
           {lang === 'ES' &&
-            'Además de incluir la perspectiva de género en el desarrollo de todos nuestros proyectos, apoyamos la creación de clubs de debate en los centros educativos del distrito de Ward, abordando temas como la desigualdad, la violencia o la salud sexual y reproductiva de las mujeres. Internamente, llevamos a cabo formaciones en materia de igualdad de género tanto para el personal tanzano como para el personal español.'}
+            'En Maisha Roots, la igualdad de género es un pilar fundamental en nuestro trabajo. Implementamos dos estrategias clave para promover la igualdad: la primera es la incorporación de la perspectiva de género en todos los proyectos y la segunda es el fortalecimiento de los conocimientos y habilidades de las niñas y jóvenes de los centros educativos. Con la creación de clubes de debate para abordar temas como la desigualdad, la violencia de género y realizando talleres sobre la salud sexual y reproductiva.'}
           {lang === 'EN' &&
-            "In addition to including the gender perspective in the development of all our projects, we support the creation of discussion clubs in the educational centers of the Terrat ward, addressing issues such as inequality, violence, or women's sexual and reproductive health. Internally, we conduct gender equality training for both Tanzanian and Spanish teams."}
+            'At Maisha Roots, gender equality is a fundamental pillar of our work. We implement two key strategies to promote equality: the first is the incorporation of the gender perspective in all projects and the second is the strengthening of the knowledge and skills of girls and young people in educational centers. With the creation of debate clubs to address issues such as inequality, gender violence and holding workshops on sexual and reproductive health.'}
           {lang === 'SW' &&
-            'Tunahusisha mtazamo wa kijinsia katika mchakato wa utekelezaji wa miradi yetu yote, tunaunga mkono uundwaji wa vilabu vya majadiliano katika vituo vya kielimu katika kata ya Terrat, wakizungumzia masuala kama usawa, ukatili au afya ya uzazi kwa wanawake. Ndani ya shirika tunafanya mafunzo ya kijinsia kwa tumu ya Tanzania na Uhispania.'}
+            'Katika Maisha Roots, usawa wa kijinsia ni nguzo kuu ya kazi yetu. Tunatekeleza mikakati miwili muhimu ya kukuza usawa: Ya kwanza ni kuingizwa kwa mtazamo wa kijinsia katika miradi yote na Ya pili ni uimarishaji wa ujuzi na wa wasichana na vijana katika vituo vya elimu, Kwa kuundwa kwa vilabu vya mijadala ili kushughulikia masuala kama vile ukosefu wa usawa, unyanyasaji wa kijinsia na kufanya warsha kuhusu afya ya ngono na uzazi.'}
         </Paragraph>
 
         <Subtitle>
@@ -63,25 +63,11 @@ const ProjectsSection: FC<SectionProps> = () => {
         </Subtitle>
         <Paragraph>
           {lang === 'ES' &&
-            'Cada semana proporcionamos clases de refuerzo a alumnas/os del colegio de Mkono, contribuyendo a la reducción del fracaso escolar en la ciudad de Arusha. El alumnado de las clases es escogido por los profesores del centro en colaboración con la ONG y las clases son impartidas por personal docente de Maisha Roots.'}
+            'En Maisha Roots creemos en la educación como herramienta de transformación social. Por ello, implementamos un programa de clases de refuerzo para alumnas y alumnos del colegio de Maweni. Nuestro objetivo es contribuir a la reducción del fracaso escolar y mejorar las oportunidades educativas de la población. Asistimos dos veces por semana a mejorar el rendimiento académico del estudiantado y fortalecer las habilidades y conocimientos tanto en inglés como en otras materias.'}
           {lang === 'EN' &&
-            'Every week we provide reinforcement classes to students from Mkono school, contributing to the reduction of school failure in the city of Arusha. The students of the classes are chosen by the teachers of the school in collaboration with the NGO and the classes are taught by teaching staff from Maisha Roots.'}
+            'At Maisha Roots we believe in education as a tool for social transformation. For this reason, we implemented a program of reinforcement classes for students at Maweni school. Our objective is to contribute to the reduction of school failure and improve the educational opportunities of the population. We attend twice a week to improve the academic performance of the students and strengthen their skills and knowledge in both English, Mathematics and other subjects.'}
           {lang === 'SW' &&
-            'Kila wiki tunatoa masomo ya ziada kwa wanafunzi wa shule ya Mkonoo, kuchangia kupunguza wanafunzi kufeli katika mkoa wa Arusha. Wanafunzi wanaoshiriki wanachaguliwa na walimu wenyeji kwa kushirikiana na shirika na vipindi vinafanywa na walimu kutoka Maisha Roots'}
-        </Paragraph>
-
-        <Subtitle>
-          {lang === 'ES' && 'Desarrollo agrícola'}
-          {lang === 'EN' && 'Agricultural development'}
-          {lang === 'SW' && 'Maendeleo ya kilimo'}
-        </Subtitle>
-        <Paragraph>
-          {lang === 'ES' &&
-            'Para contribuir al desarrollo socioeconómico de la comunidad, ofrecemos a la población de Terrat talleres sobre técnicas de cultivo que mejoren la productividad de las tierras. Estos cursos se desarrollan en un terreno alquilado por Maisha Roots para que las personas beneficiarias puedan poner en práctica los conocimientos adquiridos.'}
-          {lang === 'EN' &&
-            'To contribute to the socio-economic development of the community, we offer the people of Terrat workshops on cultivation techniques that improve the productivity of the land. These courses take place on land rented by Maisha Roots so that the beneficiaries can put the acquired knowledge into practice.'}
-          {lang === 'SW' &&
-            'Ili kuchangia katika maendeleo ya uchumi wa kijamii, tunatoa mafunzo kwa watu wa Terrat kuhusu mbinu bora za kilimo ambazo zitaboresha mavuno shambani. Mafunzo haya yanafanyika katika shamba lililokodiwa na Maisha Roots ili wanufaika waweze kufanya walichojifunza kwa vitendo.'}
+            'Maisha Roots tunaamini katika elimu kama nyenzo ya mabadiliko ya kijamii. Kwa sababu hii, tunatekeleza mpango wa madarasa na kuimarisha wanafunzi katika shule ya Maweni. Lengo letu ni kuchangia katika kupunguza kufeli shule na kuboresha fursa za elimu kwa watoto. Tunahudhuria mara mbili kwa wiki ili kuboresha ufaulu wa wanafunzi kitaaluma na kuimarisha ujuzi na maarifa yao katika Kiingereza, Hisabati na masomo mengine.'}
         </Paragraph>
 
         <Subtitle>
@@ -91,11 +77,11 @@ const ProjectsSection: FC<SectionProps> = () => {
         </Subtitle>
         <Paragraph>
           {lang === 'ES' &&
-            'En España, llevamos a cabo sesiones, talleres, cursos y actividades de sensibilización y educación para el desarrollo, tratando de mejorar la comprensión del mundo globalizado y contribuyendo a provocar una actitud crítica y comprometida con la realidad mundial. Para ello, trabajamos tanto desde la educación formal como la informal, acudiendo a centros educativos y a grupos de escultismo a realizar actividades lúdicas de concienciación. También hemos organizado exposiciones y difundido material de sensibilización sobre las dinámicas mundiales y los ODS.'}
+            'Uno de nuestros objetivos es promover la comprensión del mundo globalizado y la construcción de una ciudadanía crítica y comprometida. Para ello, desarrollamos varias actividades de sensibilización y educación para el desarrollo. Realizamos charlas en centros educativos de diferentes edades, organizamos exposiciones mostrando diferentes realidades, difundimos material informativo en redes sociales y nuestro blog y colaboramos con otras organizaciones para ampliar nuestro alcance y tener el impacto necesario para crear una sociedad más justa, solidaria y sostenible.'}
           {lang === 'EN' &&
-            'In Spain, we carry out sessions, workshops, courses, and activities to raise awareness and education for development, trying to improve the understanding of the globalized world and helping to provoke a critical and committed attitude towards world reality. To do this, we work from both formal and informal education, going to educational centers and scouting groups to carry out recreational awareness-raising activities. We have also organized exhibitions and disseminated awareness-raising material on global dynamics and the SDGs.'}
+            'One of our objectives is to promote understanding of the globalized world and the construction of a critical and committed citizenry. To achieve this, we develop several awareness-raising and development education activities. We hold talks in educational centres of different ages, we organize exhibitions showing different realities, we disseminate informative material on social networks and our blog and we collaborate with other organizations to expand our reach and have the necessary impact to create a more just, supportive and sustainable society.'}
           {lang === 'SW' &&
-            'Kwa uhispania, tunafanya mafunzo, warsha, kozi na shughuli mbalimbali ili kukuza ufahamu na elimu kwa maendeleo, tunajaribu kuboresha uelewa wa dunia ya kiulimwengu na kusaidia kuchochea mtazamo wa kukosoa na kujitoa ili kuutambua uhalisia wa dunia. Kuyatekeleza haya, tunafanya kazi kupitia mifumo rasmi na isiyo rasmi ya kielimu Katika vituo vya kielimu, makundi ya skauti ili kujenga ufahamu kuhusu shughuli za ubunifu.pia tumeratibu maonyesho na kujenga ufahamu kuhusu vifaa vya usambazwaji wa mabadiliko na malengo endelevu ya kiulimwengu.'}
+            'Mojawapo ya malengo yetu ni kukuza uelewa wa ulimwengu wa utandawazi na ujenzi wa raia makini na anayejitolea. Ili kufanikisha hili, tunaendeleza shughuli kadhaa za kukuza uelewa na maendeleo. Tunafanya mazungumzo katika vituo vya elimu vya rika tofauti, tunapanga maonyesho yanayoonyesha hali halisi tofauti, tunasambaza nyenzo za kuelimisha kwenye mitandao ya kijamii na blogi yetu na tunashirikiana na mashirika mengine kupanua ufikiaji wetu na kuwa na athari muhimu ili kuunda haki zaidi, kuunga mkono na jamii endelevu.'}
         </Paragraph>
       </SubSection>
     </Section>

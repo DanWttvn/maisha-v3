@@ -14,6 +14,7 @@ const TransparencySection: FC<SectionProps> = () => {
   const { lang } = useContext(LanguageContext)
   const emailHref = 'mailto:info@maisharoots.org'
 
+  // TO-DO: show in all languages
   const docSrcs = {
     managmentOfConflicts:
       '/images/docs/Mecan%C3%ADsmo_de_gesti%C3%B3n_de_conflictos_de_inter%C3%A9s-Maisha_Roots.pdf',
@@ -23,6 +24,8 @@ const TransparencySection: FC<SectionProps> = () => {
       '/images/docs/Aprobaci%C3%B3n_de_gastos_y_selecci%C3%B3n_de_proveedores-Maisha_Roots.pdf',
     donationsControl: '/images/docs/Control_de_donaciones-Maisha_Roots.pdf',
     complainsForm: '/images/docs/Canal_de_denuncias-Maisha_Roots.pdf',
+    dataProtection: '/images/docs/manual_proteccion_datos.pdf',
+    conduct: '/images/docs/Codigo_de_Conducta.pdf',
   }
 
   return (
@@ -99,16 +102,25 @@ const TransparencySection: FC<SectionProps> = () => {
             {lang === 'SW' && 'Udhibiti wa michango'}
           </Li>
           <Li>
-            {lang === 'ES' &&
-              'Cumplimiento de la normativa vigente en materia de protección de datos'}
-            {lang === 'EN' &&
-              'Compliance with regulations in force on data protection'}
-            {lang === 'SW' && 'Kuzingatia kanuni zinazohusu ulinzi wa taharifa'}
+            <ExternalLink href={docSrcs.dataProtection}>
+              {lang === 'ES' && 'Manual de protección de datos'}
+              {lang === 'EN' &&
+                'Compliance with regulations in force on data protection'}
+              {lang === 'SW' &&
+                'Kuzingatia kanuni zinazohusu ulinzi wa taharifa'}
+            </ExternalLink>
           </Li>
           <Li>
             {lang === 'ES' && 'Canal de Denuncias'}
             {lang === 'EN' && 'Complaints channel'}
             {lang === 'SW' && 'Malalamiko ya kituo'}
+          </Li>
+          <Li>
+            <ExternalLink href={docSrcs.conduct}>
+              {lang === 'ES' && 'Código de conducta'}
+              {lang === 'EN' && 'Code of Conduct'}
+              {lang === 'SW' && 'Kanuni za Maadili'}
+            </ExternalLink>
           </Li>
         </ul>
         <Paragraph isFullWidth>
@@ -243,25 +255,36 @@ const TransparencySection: FC<SectionProps> = () => {
           {lang === 'SW' && 'Uhasibu na ripoti za shughuli'}
         </Subtitle>
 
-        <ParagraphDocs>
-          {lang === 'ES' && 'Dossier 2017'}
-          {lang === 'EN' && 'Dossier 2017'}
-          {lang === 'SW' && 'Dossier 2017'}
-          <ExternalLink href="/images/docs/Dossier_es_2017-MR.pdf">
+        <Paragraph isFullWidth>
+          {lang === 'ES' && 'Memoria actividades 2021'}
+          {lang === 'EN' && 'Report of Activities 2021'}
+          {lang === 'SW' && 'Ripoti ya Shughuli 2021'}
+          <ExternalLink
+            href="/images/docs/Memoria_de_Actividades2021-MR.pdf"
+            styles={{ margin: '0 4px' }}
+          >
             ESP
           </ExternalLink>
-          <ExternalLink href="/images/docs/Dossier_en_2017-MR.pdf">
-            ENG
-          </ExternalLink>
-        </ParagraphDocs>
+        </Paragraph>
+
         <ParagraphDocs>
-          {lang === 'ES' && 'Memoria de Actividades 2017'}
-          {lang === 'EN' && 'Report of Activities 2017'}
-          {lang === 'SW' && 'Ripoti ya Shughuli 2017'}
-          <ExternalLink href="/images/docs/Memoria_de_Actividades2016-2017-MR.pdf">
+          {lang === 'ES' && 'Memoria actividades 2020'}
+          {lang === 'EN' && 'Report of Activities 2020'}
+          {lang === 'SW' && 'Ripoti ya Shughuli 2020'}
+          <ExternalLink href="/images/docs/Memoria_de_Actividades2020-MR.pdf">
             ESP
           </ExternalLink>
         </ParagraphDocs>
+
+        <ParagraphDocs>
+          {lang === 'ES' && 'Memoria actividades 2019'}
+          {lang === 'EN' && 'Report of Activities 2019'}
+          {lang === 'SW' && 'Ripoti ya Shughuli 2019'}
+          <ExternalLink href="/images/docs/Memoria_de_Actividades2019-MR.pdf">
+            ESP
+          </ExternalLink>
+        </ParagraphDocs>
+
         <ParagraphDocs>
           {lang === 'ES' && 'Dossier 2018'}
           {lang === 'EN' && 'Dossier 2018'}
@@ -273,6 +296,7 @@ const TransparencySection: FC<SectionProps> = () => {
             ENG
           </ExternalLink>
         </ParagraphDocs>
+
         <ParagraphDocs>
           {lang === 'ES' && 'Memoria de Actividades 2018'}
           {lang === 'EN' && 'Report of Activities 2018'}
@@ -281,32 +305,28 @@ const TransparencySection: FC<SectionProps> = () => {
             ESP
           </ExternalLink>
         </ParagraphDocs>
+
         <ParagraphDocs>
-          {lang === 'ES' && 'Memoria actividades 2019'}
-          {lang === 'EN' && 'Report of Activities 2019'}
-          {lang === 'SW' && 'Ripoti ya Shughuli 2019'}
-          <ExternalLink href="/images/docs/Memoria_de_Actividades2019-MR.pdf">
+          {lang === 'ES' && 'Dossier 2017'}
+          {lang === 'EN' && 'Dossier 2017'}
+          {lang === 'SW' && 'Dossier 2017'}
+          <ExternalLink href="/images/docs/Dossier_es_2017-MR.pdf">
+            ESP
+          </ExternalLink>
+          <ExternalLink href="/images/docs/Dossier_en_2017-MR.pdf">
+            ENG
+          </ExternalLink>
+        </ParagraphDocs>
+
+        <ParagraphDocs>
+          {lang === 'ES' && 'Memoria de Actividades 2017'}
+          {lang === 'EN' && 'Report of Activities 2017'}
+          {lang === 'SW' && 'Ripoti ya Shughuli 2017'}
+          <ExternalLink href="/images/docs/Memoria_de_Actividades2016-2017-MR.pdf">
             ESP
           </ExternalLink>
         </ParagraphDocs>
-        <ParagraphDocs>
-          {lang === 'ES' && 'Memoria actividades 2020'}
-          {lang === 'EN' && 'Report of Activities 2020'}
-          {lang === 'SW' && 'Ripoti ya Shughuli 2020'}
-          <ExternalLink href="/images/docs/Memoria_de_Actividades2020-MR.pdf">
-            ESP
-          </ExternalLink>
-        </ParagraphDocs>
-        <Paragraph isFullWidth>
-          {lang === 'ES' && 'Memoria actividades 2021'}
-          {lang === 'EN' && 'Report of Activities 2021'}
-          {lang === 'SW' && 'Ripoti ya Shughuli 2021'}
-          <ExternalLink
-            href="/images/docs/Memoria_de_Actividades2021-MR.pdf"
-            styles={{ margin: '0 4px' }}>
-            ESP
-          </ExternalLink>
-        </Paragraph>
+
         <ParagraphDocs>
           {lang === 'ES' && 'Estatutos Maisha Roots Spain'}
           {lang === 'EN' && 'Maisha Roots Spain Constitution'}
@@ -315,6 +335,7 @@ const TransparencySection: FC<SectionProps> = () => {
             ESP
           </ExternalLink>
         </ParagraphDocs>
+
         <ParagraphDocs>
           {lang === 'ES' && 'Constitución FYWCO'}
           {lang === 'EN' && 'FYWCO Constitution'}
@@ -323,12 +344,23 @@ const TransparencySection: FC<SectionProps> = () => {
             ENG
           </ExternalLink>
         </ParagraphDocs>
+
         <ParagraphDocs>
           {lang === 'ES' && 'Memorandum of Understanding'}
           {lang === 'EN' && 'Memorandum of Understanding'}
           {lang === 'SW' && 'Memorandum of Understanding'}
           <ExternalLink href="/images/docs/MOU-FYWCO_MRS.pdf">ENG</ExternalLink>
         </ParagraphDocs>
+
+        <ParagraphDocs>
+          {lang === 'ES' && 'Colabora con Maisha Roots'}
+          {lang === 'EN' && 'Collaborate with Maisha Roots'}
+          {lang === 'SW' && 'Shirikiana na IKEA'}
+          <ExternalLink href="/images/docs/Colaboracion_con_Maisha_Roots.pdf">
+            ESP
+          </ExternalLink>
+        </ParagraphDocs>
+
         <ParagraphDocs>
           {lang === 'ES' && 'Plan de voluntariado'}
           {lang === 'EN' && 'Volunteer Plan'}
@@ -337,6 +369,7 @@ const TransparencySection: FC<SectionProps> = () => {
             ESP
           </ExternalLink>
         </ParagraphDocs>
+
         <ParagraphDocs>
           {lang === 'ES' && 'Utilidad Pública Maisha Roots Spain'}
           {lang === 'EN' && 'Maisha Roots Spain Public Utility'}
