@@ -37,6 +37,8 @@ const TimelineSection: FC<SectionProps> = () => {
         <Carousel.Container
           title={titles[lang]}
           sectionTitles={[
+            '2023',
+            '2022',
             '2021',
             '2020',
             '2019',
@@ -46,7 +48,30 @@ const TimelineSection: FC<SectionProps> = () => {
             '2014/15',
           ]}
           styles={{ height: 690 }}
-          isFullWidth>
+          isFullWidth
+        >
+          <Carousel.Item src="/images/experience_2023.jpg" hasOverlay>
+            <Year>2023</Year>
+            <Paragraph>
+              {lang === 'ES' &&
+                'El programa de deportes y salud se expande e introducimos actividades de desarrollo socioemocional, aparte de juegos de desarrollo intelectual y diversos talleres que mejoran la salud, colaborando estrechamente con Cruz Roja Tanzania y hospitales de la zona. Ampliamos también el proyecto de desigualdad de género creando los clubes de debate en varios colegios de educación secundaria de la zona y sensibilizando en temas relacionados con la salud sexual y reproductiva.'}
+              {lang === 'EN' &&
+                'We expand the sports and health program, and we are introduced socio-emotional development activities, as well as intellectual development games and various workshops that improve health, collaborating closely with the Tanzania Red Cross and experts in the area. We also expanded the gender equality project by creating debate clubs in several secondary schools and raising awareness on issues related to sexual and reproductive health.'}
+              {lang === 'SW' &&
+                'Tumepanua programu ya michezo na afya na tumeanzisha shughuli na michezo ya kushirikiana na ya kihisia, pamoja na michezo ya maendeleo ya kiakili na warsha mbalimbali zinazoboresha afya kwa kushirikiana kwa karibu na Shirika la Msalaba Mwekundu Tanzania na wataalam wengine kutoka maeneo hayo. Pia tumepanua mradi wa usawa wa kijinsia kwa kuunda vilabu vya mijadala katika shule kadhaa za Sekondari na kuongeza uelewa kuhusu masuala yanayohusiana na afya ya uzazi.'}
+            </Paragraph>
+          </Carousel.Item>
+          <Carousel.Item src="/images/experience_2022.jpg" hasOverlay>
+            <Year>2022</Year>
+            <Paragraph>
+              {lang === 'ES' &&
+                'Empezamos el programa de deportes y salud, desarrollando actividades de deporte, ocio, fomentando la vida saludable y valores como la colaboración, el respeto y el empoderamiento. Además, empezamos un programa de apoyo educativo extraescolar en materias como inglés y matemáticas y puesto que las mujeres del barrio y las autoridades nos han transmitido el grave problema de desigualdad de género optamos por desarrollar talleres de sensibilización sobre violencia de género y matrimonios forzados.'}
+              {lang === 'EN' &&
+                'We started the program of sports and health, developing activities of sport, leisure, promoting healthy life and values such as collaboration, respect and empowerment. We also started a program of support in subjects such as English and mathematics. In addition, the women of the neighborhood and the authorities have faced the serious problem of gender inequality, so that we decided to develop awareness workshops about gender violence and forced marriages.'}
+              {lang === 'SW' &&
+                'Tulianza programu ya michezo na afya, kuendeleza shughuli za michezo, burudani, kukuza maisha yenye afya na maadili kama vile ushirikiano, heshima na uwezeshaji. Pia tulianzisha programu ya usaidizi katika masomo kama vile Kiingereza na Hisabati. Aidha, wanawake wa kitongoji na mamlaka kukumbana na tatizo kubwa la ukosefu wa usawa wa kijinsia, hivyo tukaamua kuandaa warsha za uelimishaji kuhusu ukatili wa kijinsia na ndoa za kulazimishwa/ndoa za utotoni.'}
+            </Paragraph>
+          </Carousel.Item>
           <Carousel.Item src="/images/photo10.webp" hasOverlay>
             <Year>2021</Year>
             <Paragraph>
