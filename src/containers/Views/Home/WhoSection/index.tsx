@@ -269,7 +269,7 @@ const WhoSection: FC<SectionProps> = () => {
 
         <DataContainer isFullWidth>
           <Container direction="vertical" styles={{ margin: '1.875rem 0' }}>
-            <DataText>194º</DataText>
+            <DataText>160º</DataText>
             <Text>
               {lang === 'ES' && 'Ránking Índice de'}
               {lang === 'EN' && 'Human Development'}
@@ -282,7 +282,7 @@ const WhoSection: FC<SectionProps> = () => {
             </Text>
           </Container>
           <Container direction="vertical" styles={{ margin: '1.875rem 0' }}>
-            <DataText>64</DataText>
+            <DataText>66</DataText>
             <DataText
               styles={{
                 fontSize: '5rem',
@@ -304,17 +304,17 @@ const WhoSection: FC<SectionProps> = () => {
             <DataText>
               {lang === 'ES' && (
                 <>
-                  862<span style={{ fontSize: '5rem' }}>€</span>
+                  1018<span style={{ fontSize: '5rem' }}>€</span>
                 </>
               )}
               {lang === 'EN' && (
                 <>
-                  862<span style={{ fontSize: '5rem' }}>€</span>
+                  1018<span style={{ fontSize: '5rem' }}>€</span>
                 </>
               )}
               {lang === 'SW' && (
                 <>
-                  <span style={{ fontSize: '4rem' }}>2,284,300</span>
+                  <span style={{ fontSize: '4rem' }}>TZS 2,881,200</span>
                 </>
               )}
             </DataText>

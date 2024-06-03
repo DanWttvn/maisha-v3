@@ -216,22 +216,6 @@ const HowWorkSection: FC<SectionProps> = () => {
             </ParagraphJustified>
           </GroupCard>
           <GroupCard>
-            <CommissionIcon src="./images/icons/agriculture-orange.svg" />
-            <Text>
-              {lang === 'ES' && 'Grupo de cuestiones agrícolas'}
-              {lang === 'EN' && 'Agricultural Group'}
-              {lang === 'SW' && 'Kikundi cha Kilimo'}
-            </Text>
-            <ParagraphJustified>
-              {lang === 'ES' &&
-                'Da apoyo al proyecto de empoderamiento agrícola, a través del estudio de nuevas técnicas y el fomento de prácticas sostenibles y ecológicas.'}
-              {lang === 'EN' &&
-                'It supports the agricultural empowerment project, through the study of new techniques and the promotion of sustainable and ecological practices.'}
-              {lang === 'SW' &&
-                'Inasaidia mradi wa uwezeshaji wa kilimo, kupitia utafiti wa mbinu mpya za kukuza kipato na kutunza mazingira.'}
-            </ParagraphJustified>
-          </GroupCard>
-          <GroupCard>
             <CommissionIcon src="./images/icons/gender-orange.svg" />
             <Text>
               {lang === 'ES' && 'Grupo por la Equidad de género'}
