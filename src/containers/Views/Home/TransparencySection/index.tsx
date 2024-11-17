@@ -337,22 +337,6 @@ const TransparencySection: FC<SectionProps> = () => {
         </ParagraphDocs>
 
         <ParagraphDocs>
-          {lang === 'ES' && 'Constitución FYWCO'}
-          {lang === 'EN' && 'FYWCO Constitution'}
-          {lang === 'SW' && 'Katiba ya FYWCO'}
-          <ExternalLink href="/images/docs/FYWCO_constitution.pdf">
-            ENG
-          </ExternalLink>
-        </ParagraphDocs>
-
-        <ParagraphDocs>
-          {lang === 'ES' && 'Memorandum of Understanding'}
-          {lang === 'EN' && 'Memorandum of Understanding'}
-          {lang === 'SW' && 'Memorandum of Understanding'}
-          <ExternalLink href="/images/docs/MOU-FYWCO_MRS.pdf">ENG</ExternalLink>
-        </ParagraphDocs>
-
-        <ParagraphDocs>
           {lang === 'ES' && 'Colabora con Maisha Roots'}
           {lang === 'EN' && 'Collaborate with Maisha Roots'}
           {lang === 'SW' && 'Shirikiana na IKEA'}
