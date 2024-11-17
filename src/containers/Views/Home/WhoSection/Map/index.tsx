@@ -72,13 +72,15 @@ const Map: FC = () => {
         <ModalSp
           isHidden={selected !== 'SP'}
           variant="B"
-          onClose={() => setSelected(undefined)}>
+          onClose={() => setSelected(undefined)}
+        >
           {spainCopy}
         </ModalSp>
         <ModalTz
           isHidden={selected !== 'TZ'}
           variant="B"
-          onClose={() => setSelected(undefined)}>
+          onClose={() => setSelected(undefined)}
+        >
           {tanzaniaCopy}
         </ModalTz>
       </Styled>

@@ -18,7 +18,8 @@ const Item: FC<Props> = forwardRef(
         src={src}
         onClick={onClick}
         hasOverlay={hasOverlay}
-        styles={styles}>
+        styles={styles}
+      >
         {children}
       </Styled>
     )

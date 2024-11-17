@@ -33,7 +33,8 @@ const NewsletterPopup: FC<Props> = () => {
       isHidden={lang !== 'ES'}
       isShown={isShown}
       onClose={handleClose}
-      styles={{ bottom: isPolicyAccepted ? 30 : 100 }}>
+      styles={{ bottom: isPolicyAccepted ? 30 : 100 }}
+    >
       <NewsletterForm />
     </Styled>
   )

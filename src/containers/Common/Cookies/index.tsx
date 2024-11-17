@@ -172,21 +172,24 @@ const Cookies: FC<Props> = ({ isHidden }) => {
           <li>
             <a
               rel="noreferrer"
-              href="https://support.mozilla.org/en-US/kb/cookies-information-Websites-store-on-your-computer">
+              href="https://support.mozilla.org/en-US/kb/cookies-information-Websites-store-on-your-computer"
+            >
               Firefox
             </a>
           </li>
           <li>
             <a
               rel="noreferrer"
-              href="https://support.google.com/chrome/bin/answer.py?hl=en&answer=95647&topic=14666&ctx=topic">
+              href="https://support.google.com/chrome/bin/answer.py?hl=en&answer=95647&topic=14666&ctx=topic"
+            >
               Chrome
             </a>
           </li>
           <li>
             <a
               rel="noreferrer"
-              href="http://windows.microsoft.com/en-US/internet-explorer/delete-manage-cookies">
+              href="http://windows.microsoft.com/en-US/internet-explorer/delete-manage-cookies"
+            >
               Internet Explorer 8-10
             </a>
           </li>

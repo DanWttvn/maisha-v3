@@ -21,12 +21,6 @@ import { SectionProps } from 'models'
 const HowWorkSection: FC<SectionProps> = () => {
   const { lang } = useContext(LanguageContext)
 
-  const imgSrcs = {
-    ES: './images/esquema-organizacion-ES.webp',
-    EN: './images/esquema-organizacion-EN.webp',
-    SW: './images/esquema-organizacion-EN.webp',
-  }
-
   return (
     <Section id="how-work">
       <Title

@@ -14,7 +14,8 @@ const Infography: FC = () => (
     <Container
       direction="horizontal"
       styles={{ justifyContent: 'space-around' }}
-      isFullWidth>
+      isFullWidth
+    >
       <Group>
         <DataContainer>
           <DataText>320</DataText>

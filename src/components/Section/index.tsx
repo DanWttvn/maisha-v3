@@ -18,7 +18,8 @@ const Section: FC<Props> = ({
       styles={styles}
       className={className}
       id={id}
-      isFullWidth={isFullWidth}>
+      isFullWidth={isFullWidth}
+    >
       {children}
     </Styled>
   )
