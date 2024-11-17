@@ -1,5 +1,4 @@
 import React, { FC, useContext } from 'react'
-import Image from 'components/Image'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import Paragraph from 'components/Paragraph'
@@ -50,55 +49,39 @@ const HowWorkSection: FC<SectionProps> = () => {
           <StructureParagraphContainer>
             <Paragraph>
               {lang === 'ES' &&
-                'Nuestra estructura está basada, en su gran mayoría, en personal voluntario, sobre todo en el caso de España, donde la totalidad del equipo está formada por personal voluntario. No obstante, contamos con un equipo directivo fuerte, estable y comprometido que, en parte, se dedica a la cooperación y al desarrollo de manera profesional. En el caso de Tanzania, el personal es asalariado.'}
+                'Maisha Roots es un proyecto que crece gracias al compromiso y la dedicación de nuestros voluntarios. Todos los miembros del equipo comparten una misma pasión: contribuir a mejorar la calidad de vida de las comunidades más vulnerables. Este espíritu de colaboración y solidaridad es el motor que impulsa nuestra organización.'}
               {lang === 'EN' &&
-                "Our current structure is mainly based on volunteers, especially in the case of Spain, where, apart from our Projects' Technician, all the team is composed of volunteers. In the case of Tanzania, the team is composed of workers."}
+                'Maisha Roots is a project that grows thanks to the commitment and dedication of our volunteers. All team members share the same passion: contributing to improving the quality of life of the most vulnerable communities. This spirit of collaboration and solidarity is the driving force behind our organization.'}
               {lang === 'SW' &&
-                'Muundo wetu wa sasa ni kujitolea, haswa katika nchi ya Uhispania, ambapo mbali na Miradi yetu Ufundi, timu yetu inaundwa na wahisani. Kwa upande wa Tanzania, timu inaudwa na wafanyakazi.'}
+                'Maisha Roots ni mradi unaokua kutokana na kujitolea na bidii ya wanajitolea wetu. Wanachama wote wa timu wanashiriki shauku moja: kuchangia kuboresha maisha ya jamii zilizo katika mazingira magumu zaidi. Roho hii ya ushirikiano na mshikamano ndiyo inayoendesha shirika letu.'}
             </Paragraph>
             <Paragraph styles={{ marginBottom: 0 }}>
               {lang === 'ES' && (
                 <>
                   Creemos que, en nuestra organización,{' '}
                   <strong>todas las voces cuentan</strong> y deben ser
-                  escuchadas. En las acciones de cooperación al desarrollo,
-                  actuamos como dos contrapartes paralelas con dos órganos de
-                  gobierno y dos asambleas generales. Además, contamos con
-                  varios grupos de trabajo que van variando en función de las
-                  necesidades del momento. En las acciones de Educación para el
-                  Desarrollo y la ciudadanía global llevadas a cabo en España,
-                  trabajamos de forma independiente, mientras que la entidad
-                  tanzana también desarrolla acciones de sensibilización
-                  autónomas.
+                  escuchadas.Para ello creamos los grupos de trabajo que van
+                  variando en función de las necesidades del momento.
                 </>
               )}
               {lang === 'EN' && (
                 <>
                   We believe that, within our organization,{' '}
-                  <strong>all voices must be heard.</strong> Since we are two
-                  parallel counterparts, we have two governing organs and two
-                  general assemblies. Furthermore, in the Spanish team (where we
-                  have all volunteers), we count with various working groups
-                  which vary according to the needs of the current moment.
+                  <strong>all voices must be heard.</strong> For this reason, we
+                  create working groups that change according to the needs of
+                  the moment.
                 </>
               )}
               {lang === 'SW' && (
                 <>
                   Tunaamini kwamba, ndani ya shirika letu,{' '}
-                  <strong>sauti zote lazima zisikilizwe</strong>. Kwa kuwa sisi
-                  ni wawili tunaofanana, tunavyo vyombo viwili vya kutawala na
-                  mkusanyiko mmoja wa jumla. Kwa kuongezea, kwenye timu ya
-                  Uhispania (ambapo tunao watu wote wanaojitolea), tunahesabu na
-                  vikundi mbali mbali vya kufanya kazi ambazo hutofautiana
-                  kulingana na mahitaji ya wakati huo.
+                  <strong>sauti zote lazima zisikilizwe</strong>. Kwa ajili ya
+                  hili, tunaunda vikundi vya kazi vinavyobadilika kulingana na
+                  mahitaji ya wakati.
                 </>
               )}
             </Paragraph>
           </StructureParagraphContainer>
-          <Image
-            src={imgSrcs[lang]}
-            styles={{ paddingTop: 20, width: 430, maxWidth: '100%' }}
-          />
         </StructureContainer>
 
         <Container styles={{ justifyContent: 'center' }}>

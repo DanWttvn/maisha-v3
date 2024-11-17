@@ -9,10 +9,10 @@ const Projects: FC = () => (
   <SubSection>
     <Paragraph styles={{ marginBottom: 16 }}>
       <Text tag="span" styles={{ marginBottom: 8, marginRight: 4 }} isFullWidth>
-        La misión de nuestro Proyecto Mawio es mejorar la calidad de vida de una
-        de las comunidades masái de la ciudad de Arusha, al norte de Tanzania, a
-        través del fomento de la educación y el desarrollo de los medios de vida
-        desde un enfoque participativo.
+        La misión de nuestros proyectos es mejorar la calidad de vida de las
+        comunidades de la ciudad de Arusha, al norte de Tanzania, a través del
+        fomento de la educación y el desarrollo de los medios de vida desde un
+        enfoque participativo.
       </Text>
       <Text tag="span" weight="bold" isFullWidth>
         ¡Mira las actividades que ya hemos puesto en marcha!

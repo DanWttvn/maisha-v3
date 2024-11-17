@@ -79,7 +79,7 @@ export const Navbar: FC<Props> = ({ isHomePage }) => {
         />
         <Menu $isResponsiveOpen={isResponsiveOpen}>
           {items}
-          <Container>
+          <Container key="language-container">
             <Li onClick={() => onLanguageChange('ES')} isSubItem>
               ESP
             </Li>
