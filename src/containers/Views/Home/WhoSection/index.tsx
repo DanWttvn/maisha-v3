@@ -54,11 +54,11 @@ const WhoSection: FC<SectionProps> = () => {
           </Subtitle>
           <Paragraph color="white" weight="bold">
             {lang === 'ES' &&
-              'Maisha Roots es una ONG que aúna los esfuerzos de dos entidades, una española (Maisha Roots Spain) y otra tanzana (FYWCO, Focus for Youth, Woman and Children Organization), con el fin de fomentar el desarrollo en Tanzania.'}
+              'Maisha Roots es una ONG dedicada al desarrollo comunitario en Tanzania, combinando la visión global con la acción local. Tiene como objetivo de mejorar la calidad de vida de las poblaciones más vulnerables, promoviendo el desarrollo sostenible y la equidad.'}
             {lang === 'EN' &&
-              'Maisha Roots is an NGO that combines the efforts of two entities, a Spanish one (Maisha Roots Spain) and a Tanzanian one (FYWCO, Focus for Youth, Woman and Children Organization), with the common goal of fostering development in Tanzania.'}
+              'Maisha Roots is an NGO dedicated to community development in Tanzania, combining global vision with local action. Its goal is to improve the quality of life for the most vulnerable populations, promoting sustainable development and equity.'}
             {lang === 'SW' &&
-              'Maisha Roots ni Shirika Lisilo La Kiserikali ambalo linalounganisha nguvu za taasisi mbili Moja ya Uhispania (Maisha Roots Spain) na nyingine ya Tanzania (Focus for youth, women and children organisation kwa lengo la Pamoja la kuchochea maendeleo Tanzania.'}
+              'Maisha Roots ni shirika lisilo la kiserikali (NGO) linalojitolea kwa maendeleo ya jamii nchini Tanzania, likichanganya mtazamo wa kimataifa na hatua za ndani. Lengo lake ni kuboresha maisha ya watu walio katika mazingira magumu zaidi, likihamasisha maendeleo endelevu na usawa.'}
           </Paragraph>
           <Paragraph color="white" weight="bold">
             {lang === 'ES' &&

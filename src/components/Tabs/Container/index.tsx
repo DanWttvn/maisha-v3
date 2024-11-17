@@ -31,7 +31,8 @@ const Tabs: FC<Props> = ({ isHidden, styles, children, isFullWidth }) => {
       <TabButton
         key={i}
         onClick={e => handleClick(i, e)}
-        isActive={value === i}>
+        isActive={value === i}
+      >
         {x.props.title}
       </TabButton>
     )

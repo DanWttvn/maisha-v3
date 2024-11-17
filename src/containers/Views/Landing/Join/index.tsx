@@ -40,14 +40,16 @@ const Join: FC<Props> = ({ variant }) => {
               key={amount}
               onClick={() => handleSelectAmount(amount)}
               isSelected={selectedAmount === amount && customAmount !== amount}
-              variant="C">
+              variant="C"
+            >
               {amount}€
             </Button>
           ))}
           <Button
             variant="C"
             onClick={() => handleSelectAmount(customAmount)}
-            isSelected={selectedAmount === customAmount}>
+            isSelected={selectedAmount === customAmount}
+          >
             <Input type="number" min={5} onChange={handleInputChange} />€
           </Button>
         </Container>
@@ -55,14 +57,16 @@ const Join: FC<Props> = ({ variant }) => {
           isHidden={isError}
           color="black"
           weight="semibold"
-          isFullWidth>
+          isFullWidth
+        >
           Elige tu aportación mensual
         </HelperText>
         <HelperText
           isHidden={selectedAmount !== 5}
           color="black"
           size="s"
-          isFullWidth>
+          isFullWidth
+        >
           *Para evitar comisiones del banco y sacar el máximo provecho a tu
           aportación, retiraremos cada dos meses 10€ de tu cuenta
         </HelperText>
@@ -83,7 +87,8 @@ const Join: FC<Props> = ({ variant }) => {
 
       <Dialog
         isHidden={!isFormModalOpen}
-        onClose={() => setIsFormModalOpen(false)}>
+        onClose={() => setIsFormModalOpen(false)}
+      >
         <Subtitle>Hazte socio</Subtitle>
         <Text color="black" weight="semibold" styles={{ marginRight: 8 }}>
           Tu aportación mensual seleccionada es de{' '}
@@ -97,7 +102,8 @@ const Join: FC<Props> = ({ variant }) => {
             textDecoration: 'underline',
             cursor: 'pointer',
             marginTop: 2,
-          }}>
+          }}
+        >
           Cambiar
         </Text>
         <SkipWrap />
@@ -107,14 +113,16 @@ const Join: FC<Props> = ({ variant }) => {
       <Banner
         variant="B"
         isShown={!isCTAVisible && !isFormModalOpen}
-        styles={{ padding: '20px 20%', alignItems: 'center' }}>
+        styles={{ padding: '20px 20%', alignItems: 'center' }}
+      >
         <Text color="black" weight="semibold">
           Ayúdanos a seguir creciendo!
         </Text>
         <Button
           variant="B"
           onClick={handleScrollToTop}
-          styles={{ marginLeft: 'auto' }}>
+          styles={{ marginLeft: 'auto' }}
+        >
           ÚNETE
         </Button>
       </Banner>

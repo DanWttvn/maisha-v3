@@ -44,10 +44,8 @@ const Faq: FC = () => (
       <Text>
         Con tu contribución, no importa la cantidad, estás haciendo posible que
         saquemos adelante nuestros proyectos actuales y futuros. Tu aportación
-        nos permite pagar a nuestro <strong>equipo local tanzano</strong>,
-        comprar los <strong>materiales</strong> que necesitamos para desarrollar
-        nuestros talleres y proyectos y hacer frente a los{' '}
-        <strong>gastos</strong> de la ONG.
+        nos permite tener una <strong>base económica</strong> para desarrollar
+        nuestros talleres y proyectos en Tanzania.
       </Text>
     </Accordion>
     <Accordion title="¿Qué ventajas obtengo como socio/a?" isFullWidth>

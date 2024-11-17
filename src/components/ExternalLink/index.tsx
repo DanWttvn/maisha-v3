@@ -35,7 +35,8 @@ const ExternalLink: FC<Props> = ({
       size={size}
       styles={styles}
       weight={weight}
-      className={className}>
+      className={className}
+    >
       {children}
     </Styled>
   )

@@ -22,7 +22,8 @@ const Subtitle: FC<Props> = ({
         isCentered={isCentered}
         styles={styles}
         isFullWidth={isFullWidth}
-        className={className}>
+        className={className}
+      >
         {children}
       </H4>
     ) : (
@@ -31,7 +32,8 @@ const Subtitle: FC<Props> = ({
         isCentered={isCentered}
         styles={styles}
         isFullWidth={isFullWidth}
-        className={className}>
+        className={className}
+      >
         {children}
       </H3>
     )}

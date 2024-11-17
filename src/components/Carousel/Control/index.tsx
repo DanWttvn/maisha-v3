@@ -34,7 +34,8 @@ const Control: FC<Props> = ({ isHidden, control, sectionTitles, onChange }) => {
           size={isActive ? 'l' : 'm'}
           styles={{
             color: isActive ? theme.colors.darkOrange : theme.colors.white,
-          }}>
+          }}
+        >
           {x}
         </Text>
       </NodeWrapper>

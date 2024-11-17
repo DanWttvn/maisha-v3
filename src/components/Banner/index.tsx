@@ -26,7 +26,8 @@ const Banner: FC<Props> = ({
       variant={variant}
       isShown={isShown}
       className={className}
-      styles={styles}>
+      styles={styles}
+    >
       {children}
     </Styled>
   )

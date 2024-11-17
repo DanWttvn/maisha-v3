@@ -31,14 +31,16 @@ const JoinBanner: FC = () => {
       variant="B"
       isShown={isShown}
       isHidden={lang !== 'ES'}
-      styles={{ padding: '20px 20%', alignItems: 'center' }}>
+      styles={{ padding: '20px 20%', alignItems: 'center' }}
+    >
       <Text color="black" weight="semibold">
         Ayúdanos a seguir creciendo!
       </Text>
       <Button
         variant="B"
         onClick={() => void push(urls.landing2)}
-        styles={{ marginLeft: 'auto' }}>
+        styles={{ marginLeft: 'auto' }}
+      >
         ÚNETE
       </Button>
     </Banner>

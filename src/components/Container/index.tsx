@@ -21,7 +21,8 @@ const Container: FC<Props> = ({
       styles={styles}
       direction={direction}
       isFullWidth={isFullWidth}
-      className={className}>
+      className={className}
+    >
       {children}
     </Styled>
   )
