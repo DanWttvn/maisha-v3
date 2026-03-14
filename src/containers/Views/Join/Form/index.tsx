@@ -34,6 +34,7 @@ const JoinForm: FC<Props> = ({
     isPolicyModalOpen,
     setIsPolicyModalOpen,
     generalErrors,
+    failErrorMessage,
   } = useConnect({ forcedAmount })
 
   if (isHidden) return null
@@ -106,7 +107,12 @@ const JoinForm: FC<Props> = ({
               onClick={() => handleSelectAmount(customAmount)}
               isSelected={selectedAmount === customAmount}
             >
-              <AmountInput type="number" onChange={handleInputChange} />€
+              <AmountInput
+                name="customAmount"
+                type="number"
+                onChange={handleInputChange}
+              />
+              €
             </OptionsButton>
           </Container>
 
@@ -167,8 +173,7 @@ const JoinForm: FC<Props> = ({
           isHidden={!generalErrors.includes('fail')}
           isFullWidth
         >
-          Ha ocurrido un error, por favor, vuelve a intentarlo más tarde o envía
-          un email a info@maisharoots.org
+          {failErrorMessage}
         </Text>
         <Button
           type="submit"

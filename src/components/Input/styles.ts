@@ -7,6 +7,7 @@ export default styled.input<Pick<Props, 'isFullWidth' | 'styles'>>`
   font-weight: ${({ theme }) => theme.weights.black};
   text-align: center;
   border: none;
+  background-color: white;
 
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;

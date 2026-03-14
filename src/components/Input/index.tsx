@@ -6,11 +6,13 @@ export interface Props extends BaseProps {
   type?: 'text' | 'number'
   onChange: (value: string) => void
   min?: number
+  name: string
 }
 
 const Input: FC<Props> = ({
   type = 'text',
   styles,
+  name,
   className,
   min,
   onChange,
@@ -26,6 +28,7 @@ const Input: FC<Props> = ({
       min={min}
       onKeyDown={preventSymbols}
       onChange={e => onChange(e.currentTarget.value)}
+      name={name}
       type={type}
       styles={styles}
       className={className}
