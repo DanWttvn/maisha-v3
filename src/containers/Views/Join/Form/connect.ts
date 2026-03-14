@@ -16,6 +16,7 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
   const [generalErrors, setGeneralErrors] = useState<
     ('no-amount' | 'fail' | 'smaller-than-min' | 'terms-not-accepted')[]
   >([])
+  const [failErrorMessage, setFailErrorMessage] = useState('')
 
   const {
     register,
@@ -38,6 +39,7 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
   }
 
   const sendForm = async (data: FormValues) => {
+    setFailErrorMessage('')
     // Validation
     if (!selectedAmount)
       return setGeneralErrors([...generalErrors, 'no-amount'])
@@ -51,6 +53,7 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
 
       if (!!res) void push(urls.thanks)
     } catch (error) {
+      setFailErrorMessage((error as Error).message)
       setGeneralErrors([...generalErrors, 'fail'])
     }
   }
@@ -69,5 +72,6 @@ export const useConnect = ({ forcedAmount }: { forcedAmount: number }) => {
     customAmount,
     isPolicyModalOpen,
     setIsPolicyModalOpen,
+    failErrorMessage,
   }
 }

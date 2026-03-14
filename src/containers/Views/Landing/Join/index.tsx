@@ -50,7 +50,13 @@ const Join: FC<Props> = ({ variant }) => {
             onClick={() => handleSelectAmount(customAmount)}
             isSelected={selectedAmount === customAmount}
           >
-            <Input type="number" min={5} onChange={handleInputChange} />€
+            <Input
+              name="customAmount"
+              type="number"
+              min={5}
+              onChange={handleInputChange}
+            />
+            €
           </Button>
         </Container>
         <HelperText
